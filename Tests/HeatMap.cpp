@@ -111,7 +111,7 @@ int main()
   //   * i.e. there is constant cold at the edges
   //   * NCOLs should be a multiple of 16
   //   * HEIGHT should be a multiple of NQPUS
-  const int NQPUS  = 1;
+  const int NQPUS  = 4;
   const int WIDTH  = 512-16;
   const int NCOLS  = WIDTH+16;
   const int HEIGHT = 504;
