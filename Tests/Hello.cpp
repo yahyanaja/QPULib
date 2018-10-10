@@ -69,7 +69,7 @@ int main()
   // Construct kernel
   auto k = compile(conv_p);
   k.setNumQPUs(NQPUS);
-  if(numQPUs().expr->e->intLit != NQPUS )
+  if(numQPUs().expr->intLit != NQPUS )
   {
     printf("Expected numQPUs() to be eq to NQPUS = %d\n", NQPUS);
     return 1;
