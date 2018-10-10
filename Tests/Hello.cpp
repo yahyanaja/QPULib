@@ -12,11 +12,12 @@ using namespace std;
 SharedArray<double> out(6);
 std::vector<double> vec = {1, 2, 3, 4};
 std::vector<double> main_filter = {5, 6, 7};
+static int const main_siz = main_filter.size();
 
- inline void multi_vec_elem(std::vector<double> const &vec, double elem, int it) {
-     static int const vec_siz = vec.size();
-     for(int i = 0; i < vec_siz ; i++){
-        out[it] += vec[i] * elem;
+
+ inline void multi_vec_elem(double elem, int it) {
+     for(int i = 0; i < main_siz ; i++){
+        out[it] += main_filter[i] * elem;
         it++;
     }
 
@@ -25,12 +26,11 @@ std::vector<double> main_filter = {5, 6, 7};
 void conv_p() {
     printf("DP: Conv started!\n");
     auto t = std::chrono::system_clock::now();
-    int const nf = vec.size();
     // int const ng = g.size();
     // int const n  = nf + ng - 1;
     // std::vector<T> out(n, T());
     // int out_beg = 0; // out.begin();
-    for(auto i(0); i < nf; ++i) {
+    for(auto i(0); i < vec_siz; ++i) {
         multi_vec_elem(main_filter, vec[i], i );
 
     }
