@@ -112,11 +112,11 @@ int main()
   //   * NCOLs should be a multiple of 16
   //   * HEIGHT should be a multiple of NQPUS
   const int NQPUS  = 4;
-  const int WIDTH  = 512-16;
+  const int WIDTH  = 70-16;
   const int NCOLS  = WIDTH+16;
-  const int HEIGHT = 504;
+  const int HEIGHT = 72;
   const int NROWS  = HEIGHT+2;
-  const int NSPOTS = 10;
+  // const int NSPOTS = 10;
   const int NSTEPS = 1500;
 
   // Timestamps
@@ -130,14 +130,14 @@ int main()
       mapB[y*NCOLS+x] = 0;
     }
 
-  // Inject hot spots
-  srand(0);
-  for (int i = 0; i < NSPOTS; i++) {
-    int t = rand() % 256;
-    int x = rand() % WIDTH;
-    int y = 1 + rand() % HEIGHT;
-    mapA[y*NCOLS+x] = (float) (1000*t);
-  }
+  // // Inject hot spots
+  // srand(0);
+  // for (int i = 0; i < NSPOTS; i++) {
+  //   int t = rand() % 256;
+  //   int x = rand() % WIDTH;
+  //   int y = 1 + rand() % HEIGHT;
+  //   mapA[y*NCOLS+x] = (float) (1000*t);
+  // }
 
   // Compile kernel
   auto k = compile(step);

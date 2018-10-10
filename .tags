@@ -1,0 +1,1004 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+A	Lib/Target/Syntax.h	/^enum BufferAorB { A, B };$/;"	e	enum:BufferAorB
+A16	Lib/Target/Syntax.h	/^  , A16    \/\/ Bits 15..0$/;"	e	enum:SubWord
+A32	Lib/Target/Syntax.h	/^  , A32    \/\/ Bits 31..0$/;"	e	enum:SubWord
+A8	Lib/Target/Syntax.h	/^    A8     \/\/ Bits 7..0$/;"	e	enum:SubWord
+ACC	Lib/Target/Syntax.h	/^  , ACC             \/\/ Accumulator register$/;"	e	enum:RegTag
+ADD	Lib/Source/Syntax.h	/^  ROTATE, ADD, SUB, MUL, MIN, MAX,$/;"	e	enum:OpId
+ALL	Lib/Source/Syntax.h	/^enum CExprTag { ALL, ANY };$/;"	e	enum:CExprTag
+ALU	Lib/Target/Syntax.h	/^             RegOrImm srcA; ALUOp op; RegOrImm srcB; } ALU;$/;"	m	union:Instr::__anon3	typeref:struct:Instr::__anon3::__anon5
+ALU	Lib/Target/Syntax.h	/^  , ALU           \/\/ ALU operation$/;"	e	enum:InstrTag
+ALUOp	Lib/Target/Syntax.h	/^enum ALUOp {$/;"	g
+ALWAYS	Lib/Target/Syntax.h	/^  , ALWAYS$/;"	e	enum:AssignCondTag
+AND	Lib/Source/Syntax.h	/^enum BExprTag { NOT, AND, OR, CMP };$/;"	e	enum:BExprTag
+ANY	Lib/Source/Syntax.h	/^enum CExprTag { ALL, ANY };$/;"	e	enum:CExprTag
+APPLY	Lib/Source/Syntax.h	/^enum ExprTag { INT_LIT, FLOAT_LIT, VAR, APPLY, DEREF };$/;"	e	enum:ExprTag
+ASSIGN	Lib/Source/Syntax.h	/^  SKIP, ASSIGN, SEQ, WHERE,$/;"	e	enum:StmtTag
+AST_HEAP_SIZE	Lib/Params.h	/^#define AST_HEAP_SIZE /;"	d
+A_ADD	Lib/Target/Syntax.h	/^  , A_ADD          \/\/ Integer add$/;"	e	enum:ALUOp
+A_ASR	Lib/Target/Syntax.h	/^  , A_ASR          \/\/ Integer arithmetic shift right$/;"	e	enum:ALUOp
+A_BAND	Lib/Target/Syntax.h	/^  , A_BAND         \/\/ Bitwise and$/;"	e	enum:ALUOp
+A_BNOT	Lib/Target/Syntax.h	/^  , A_BNOT         \/\/ Bitwise not$/;"	e	enum:ALUOp
+A_BOR	Lib/Target/Syntax.h	/^  , A_BOR          \/\/ Bitwise or$/;"	e	enum:ALUOp
+A_BXOR	Lib/Target/Syntax.h	/^  , A_BXOR         \/\/ Bitwise xor$/;"	e	enum:ALUOp
+A_CLZ	Lib/Target/Syntax.h	/^  , A_CLZ          \/\/ Count leading zeros$/;"	e	enum:ALUOp
+A_FADD	Lib/Target/Syntax.h	/^  , A_FADD         \/\/ Floating-point add$/;"	e	enum:ALUOp
+A_FMAX	Lib/Target/Syntax.h	/^  , A_FMAX         \/\/ Floating-point max$/;"	e	enum:ALUOp
+A_FMAXABS	Lib/Target/Syntax.h	/^  , A_FMAXABS      \/\/ Floating-point max of absolute values$/;"	e	enum:ALUOp
+A_FMIN	Lib/Target/Syntax.h	/^  , A_FMIN         \/\/ Floating-point min$/;"	e	enum:ALUOp
+A_FMINABS	Lib/Target/Syntax.h	/^  , A_FMINABS      \/\/ Floating-point min of absolute values$/;"	e	enum:ALUOp
+A_FSUB	Lib/Target/Syntax.h	/^  , A_FSUB         \/\/ Floating-point subtract$/;"	e	enum:ALUOp
+A_FtoI	Lib/Target/Syntax.h	/^  , A_FtoI         \/\/ Float to signed integer$/;"	e	enum:ALUOp
+A_ItoF	Lib/Target/Syntax.h	/^  , A_ItoF         \/\/ Signed integer to float$/;"	e	enum:ALUOp
+A_MAX	Lib/Target/Syntax.h	/^  , A_MAX          \/\/ Integer max$/;"	e	enum:ALUOp
+A_MIN	Lib/Target/Syntax.h	/^  , A_MIN          \/\/ Integer min$/;"	e	enum:ALUOp
+A_ROR	Lib/Target/Syntax.h	/^  , A_ROR          \/\/ Integer rotate right$/;"	e	enum:ALUOp
+A_SHL	Lib/Target/Syntax.h	/^  , A_SHL          \/\/ Integer shift left$/;"	e	enum:ALUOp
+A_SHR	Lib/Target/Syntax.h	/^  , A_SHR          \/\/ Integer shift right$/;"	e	enum:ALUOp
+A_SUB	Lib/Target/Syntax.h	/^  , A_SUB          \/\/ Integer subtract$/;"	e	enum:ALUOp
+A_V8ADDS	Lib/Target/Syntax.h	/^  , A_V8ADDS       \/\/ Add with saturation per 8-bit element$/;"	e	enum:ALUOp
+A_V8SUBS	Lib/Target/Syntax.h	/^  , A_V8SUBS       \/\/ Subtract with saturation per 8-bit element$/;"	e	enum:ALUOp
+AssignCond	Lib/Target/Syntax.h	/^struct AssignCond {$/;"	s
+AssignCondTag	Lib/Target/Syntax.h	/^enum AssignCondTag {$/;"	g
+B	Lib/Target/Syntax.h	/^enum BufferAorB { A, B };$/;"	e	enum:BufferAorB
+B16	Lib/Target/Syntax.h	/^  , B16    \/\/ Bits 31..16$/;"	e	enum:SubWord
+B8	Lib/Target/Syntax.h	/^  , B8     \/\/ Bits 15..8$/;"	e	enum:SubWord
+BAND	Lib/Source/Syntax.h	/^  SHL, SHR, USHR, BOR, BAND, BXOR, BNOT, ROR,$/;"	e	enum:OpId
+BExpr	Lib/Source/Syntax.h	/^struct BExpr {$/;"	s
+BExprTag	Lib/Source/Syntax.h	/^enum BExprTag { NOT, AND, OR, CMP };$/;"	g
+BNOT	Lib/Source/Syntax.h	/^  SHL, SHR, USHR, BOR, BAND, BXOR, BNOT, ROR,$/;"	e	enum:OpId
+BOR	Lib/Source/Syntax.h	/^  SHL, SHR, USHR, BOR, BAND, BXOR, BNOT, ROR,$/;"	e	enum:OpId
+BR	Lib/Target/Syntax.h	/^    struct { BranchCond cond; BranchTarget target; } BR;$/;"	m	union:Instr::__anon3	typeref:struct:Instr::__anon3::__anon6
+BR	Lib/Target/Syntax.h	/^  , BR            \/\/ Conditional branch to target$/;"	e	enum:InstrTag
+BRL	Lib/Target/Syntax.h	/^    struct { BranchCond cond; Label label; } BRL;$/;"	m	union:Instr::__anon3	typeref:struct:Instr::__anon3::__anon7
+BRL	Lib/Target/Syntax.h	/^  , BRL           \/\/ Conditional branch to label$/;"	e	enum:InstrTag
+BUS_TO_PHYS	Lib/VideoCore/Mailbox.h	/^#define BUS_TO_PHYS(/;"	d
+BXOR	Lib/Source/Syntax.h	/^  SHL, SHR, USHR, BOR, BAND, BXOR, BNOT, ROR,$/;"	e	enum:OpId
+BaseType	Lib/Source/Syntax.h	/^enum BaseType { UINT8, INT16, INT32, FLOAT };$/;"	g
+BoolExpr	Lib/Source/Cond.h	/^  BoolExpr(BExpr* b) { bexpr = b; }$/;"	f	struct:BoolExpr
+BoolExpr	Lib/Source/Cond.h	/^struct BoolExpr$/;"	s
+BranchCond	Lib/Target/Syntax.h	/^struct BranchCond {$/;"	s
+BranchCondTag	Lib/Target/Syntax.h	/^enum BranchCondTag {$/;"	g
+BranchTarget	Lib/Target/Syntax.h	/^struct BranchTarget {$/;"	s
+BufferAorB	Lib/Target/Syntax.h	/^enum BufferAorB { A, B };$/;"	g
+C8	Lib/Target/Syntax.h	/^  , C8     \/\/ Bits 23..16$/;"	e	enum:SubWord
+CExpr	Lib/Source/Syntax.h	/^struct CExpr {$/;"	s
+CExprTag	Lib/Source/Syntax.h	/^enum CExprTag { ALL, ANY };$/;"	g
+CFG	Lib/Target/CFG.h	/^typedef Seq<Succs> CFG;$/;"	t
+CMP	Lib/Source/Syntax.h	/^enum BExprTag { NOT, AND, OR, CMP };$/;"	e	enum:BExprTag
+COND_ALL	Lib/Target/Syntax.h	/^    COND_ALL         \/\/ Reduce vector of bits to a single$/;"	e	enum:BranchCondTag
+COND_ALWAYS	Lib/Target/Syntax.h	/^  , COND_ALWAYS$/;"	e	enum:BranchCondTag
+COND_ANY	Lib/Target/Syntax.h	/^  , COND_ANY         \/\/ bit using AND\/OR reduction$/;"	e	enum:BranchCondTag
+COND_NEVER	Lib/Target/Syntax.h	/^  , COND_NEVER$/;"	e	enum:BranchCondTag
+CXX	Tests/Makefile	/^CXX = g++$/;"	m
+CXX_FLAGS	Tests/Makefile	/^CXX_FLAGS = -Wconversion -std=c++0x -I $(ROOT)$/;"	m
+CmpOp	Lib/Source/Syntax.h	/^struct CmpOp { CmpOpId op; BaseType type; };$/;"	s
+CmpOpId	Lib/Source/Syntax.h	/^enum CmpOpId { EQ, NEQ, LT, GT, LE, GE };$/;"	g
+Cond	Lib/Source/Cond.h	/^  Cond(CExpr* c) { cexpr = c; }$/;"	f	struct:Cond
+Cond	Lib/Source/Cond.h	/^struct Cond$/;"	s
+CoreState	Lib/Source/Interpreter.h	/^struct CoreState {$/;"	s
+Cursor	Tests/HeatMap.cpp	/^struct Cursor {$/;"	s	file:
+D8	Lib/Target/Syntax.h	/^  , D8     \/\/ Bits 31..24$/;"	e	enum:SubWord
+DEREF	Lib/Source/Syntax.h	/^enum ExprTag { INT_LIT, FLOAT_LIT, VAR, APPLY, DEREF };$/;"	e	enum:ExprTag
+DEVICE_FILE_NAME	Lib/VideoCore/Mailbox.h	/^#define DEVICE_FILE_NAME /;"	d
+DMAReq	Lib/Target/Emulator.h	/^struct DMAReq {$/;"	s
+DefsOf	Lib/Target/ReachingDefs.cpp	/^typedef Seq<SmallSeq<InstrId>> DefsOf;$/;"	t	file:
+DefsOf	Lib/Target/ReachingDefs.h	/^typedef Seq<ReachSet> DefsOf;$/;"	t
+ELEM_NUM	Lib/Source/Syntax.h	/^  , ELEM_NUM     \/\/ (Read-only.) Reading this variable will yield a vector$/;"	e	enum:VarTag
+EMULATOR_HEAP_SIZE	Lib/Target/Emulator.h	/^#define EMULATOR_HEAP_SIZE /;"	d
+END	Lib/Target/Syntax.h	/^  , END           \/\/ Program end (halt)$/;"	e	enum:InstrTag
+EQ	Lib/Source/Syntax.h	/^enum CmpOpId { EQ, NEQ, LT, GT, LE, GE };$/;"	e	enum:CmpOpId
+Else	Lib/Source/Stmt.h	/^#define Else /;"	d
+Else_	Lib/Source/Stmt.cpp	/^void Else_()$/;"	f
+End	Lib/Source/Stmt.h	/^#define End /;"	d
+End_	Lib/Source/Stmt.cpp	/^void End_()$/;"	f
+Expr	Lib/Source/Syntax.h	/^struct Expr {$/;"	s
+ExprTag	Lib/Source/Syntax.h	/^enum ExprTag { INT_LIT, FLOAT_LIT, VAR, APPLY, DEREF };$/;"	g
+FLAG	Lib/Target/Syntax.h	/^  , FLAG$/;"	e	enum:AssignCondTag
+FLOAT	Lib/Source/Syntax.h	/^enum BaseType { UINT8, INT16, INT32, FLOAT };$/;"	e	enum:BaseType
+FLOAT_LIT	Lib/Source/Syntax.h	/^enum ExprTag { INT_LIT, FLOAT_LIT, VAR, APPLY, DEREF };$/;"	e	enum:ExprTag
+FLOAT_TYPE	Lib/Source/Gen.cpp	/^enum TypeTag { INT_TYPE, FLOAT_TYPE, PTR_TYPE, PTR2_TYPE };$/;"	e	enum:TypeTag	file:
+FLUSH	Lib/Source/Syntax.h	/^  LOAD_RECEIVE, STORE_REQUEST, FLUSH,$/;"	e	enum:StmtTag
+FOR	Lib/Source/Syntax.h	/^  IF, WHILE, PRINT, FOR,$/;"	e	enum:StmtTag
+Flag	Lib/Target/Syntax.h	/^enum Flag {$/;"	g
+Float	Lib/Source/Float.cpp	/^Float::Float() {$/;"	f	class:Float
+Float	Lib/Source/Float.cpp	/^Float::Float(Float& x) {$/;"	f	class:Float
+Float	Lib/Source/Float.cpp	/^Float::Float(FloatExpr e) {$/;"	f	class:Float
+Float	Lib/Source/Float.cpp	/^Float::Float(const Float& x) {$/;"	f	class:Float
+Float	Lib/Source/Float.cpp	/^Float::Float(float x) {$/;"	f	class:Float
+Float	Lib/Source/Float.h	/^struct Float {$/;"	s
+FloatExpr	Lib/Source/Float.cpp	/^FloatExpr::FloatExpr() { this->expr = NULL; }$/;"	f	class:FloatExpr
+FloatExpr	Lib/Source/Float.cpp	/^FloatExpr::FloatExpr(float x) { this->expr = mkFloatLit(x); }$/;"	f	class:FloatExpr
+FloatExpr	Lib/Source/Float.h	/^struct FloatExpr {$/;"	s
+For	Lib/Source/Stmt.h	/^#define For(/;"	d
+ForBody_	Lib/Source/Stmt.cpp	/^void ForBody_()$/;"	f
+For_	Lib/Source/Stmt.cpp	/^void For_(BoolExpr b)$/;"	f
+For_	Lib/Source/Stmt.cpp	/^void For_(Cond c)$/;"	f
+FtoI	Lib/Source/Syntax.h	/^  ItoF, FtoI$/;"	e	enum:OpId
+GE	Lib/Source/Syntax.h	/^enum CmpOpId { EQ, NEQ, LT, GT, LE, GE };$/;"	e	enum:CmpOpId
+GPU_MEM_FLG	Lib/VideoCore/SharedArray.h	/^#define GPU_MEM_FLG /;"	d
+GPU_MEM_MAP	Lib/VideoCore/SharedArray.h	/^#define GPU_MEM_MAP /;"	d
+GT	Lib/Source/Syntax.h	/^enum CmpOpId { EQ, NEQ, LT, GT, LE, GE };$/;"	e	enum:CmpOpId
+GenKill	Lib/Target/ReachingDefs.cpp	/^struct GenKill {$/;"	s	file:
+GenOptions	Lib/Source/Gen.h	/^struct GenOptions {$/;"	s
+Heap	Lib/Common/Heap.h	/^    Heap()$/;"	f	class:Heap
+Heap	Lib/Common/Heap.h	/^    Heap(const char* name, unsigned int heapCapacityInBytes)$/;"	f	class:Heap
+Heap	Lib/Common/Heap.h	/^    Heap(unsigned int heapCapacityInBytes)$/;"	f	class:Heap
+Heap	Lib/Common/Heap.h	/^class Heap$/;"	c
+IF	Lib/Source/Syntax.h	/^  IF, WHILE, PRINT, FOR,$/;"	e	enum:StmtTag
+IMM	Lib/Target/Syntax.h	/^enum RegOrImmTag { REG, IMM };$/;"	e	enum:RegOrImmTag
+IMM_FLOAT32	Lib/Target/Syntax.h	/^  , IMM_FLOAT32  \/\/ 32-bit float$/;"	e	enum:ImmTag
+IMM_INT32	Lib/Target/Syntax.h	/^    IMM_INT32    \/\/ 32-bit word$/;"	e	enum:ImmTag
+IMM_MASK	Lib/Target/Syntax.h	/^  , IMM_MASK     \/\/ 1 bit per vector element (0 to 0xffff)$/;"	e	enum:ImmTag
+INITIAL_MAX_ELEMS	Lib/Common/Seq.h	/^#define INITIAL_MAX_ELEMS /;"	d
+INT16	Lib/Source/Syntax.h	/^enum BaseType { UINT8, INT16, INT32, FLOAT };$/;"	e	enum:BaseType
+INT32	Lib/Source/Syntax.h	/^enum BaseType { UINT8, INT16, INT32, FLOAT };$/;"	e	enum:BaseType
+INT_LIT	Lib/Source/Syntax.h	/^enum ExprTag { INT_LIT, FLOAT_LIT, VAR, APPLY, DEREF };$/;"	e	enum:ExprTag
+INT_TYPE	Lib/Source/Gen.cpp	/^enum TypeTag { INT_TYPE, FLOAT_TYPE, PTR_TYPE, PTR2_TYPE };$/;"	e	enum:TypeTag	file:
+IOCTL_MBOX_PROPERTY	Lib/VideoCore/Mailbox.h	/^#define IOCTL_MBOX_PROPERTY /;"	d
+IRQ	Lib/Target/Syntax.h	/^  , IRQ$/;"	e	enum:InstrTag
+If	Lib/Source/Stmt.h	/^#define If(/;"	d
+If_	Lib/Source/Stmt.cpp	/^void If_(BoolExpr b)$/;"	f
+If_	Lib/Source/Stmt.cpp	/^void If_(Cond c)$/;"	f
+Imm	Lib/Target/Syntax.h	/^struct Imm {$/;"	s
+ImmTag	Lib/Target/Syntax.h	/^enum ImmTag {$/;"	g
+InFlightMemReq	Lib/Target/Emulator.cpp	/^struct InFlightMemReq {$/;"	s	file:
+Instr	Lib/Target/Syntax.h	/^struct Instr {$/;"	s
+InstrId	Lib/Target/Syntax.h	/^typedef int InstrId;$/;"	t
+InstrTag	Lib/Target/Syntax.h	/^enum InstrTag {$/;"	g
+Int	Lib/Source/Int.cpp	/^Int::Int() {$/;"	f	class:Int
+Int	Lib/Source/Int.cpp	/^Int::Int(Int& x) {$/;"	f	class:Int
+Int	Lib/Source/Int.cpp	/^Int::Int(IntExpr e) {$/;"	f	class:Int
+Int	Lib/Source/Int.cpp	/^Int::Int(const Int& x) {$/;"	f	class:Int
+Int	Lib/Source/Int.cpp	/^Int::Int(int x) {$/;"	f	class:Int
+Int	Lib/Source/Int.h	/^struct Int {$/;"	s
+IntExpr	Lib/Source/Int.cpp	/^IntExpr::IntExpr() { this->expr = NULL; }$/;"	f	class:IntExpr
+IntExpr	Lib/Source/Int.cpp	/^IntExpr::IntExpr(int x) { this->expr = mkIntLit(x); }$/;"	f	class:IntExpr
+IntExpr	Lib/Source/Int.h	/^struct IntExpr {$/;"	s
+InterpreterState	Lib/Source/Interpreter.h	/^struct InterpreterState {$/;"	s
+ItoF	Lib/Source/Syntax.h	/^  ItoF, FtoI$/;"	e	enum:OpId
+K	Tests/HeatMap.cpp	/^#define K /;"	d	file:
+K	Tests/HeatMapScalar.cpp	/^#define K /;"	d	file:
+Kernel	Lib/Kernel.h	/^  Kernel(void (*f)(ts... params)) {$/;"	f	struct:Kernel
+Kernel	Lib/Kernel.h	/^template <typename... ts> struct Kernel {$/;"	s
+LAB	Lib/Target/Syntax.h	/^  , LAB           \/\/ Label$/;"	e	enum:InstrTag
+LD1	Lib/Target/Syntax.h	/^    struct { Reg addr; BufferAorB buffer; } LD1;$/;"	m	union:Instr::__anon3	typeref:struct:Instr::__anon3::__anon8
+LD1	Lib/Target/Syntax.h	/^  , LD1           \/\/ First, DMA vector in DRAM into VPM (local) memory$/;"	e	enum:InstrTag
+LD2	Lib/Target/Syntax.h	/^  , LD2           \/\/ Second, wait for DMA completion$/;"	e	enum:InstrTag
+LD3	Lib/Target/Syntax.h	/^    struct { BufferAorB buffer; } LD3;$/;"	m	union:Instr::__anon3	typeref:struct:Instr::__anon3::__anon9
+LD3	Lib/Target/Syntax.h	/^  , LD3           \/\/ Third, setup a read from VPM memory$/;"	e	enum:InstrTag
+LD4	Lib/Target/Syntax.h	/^    struct { Reg dest; } LD4;$/;"	m	union:Instr::__anon3	typeref:struct:Instr::__anon3::__anon10
+LD4	Lib/Target/Syntax.h	/^  , LD4           \/\/ Fourth, transfer from VPM into given register$/;"	e	enum:InstrTag
+LE	Lib/Source/Syntax.h	/^enum CmpOpId { EQ, NEQ, LT, GT, LE, GE };$/;"	e	enum:CmpOpId
+LI	Lib/Target/Syntax.h	/^    LI            \/\/ Load immediate$/;"	e	enum:InstrTag
+LI	Lib/Target/Syntax.h	/^    struct { bool setFlags; AssignCond cond; Reg dest; Imm imm; } LI;$/;"	m	union:Instr::__anon3	typeref:struct:Instr::__anon3::__anon4
+LIB	Tests/Makefile	/^LIB = $(patsubst %,$(OBJ_DIR)\/%,$(OBJ))$/;"	m
+LOAD_RECEIVE	Lib/Source/Syntax.h	/^  LOAD_RECEIVE, STORE_REQUEST, FLUSH,$/;"	e	enum:StmtTag
+LT	Lib/Source/Syntax.h	/^enum CmpOpId { EQ, NEQ, LT, GT, LE, GE };$/;"	e	enum:CmpOpId
+Label	Lib/Target/Syntax.h	/^typedef int Label;$/;"	t
+LiveSet	Lib/Target/Liveness.h	/^typedef SmallSeq<RegId> LiveSet;$/;"	t
+Liveness	Lib/Target/Liveness.h	/^typedef Seq<LiveSet> Liveness;$/;"	t
+MAJOR_NUM	Lib/VideoCore/Mailbox.h	/^#define MAJOR_NUM /;"	d
+MAX	Lib/Source/Syntax.h	/^  ROTATE, ADD, SUB, MUL, MIN, MAX,$/;"	e	enum:OpId
+MAX_KERNEL_PARAMS	Lib/Kernel.h	/^#define MAX_KERNEL_PARAMS /;"	d
+MAX_QPUS	Lib/Target/Emulator.h	/^#define MAX_QPUS /;"	d
+MIN	Lib/Source/Syntax.h	/^  ROTATE, ADD, SUB, MUL, MIN, MAX,$/;"	e	enum:OpId
+MUL	Lib/Source/Syntax.h	/^  ROTATE, ADD, SUB, MUL, MIN, MAX,$/;"	e	enum:OpId
+M_FMUL	Lib/Target/Syntax.h	/^  , M_FMUL        \/\/ Floating-point multiply$/;"	e	enum:ALUOp
+M_MUL24	Lib/Target/Syntax.h	/^  , M_MUL24       \/\/ 24-bit integer multiply$/;"	e	enum:ALUOp
+M_ROTATE	Lib/Target/Syntax.h	/^  , M_ROTATE      \/\/ Rotation (intermediate op-code)$/;"	e	enum:ALUOp
+M_V8ADDS	Lib/Target/Syntax.h	/^  , M_V8ADDS      \/\/ Add with saturation per 8-bit element$/;"	e	enum:ALUOp
+M_V8MAX	Lib/Target/Syntax.h	/^  , M_V8MAX       \/\/ Max per 8-bit element$/;"	e	enum:ALUOp
+M_V8MIN	Lib/Target/Syntax.h	/^  , M_V8MIN       \/\/ Min per 8-bit element$/;"	e	enum:ALUOp
+M_V8MUL	Lib/Target/Syntax.h	/^  , M_V8MUL       \/\/ Multiply per 8-bit element$/;"	e	enum:ALUOp
+M_V8SUBS	Lib/Target/Syntax.h	/^  , M_V8SUBS      \/\/ Subtract with saturation per 8-bit element$/;"	e	enum:ALUOp
+NC	Lib/Target/Syntax.h	/^  , NC              \/\/ Negative clear$/;"	e	enum:Flag
+NEQ	Lib/Source/Syntax.h	/^enum CmpOpId { EQ, NEQ, LT, GT, LE, GE };$/;"	e	enum:CmpOpId
+NEVER	Lib/Target/Syntax.h	/^    NEVER$/;"	e	enum:AssignCondTag
+NONE	Lib/Target/Syntax.h	/^  , NONE            \/\/ No read\/write$/;"	e	enum:RegTag
+NOP	Lib/Target/Syntax.h	/^    NOP            \/\/ No op$/;"	e	enum:ALUOp
+NOT	Lib/Source/Syntax.h	/^enum BExprTag { NOT, AND, OR, CMP };$/;"	e	enum:BExprTag
+NO_OP	Lib/Target/Syntax.h	/^  , NO_OP         \/\/ No-op$/;"	e	enum:InstrTag
+NS	Lib/Target/Syntax.h	/^  , NS              \/\/ Negative set$/;"	e	enum:Flag
+NUM_LANES	Lib/Target/Emulator.h	/^#define NUM_LANES /;"	d
+NUM_SMALL_FLOATS	Lib/Target/SmallLiteral.cpp	/^const int NUM_SMALL_FLOATS = 16;$/;"	v
+OBJ	Tests/Makefile	/^OBJ =                         \\$/;"	m
+OBJ_DIR	Tests/Makefile	/^  OBJ_DIR := $(OBJ_DIR)-debug$/;"	m
+OBJ_DIR	Tests/Makefile	/^  OBJ_DIR := $(OBJ_DIR)-qpu$/;"	m
+OBJ_DIR	Tests/Makefile	/^OBJ_DIR = obj$/;"	m
+OR	Lib/Source/Syntax.h	/^enum BExprTag { NOT, AND, OR, CMP };$/;"	e	enum:BExprTag
+Op	Lib/Source/Syntax.h	/^struct Op { OpId op; BaseType type; };$/;"	s
+OpId	Lib/Source/Syntax.h	/^enum OpId {$/;"	g
+PAGE_SIZE	Lib/VideoCore/Mailbox.cpp	/^#define PAGE_SIZE /;"	d	file:
+PRF	Lib/Target/Syntax.h	/^    Reg PRF;$/;"	m	union:Instr::__anon3
+PRF	Lib/Target/Syntax.h	/^  , PRF           \/\/ Print float$/;"	e	enum:InstrTag
+PRI	Lib/Target/Syntax.h	/^    Reg PRI;$/;"	m	union:Instr::__anon3
+PRI	Lib/Target/Syntax.h	/^  , PRI           \/\/ Print integer$/;"	e	enum:InstrTag
+PRINT	Lib/Source/Syntax.h	/^  IF, WHILE, PRINT, FOR,$/;"	e	enum:StmtTag
+PRINT_FLOAT	Lib/Source/Syntax.h	/^enum PrintTag { PRINT_INT, PRINT_FLOAT, PRINT_STR };$/;"	e	enum:PrintTag
+PRINT_INT	Lib/Source/Syntax.h	/^enum PrintTag { PRINT_INT, PRINT_FLOAT, PRINT_STR };$/;"	e	enum:PrintTag
+PRINT_STR	Lib/Source/Syntax.h	/^enum PrintTag { PRINT_INT, PRINT_FLOAT, PRINT_STR };$/;"	e	enum:PrintTag
+PRS	Lib/Target/Syntax.h	/^    const char* PRS;$/;"	m	union:Instr::__anon3
+PRS	Lib/Target/Syntax.h	/^  , PRS           \/\/ Print string$/;"	e	enum:InstrTag
+PTR2_TYPE	Lib/Source/Gen.cpp	/^enum TypeTag { INT_TYPE, FLOAT_TYPE, PTR_TYPE, PTR2_TYPE };$/;"	e	enum:TypeTag	file:
+PTR_TYPE	Lib/Source/Gen.cpp	/^enum TypeTag { INT_TYPE, FLOAT_TYPE, PTR_TYPE, PTR2_TYPE };$/;"	e	enum:TypeTag	file:
+Print	Lib/Source/Stmt.cpp	/^void Print(IntExpr x)$/;"	f
+Print	Lib/Source/Stmt.cpp	/^void Print(const char* str)$/;"	f
+PrintStmt	Lib/Source/Syntax.h	/^struct PrintStmt {$/;"	s
+PrintTag	Lib/Source/Syntax.h	/^enum PrintTag { PRINT_INT, PRINT_FLOAT, PRINT_STR };$/;"	g
+Ptr	Lib/Source/Ptr.h	/^  Ptr<T>() {$/;"	f	struct:Ptr
+Ptr	Lib/Source/Ptr.h	/^  Ptr<T>(Ptr<T>& x) {$/;"	f	struct:Ptr
+Ptr	Lib/Source/Ptr.h	/^  Ptr<T>(PtrExpr<T> rhs) {$/;"	f	struct:Ptr
+Ptr	Lib/Source/Ptr.h	/^  Ptr<T>(const Ptr<T>& x) {$/;"	f	struct:Ptr
+Ptr	Lib/Source/Ptr.h	/^template <typename T> struct Ptr {$/;"	s
+PtrExpr	Lib/Source/Ptr.h	/^  PtrExpr<T>() { this->expr = NULL; }$/;"	f	struct:PtrExpr
+PtrExpr	Lib/Source/Ptr.h	/^template <typename T> struct PtrExpr {$/;"	s
+QPUState	Lib/Target/Emulator.h	/^struct QPUState {$/;"	s
+QPU_NUM	Lib/Source/Syntax.h	/^  , QPU_NUM      \/\/ (Read-only.) Reading this variable will yield the$/;"	e	enum:VarTag
+QPU_TIMEOUT	Lib/VideoCore/Invoke.cpp	/^#define QPU_TIMEOUT /;"	d	file:
+RECV	Lib/Target/Syntax.h	/^    struct { Reg dest; } RECV;$/;"	m	union:Instr::__anon3	typeref:struct:Instr::__anon3::__anon13
+RECV	Lib/Target/Syntax.h	/^  , RECV$/;"	e	enum:InstrTag
+REG	Lib/Target/Syntax.h	/^enum RegOrImmTag { REG, IMM };$/;"	e	enum:RegOrImmTag
+REG_A	Lib/Target/Syntax.h	/^    REG_A           \/\/ In register file A (0..31)$/;"	e	enum:RegTag
+REG_B	Lib/Target/Syntax.h	/^  , REG_B           \/\/ In register file B (0..31)$/;"	e	enum:RegTag
+ROOT	Tests/Makefile	/^ROOT = ..\/Lib$/;"	m
+ROR	Lib/Source/Syntax.h	/^  SHL, SHR, USHR, BOR, BAND, BXOR, BNOT, ROR,$/;"	e	enum:OpId
+ROTATE	Lib/Source/Syntax.h	/^  ROTATE, ADD, SUB, MUL, MIN, MAX,$/;"	e	enum:OpId
+ROT_ACC	Lib/Target/Syntax.h	/^  , ROT_ACC    \/\/ Rotation amount taken from accumulator 5$/;"	e	enum:SmallImmTag
+ROT_IMM	Lib/Target/Syntax.h	/^  , ROT_IMM    \/\/ Rotation amount 1..15$/;"	e	enum:SmallImmTag
+RSV_NUM_QPUS	Lib/Source/Syntax.h	/^  RSV_NUM_QPUS     = 1,$/;"	e	enum:ReservedVarId
+RSV_QPU_ID	Lib/Source/Syntax.h	/^  RSV_QPU_ID       = 0,$/;"	e	enum:ReservedVarId
+RSV_READ_STRIDE	Lib/Source/Syntax.h	/^  RSV_READ_STRIDE  = 2,$/;"	e	enum:ReservedVarId
+RSV_WRITE_STRIDE	Lib/Source/Syntax.h	/^  RSV_WRITE_STRIDE = 3$/;"	e	enum:ReservedVarId
+ReachSet	Lib/Target/ReachingDefs.h	/^typedef SmallSeq<InstrId> ReachSet;$/;"	t
+ReachingDefs	Lib/Target/ReachingDefs.h	/^typedef Seq<ReachSet> ReachingDefs;$/;"	t
+Reg	Lib/Target/Syntax.h	/^struct Reg {$/;"	s
+RegId	Lib/Target/Syntax.h	/^typedef int RegId;$/;"	t
+RegOrImm	Lib/Target/Syntax.h	/^struct RegOrImm {$/;"	s
+RegOrImmTag	Lib/Target/Syntax.h	/^enum RegOrImmTag { REG, IMM };$/;"	g
+RegTag	Lib/Target/Syntax.h	/^enum RegTag {$/;"	g
+ReservedVarId	Lib/Source/Syntax.h	/^enum ReservedVarId {$/;"	g
+SDEC	Lib/Target/Syntax.h	/^  , SDEC          \/\/ Decrement semaphore$/;"	e	enum:InstrTag
+SEMA_DEC	Lib/Source/Syntax.h	/^  SEND_IRQ_TO_HOST, SEMA_INC, SEMA_DEC };$/;"	e	enum:StmtTag
+SEMA_INC	Lib/Source/Syntax.h	/^  SEND_IRQ_TO_HOST, SEMA_INC, SEMA_DEC };$/;"	e	enum:StmtTag
+SEND_IRQ_TO_HOST	Lib/Source/Syntax.h	/^  SEND_IRQ_TO_HOST, SEMA_INC, SEMA_DEC };$/;"	e	enum:StmtTag
+SEQ	Lib/Source/Syntax.h	/^  SKIP, ASSIGN, SEQ, WHERE,$/;"	e	enum:StmtTag
+SET_READ_STRIDE	Lib/Source/Syntax.h	/^  SET_READ_STRIDE, SET_WRITE_STRIDE,$/;"	e	enum:StmtTag
+SET_WRITE_STRIDE	Lib/Source/Syntax.h	/^  SET_READ_STRIDE, SET_WRITE_STRIDE,$/;"	e	enum:StmtTag
+SHL	Lib/Source/Syntax.h	/^  SHL, SHR, USHR, BOR, BAND, BXOR, BNOT, ROR,$/;"	e	enum:OpId
+SHR	Lib/Source/Syntax.h	/^  SHL, SHR, USHR, BOR, BAND, BXOR, BNOT, ROR,$/;"	e	enum:OpId
+SINC	Lib/Target/Syntax.h	/^  , SINC          \/\/ Increment semaphore$/;"	e	enum:InstrTag
+SKIP	Lib/Source/Syntax.h	/^  SKIP, ASSIGN, SEQ, WHERE,$/;"	e	enum:StmtTag
+SMALL_IMM	Lib/Target/Syntax.h	/^    SMALL_IMM  \/\/ Small immediate$/;"	e	enum:SmallImmTag
+SPECIAL	Lib/Target/Syntax.h	/^  , SPECIAL         \/\/ Special register$/;"	e	enum:RegTag
+SPECIAL_DMA_LD_ADDR	Lib/Target/Syntax.h	/^  , SPECIAL_DMA_LD_ADDR$/;"	e	enum:Special
+SPECIAL_DMA_LD_WAIT	Lib/Target/Syntax.h	/^  , SPECIAL_DMA_LD_WAIT$/;"	e	enum:Special
+SPECIAL_DMA_ST_ADDR	Lib/Target/Syntax.h	/^  , SPECIAL_DMA_ST_ADDR$/;"	e	enum:Special
+SPECIAL_DMA_ST_WAIT	Lib/Target/Syntax.h	/^  , SPECIAL_DMA_ST_WAIT$/;"	e	enum:Special
+SPECIAL_ELEM_NUM	Lib/Target/Syntax.h	/^  , SPECIAL_ELEM_NUM$/;"	e	enum:Special
+SPECIAL_HOST_INT	Lib/Target/Syntax.h	/^  , SPECIAL_HOST_INT$/;"	e	enum:Special
+SPECIAL_QPU_NUM	Lib/Target/Syntax.h	/^  , SPECIAL_QPU_NUM$/;"	e	enum:Special
+SPECIAL_RD_SETUP	Lib/Target/Syntax.h	/^  , SPECIAL_RD_SETUP$/;"	e	enum:Special
+SPECIAL_TMU0_S	Lib/Target/Syntax.h	/^  , SPECIAL_TMU0_S$/;"	e	enum:Special
+SPECIAL_UNIFORM	Lib/Target/Syntax.h	/^    SPECIAL_UNIFORM$/;"	e	enum:Special
+SPECIAL_VPM_READ	Lib/Target/Syntax.h	/^  , SPECIAL_VPM_READ$/;"	e	enum:Special
+SPECIAL_VPM_WRITE	Lib/Target/Syntax.h	/^  , SPECIAL_VPM_WRITE$/;"	e	enum:Special
+SPECIAL_WR_SETUP	Lib/Target/Syntax.h	/^  , SPECIAL_WR_SETUP$/;"	e	enum:Special
+ST1	Lib/Target/Syntax.h	/^    struct { Reg data; BufferAorB buffer; } ST1;$/;"	m	union:Instr::__anon3	typeref:struct:Instr::__anon3::__anon11
+ST1	Lib/Target/Syntax.h	/^  , ST1           \/\/ First, write the vector to VPM (local) memory.$/;"	e	enum:InstrTag
+ST2	Lib/Target/Syntax.h	/^    struct { Reg addr; BufferAorB buffer; } ST2;$/;"	m	union:Instr::__anon3	typeref:struct:Instr::__anon3::__anon12
+ST2	Lib/Target/Syntax.h	/^  , ST2           \/\/ Second, DMA from the VPM out to DRAM.$/;"	e	enum:InstrTag
+ST3	Lib/Target/Syntax.h	/^  , ST3           \/\/ Third, wait for DMA to complete.$/;"	e	enum:InstrTag
+STANDARD	Lib/Source/Syntax.h	/^    STANDARD     \/\/ A standard variable that can be stored$/;"	e	enum:VarTag
+STORE_REQUEST	Lib/Source/Syntax.h	/^  LOAD_RECEIVE, STORE_REQUEST, FLUSH,$/;"	e	enum:StmtTag
+SUB	Lib/Source/Syntax.h	/^  ROTATE, ADD, SUB, MUL, MIN, MAX,$/;"	e	enum:OpId
+Seq	Lib/Common/Seq.h	/^    Seq() { init(INITIAL_MAX_ELEMS); }$/;"	f	class:Seq
+Seq	Lib/Common/Seq.h	/^    Seq(const Seq<T>& seq) {$/;"	f	class:Seq
+Seq	Lib/Common/Seq.h	/^    Seq(int initialSize) { init(initialSize); }$/;"	f	class:Seq
+Seq	Lib/Common/Seq.h	/^template <class T> class Seq$/;"	c
+SharedArray	Lib/VideoCore/SharedArray.h	/^  SharedArray() {$/;"	f	class:SharedArray
+SharedArray	Lib/VideoCore/SharedArray.h	/^  SharedArray(uint32_t n) {$/;"	f	class:SharedArray
+SharedArray	Lib/VideoCore/SharedArray.h	/^template <typename T> class SharedArray {$/;"	c
+SmallImm	Lib/Target/Syntax.h	/^struct SmallImm {$/;"	s
+SmallImmTag	Lib/Target/Syntax.h	/^enum SmallImmTag {$/;"	g
+SmallSeq	Lib/Common/Seq.h	/^    SmallSeq() : Seq<T>(8) {};$/;"	f	class:SmallSeq
+SmallSeq	Lib/Common/Seq.h	/^template <class T> class SmallSeq : public Seq<T> {$/;"	c
+Special	Lib/Target/Syntax.h	/^enum Special {$/;"	g
+Stack	Lib/Common/Stack.h	/^    Stack()$/;"	f	class:Stack
+Stack	Lib/Common/Stack.h	/^template <class T> class Stack$/;"	c
+StackItem	Lib/Common/Stack.h	/^template <class T> class StackItem$/;"	c
+State	Lib/Target/Emulator.h	/^struct State {$/;"	s
+Stmt	Lib/Source/Syntax.h	/^struct Stmt {$/;"	s
+StmtTag	Lib/Source/Syntax.h	/^enum StmtTag {$/;"	g
+SubWord	Lib/Target/Syntax.h	/^enum SubWord {$/;"	g
+Succs	Lib/Target/CFG.h	/^typedef SmallSeq<InstrId> Succs;$/;"	t
+TMP_A	Lib/Target/Syntax.h	/^  , TMP_A           \/\/ Used in intermediate code$/;"	e	enum:RegTag
+TMP_B	Lib/Target/Syntax.h	/^  , TMP_B           \/\/ Used in intermediate code$/;"	e	enum:RegTag
+TMU0_ADDR	Lib/Source/Syntax.h	/^  , TMU0_ADDR    \/\/ (Write-only.) Initiate load via TMU$/;"	e	enum:VarTag
+TMU0_TO_ACC4	Lib/Target/Syntax.h	/^  , TMU0_TO_ACC4$/;"	e	enum:InstrTag
+Type	Lib/Source/Gen.cpp	/^struct Type {$/;"	s	file:
+TypeTag	Lib/Source/Gen.cpp	/^enum TypeTag { INT_TYPE, FLOAT_TYPE, PTR_TYPE, PTR2_TYPE };$/;"	g	file:
+UINT8	Lib/Source/Syntax.h	/^enum BaseType { UINT8, INT16, INT32, FLOAT };$/;"	e	enum:BaseType
+UNIFORM	Lib/Source/Syntax.h	/^  , UNIFORM      \/\/ (Read-only.)  Reading this variable will consume a value$/;"	e	enum:VarTag
+USHR	Lib/Source/Syntax.h	/^  SHL, SHR, USHR, BOR, BAND, BXOR, BNOT, ROR,$/;"	e	enum:OpId
+UseDef	Lib/Target/Liveness.h	/^struct UseDef {$/;"	s
+UseDefReg	Lib/Target/Liveness.h	/^struct UseDefReg {$/;"	s
+UsesOf	Lib/Target/ReachingDefs.cpp	/^typedef Seq<SmallSeq<InstrId>> UsesOf;$/;"	t	file:
+VAR	Lib/Source/Syntax.h	/^enum ExprTag { INT_LIT, FLOAT_LIT, VAR, APPLY, DEREF };$/;"	e	enum:ExprTag
+VPMLoadQueue	Lib/Target/Emulator.h	/^struct VPMLoadQueue {$/;"	s
+VPM_SIZE	Lib/Target/Emulator.h	/^#define VPM_SIZE /;"	d
+Var	Lib/Source/Syntax.h	/^struct Var {$/;"	s
+VarId	Lib/Source/Syntax.h	/^typedef int VarId;$/;"	t
+VarTag	Lib/Source/Syntax.h	/^enum VarTag {$/;"	g
+Vec	Lib/Target/Emulator.h	/^struct Vec {$/;"	s
+WHERE	Lib/Source/Syntax.h	/^  SKIP, ASSIGN, SEQ, WHERE,$/;"	e	enum:StmtTag
+WHILE	Lib/Source/Syntax.h	/^  IF, WHILE, PRINT, FOR,$/;"	e	enum:StmtTag
+Where	Lib/Source/Stmt.h	/^#define Where(/;"	d
+Where_	Lib/Source/Stmt.h	/^inline void Where_(BoolExpr b) { Where__(b.bexpr); }$/;"	f
+Where__	Lib/Source/Stmt.cpp	/^void Where__(BExpr* b)$/;"	f
+While	Lib/Source/Stmt.h	/^#define While(/;"	d
+While_	Lib/Source/Stmt.cpp	/^void While_(BoolExpr b)$/;"	f
+While_	Lib/Source/Stmt.cpp	/^void While_(Cond c)$/;"	f
+Word	Lib/Target/Emulator.h	/^union Word {$/;"	u
+ZC	Lib/Target/Syntax.h	/^  , ZC              \/\/ Zero clear$/;"	e	enum:Flag
+ZS	Lib/Target/Syntax.h	/^    ZS              \/\/ Zero set$/;"	e	enum:Flag
+_CFG_H_	Lib/Target/CFG.h	/^#define _CFG_H_$/;"	d
+_EMULATOR_H_	Lib/Target/Emulator.h	/^#define _EMULATOR_H_$/;"	d
+_ENCODE_H_	Lib/Target/Encode.h	/^#define _ENCODE_H_$/;"	d
+_GEN_H_	Lib/Source/Gen.h	/^#define _GEN_H_$/;"	d
+_HEAP_H_	Lib/Common/Heap.h	/^#define _HEAP_H_$/;"	d
+_INTERPRETER_H_	Lib/Source/Interpreter.h	/^#define _INTERPRETER_H_$/;"	d
+_INVOKE_H_	Lib/VideoCore/Invoke.h	/^#define _INVOKE_H_$/;"	d
+_KERNEL_H_	Lib/Kernel.h	/^#define _KERNEL_H_$/;"	d
+_LIVENESS_H_	Lib/Target/Liveness.h	/^#define _LIVENESS_H_$/;"	d
+_LIVERANGESPLIT_H_	Lib/Target/LiveRangeSplit.h	/^#define _LIVERANGESPLIT_H_$/;"	d
+_LOADSTORE_H_	Lib/Target/LoadStore.h	/^#define _LOADSTORE_H_$/;"	d
+_MAILBOX_H_	Lib/VideoCore/Mailbox.h	/^#define _MAILBOX_H_$/;"	d
+_PARAMS_H_	Lib/Params.h	/^#define _PARAMS_H_$/;"	d
+_QPULIB_H_	Lib/QPULib.h	/^#define _QPULIB_H_$/;"	d
+_REACHINGDEFS_H_	Lib/Target/ReachingDefs.h	/^#define _REACHINGDEFS_H_$/;"	d
+_REGALLOC_H_	Lib/Target/RegAlloc.h	/^#define _REGALLOC_H_$/;"	d
+_REMOVELABELS_H_	Lib/Target/RemoveLabels.h	/^#define _REMOVELABELS_H_$/;"	d
+_SATISFY_H_	Lib/Target/Satisfy.h	/^#define _SATISFY_H_$/;"	d
+_SEQ_H_	Lib/Common/Seq.h	/^#define _SEQ_H_$/;"	d
+_SHAREDARRAY_H_	Lib/VideoCore/SharedArray.h	/^#define _SHAREDARRAY_H_$/;"	d
+_SMALL_LITERAL_H_	Lib/Target/SmallLiteral.h	/^#define _SMALL_LITERAL_H_$/;"	d
+_SOURCE_COND_H_	Lib/Source/Cond.h	/^#define _SOURCE_COND_H_$/;"	d
+_SOURCE_FLOAT_H_	Lib/Source/Float.h	/^#define _SOURCE_FLOAT_H_$/;"	d
+_SOURCE_INT_H_	Lib/Source/Int.h	/^#define _SOURCE_INT_H_$/;"	d
+_SOURCE_PRETTY_H_	Lib/Source/Pretty.h	/^#define _SOURCE_PRETTY_H_$/;"	d
+_SOURCE_PTR_H_	Lib/Source/Ptr.h	/^#define _SOURCE_PTR_H_$/;"	d
+_SOURCE_STMTEXTRA_H_	Lib/Source/StmtExtra.h	/^#define _SOURCE_STMTEXTRA_H_$/;"	d
+_SOURCE_STMT_H_	Lib/Source/Stmt.h	/^#define _SOURCE_STMT_H_$/;"	d
+_SOURCE_SYNTAX_H_	Lib/Source/Syntax.h	/^#define _SOURCE_SYNTAX_H_$/;"	d
+_STACK_H_	Lib/Common/Stack.h	/^#define _STACK_H_$/;"	d
+_SUBST_H_	Lib/Target/Subst.h	/^#define _SUBST_H_$/;"	d
+_TARGET_PRETTY_H_	Lib/Target/Pretty.h	/^#define _TARGET_PRETTY_H_$/;"	d
+_TARGET_SYNTAX_H_	Lib/Target/Syntax.h	/^#define _TARGET_SYNTAX_H_$/;"	d
+_TRANSLATE_H_	Lib/Source/Translate.h	/^#define _TRANSLATE_H_$/;"	d
+_VIDEOCORE_H_	Lib/VideoCore/VideoCore.h	/^#define _VIDEOCORE_H_$/;"	d
+accum	Lib/Target/Emulator.h	/^  Vec accum[6];              \/\/ Accumulator registers$/;"	m	struct:QPUState
+active	Lib/Target/Emulator.h	/^  bool active;$/;"	m	struct:DMAReq
+addr	Lib/Source/Syntax.h	/^    struct { Expr* data; Expr* addr; } storeReq;$/;"	m	struct:Stmt::__anon22::__anon29
+addr	Lib/Target/Emulator.cpp	/^  Word addr;$/;"	m	struct:InFlightMemReq	file:
+addr	Lib/Target/Emulator.h	/^  Word addr;$/;"	m	struct:DMAReq
+addr	Lib/Target/Syntax.h	/^    struct { Reg addr; BufferAorB buffer; } LD1;$/;"	m	struct:Instr::__anon3::__anon8
+addr	Lib/Target/Syntax.h	/^    struct { Reg addr; BufferAorB buffer; } ST2;$/;"	m	struct:Instr::__anon3::__anon12
+addr	Tests/HeatMap.cpp	/^  Ptr<Float> addr;$/;"	m	struct:Cursor	file:
+address	Lib/VideoCore/SharedArray.h	/^  uint32_t address;$/;"	m	class:SharedArray
+addrs	Lib/Target/Emulator.h	/^  int addrs[3];$/;"	m	struct:VPMLoadQueue
+advance	Tests/HeatMap.cpp	/^  void advance() {$/;"	f	struct:Cursor
+all	Lib/Source/Cond.h	/^inline Cond all(BoolExpr a)$/;"	f
+alloc	Lib/Common/Heap.h	/^    template <class T> T* alloc()$/;"	f	class:Heap
+alloc	Lib/Common/Heap.h	/^    template <class T> T* alloc(unsigned long n)$/;"	f	class:Heap
+alloc	Lib/VideoCore/SharedArray.h	/^  void alloc(uint32_t n) {$/;"	f	class:SharedArray
+alu	Lib/Target/Emulator.cpp	/^Vec alu(QPUState* s, Seq<int32_t>* uniforms,$/;"	f
+any	Lib/Source/Cond.h	/^inline Cond any(BoolExpr a)$/;"	f
+append	Lib/Common/Seq.h	/^    void append(T x)$/;"	f	class:Seq
+apply	Lib/Source/Syntax.h	/^    struct { Expr* lhs; Op op; Expr* rhs; } apply;$/;"	m	union:Expr::__anon14	typeref:struct:Expr::__anon14::__anon15
+arm_base	Lib/VideoCore/SharedArray.h	/^  void* arm_base;$/;"	m	class:SharedArray
+assign	Lib/Source/Stmt.cpp	/^void assign(Expr* lhs, Expr* rhs) {$/;"	f
+assign	Lib/Source/Syntax.h	/^    struct { Expr* lhs; Expr* rhs; } assign;$/;"	m	union:Stmt::__anon22	typeref:struct:Stmt::__anon22::__anon23
+assign	Lib/Source/Translate.cpp	/^void assign( Seq<Instr>* seq   \/\/ Target instruction sequence to extend$/;"	f
+assignDMALoadSetup	Lib/Target/LoadStore.cpp	/^void assignDMALoadSetup(Seq<Instr>* instrs, Reg dst, BufferAorB b, Reg qpuId)$/;"	f
+assignDMAStoreSetup	Lib/Target/LoadStore.cpp	/^void assignDMAStoreSetup(Seq<Instr>* instrs, Reg dst, BufferAorB b, Reg qpuId)$/;"	f
+assignToVar	Lib/Source/Interpreter.cpp	/^void assignToVar(CoreState* s, Vec cond, Var v, Vec x)$/;"	f
+assignVPMLoadSetup	Lib/Target/LoadStore.cpp	/^void assignVPMLoadSetup(Seq<Instr>* instrs, Reg dst, BufferAorB b, Reg qpuId)$/;"	f
+back	Lib/Target/Emulator.h	/^  int front, back;$/;"	m	struct:VPMLoadQueue
+base	Lib/Common/Heap.h	/^    uint8_t *base;$/;"	m	class:Heap
+basicGenOpts	Tests/AutoTest.cpp	/^GenOptions basicGenOpts()$/;"	f
+bexpr	Lib/Source/Cond.h	/^  BExpr* bexpr;$/;"	m	struct:BoolExpr
+bexpr	Lib/Source/Syntax.h	/^  BExpr* bexpr;$/;"	m	struct:CExpr
+body	Lib/Source/Syntax.h	/^    struct { CExpr* cond; Stmt* body; } loop;$/;"	m	struct:Stmt::__anon22::__anon27
+body	Lib/Source/Syntax.h	/^    struct { CExpr* cond; Stmt* inc; Stmt* body; } forLoop;$/;"	m	struct:Stmt::__anon22::__anon28
+boolAnd	Lib/Source/Translate.cpp	/^AssignCond boolAnd( Seq<Instr>* seq$/;"	f
+boolExp	Lib/Source/Translate.cpp	/^AssignCond boolExp( Seq<Instr>* seq$/;"	f
+boolOr	Lib/Source/Translate.cpp	/^AssignCond boolOr( Seq<Instr>* seq$/;"	f
+buffer	Lib/Target/Emulator.cpp	/^  BufferAorB buffer;$/;"	m	struct:InFlightMemReq	file:
+buffer	Lib/Target/Emulator.h	/^  BufferAorB buffer;$/;"	m	struct:DMAReq
+buffer	Lib/Target/Syntax.h	/^    struct { BufferAorB buffer; } LD3;$/;"	m	struct:Instr::__anon3::__anon9
+buffer	Lib/Target/Syntax.h	/^    struct { Reg addr; BufferAorB buffer; } LD1;$/;"	m	struct:Instr::__anon3::__anon8
+buffer	Lib/Target/Syntax.h	/^    struct { Reg addr; BufferAorB buffer; } ST2;$/;"	m	struct:Instr::__anon3::__anon12
+buffer	Lib/Target/Syntax.h	/^    struct { Reg data; BufferAorB buffer; } ST1;$/;"	m	struct:Instr::__anon3::__anon11
+buildCFG	Lib/Target/CFG.cpp	/^void buildCFG(Seq<Instr>* instrs, CFG* cfg)$/;"	f
+call	Lib/Kernel.h	/^  template <typename... us> void call(us... args) {$/;"	f	struct:Kernel
+capacity	Lib/Common/Heap.h	/^    unsigned long size, capacity;$/;"	m	class:Heap
+cexpr	Lib/Source/Cond.h	/^  CExpr* cexpr;$/;"	m	struct:Cond
+checkAssignCond	Lib/Target/Emulator.cpp	/^inline bool checkAssignCond(QPUState* s, AssignCond cond, int i)$/;"	f
+checkBranchCond	Lib/Target/Emulator.cpp	/^inline bool checkBranchCond(QPUState* s, BranchCond cond)$/;"	f
+clear	Lib/Common/Heap.h	/^    void clear()$/;"	f	class:Heap
+clear	Lib/Common/Seq.h	/^    void clear()$/;"	f	class:Seq
+clear	Lib/Common/Stack.h	/^    void clear()$/;"	f	class:Stack
+clz	Lib/Target/Emulator.cpp	/^inline int32_t clz(int32_t x)$/;"	f
+cmp	Lib/Source/Syntax.h	/^    struct { Expr* lhs; CmpOp op; Expr* rhs; } cmp;$/;"	m	union:BExpr::__anon17	typeref:struct:BExpr::__anon17::__anon20
+cmpOpToString	Lib/Source/Pretty.cpp	/^const char* cmpOpToString(CmpOp op)$/;"	f
+compile	Lib/Kernel.h	/^template <typename... ts> Kernel<ts...> compile(void (*f)(ts... params))$/;"	f
+compileKernel	Lib/Kernel.cpp	/^void compileKernel(Seq<Instr>* targetCode, Stmt* body)$/;"	f
+computeDefsOf	Lib/Target/ReachingDefs.cpp	/^void computeDefsOf(Seq<Instr>* instrs, DefsOf* defsOf)$/;"	f
+computeGenKill	Lib/Target/ReachingDefs.cpp	/^void computeGenKill(InstrId id, Instr instr, DefsOf* defsOf, GenKill* genKill)$/;"	f
+computeLiveOut	Lib/Target/Liveness.cpp	/^void computeLiveOut(CFG* cfg, Liveness* live, InstrId i, LiveSet* liveOut)$/;"	f
+computeReachIn	Lib/Target/ReachingDefs.cpp	/^void computeReachIn(Seq<Instr>* instrs, CFG* preds, Liveness* live,$/;"	f
+computeReachedBy	Lib/Target/ReachingDefs.cpp	/^void computeReachedBy(Seq<Instr>* instrs, CFG* cfg, ReachingDefs* reachedBy)$/;"	f
+computeUsesOf	Lib/Target/ReachingDefs.cpp	/^void computeUsesOf(Seq<Instr>* instrs, UsesOf* usesOf)$/;"	f
+cond	Lib/Source/Syntax.h	/^    struct { BExpr* cond; Stmt* thenStmt; Stmt* elseStmt; } where;$/;"	m	struct:Stmt::__anon22::__anon25
+cond	Lib/Source/Syntax.h	/^    struct { CExpr* cond; Stmt* body; } loop;$/;"	m	struct:Stmt::__anon22::__anon27
+cond	Lib/Source/Syntax.h	/^    struct { CExpr* cond; Stmt* inc; Stmt* body; } forLoop;$/;"	m	struct:Stmt::__anon22::__anon28
+cond	Lib/Source/Syntax.h	/^    struct { CExpr* cond; Stmt* thenStmt; Stmt* elseStmt; } ifElse;$/;"	m	struct:Stmt::__anon22::__anon26
+cond	Lib/Target/Syntax.h	/^    struct { BranchCond cond; BranchTarget target; } BR;$/;"	m	struct:Instr::__anon3::__anon6
+cond	Lib/Target/Syntax.h	/^    struct { BranchCond cond; Label label; } BRL;$/;"	m	struct:Instr::__anon3::__anon7
+cond	Lib/Target/Syntax.h	/^    struct { bool setFlags; AssignCond cond; Reg dest; Imm imm; } LI;$/;"	m	struct:Instr::__anon3::__anon4
+cond	Lib/Target/Syntax.h	/^    struct { bool setFlags; AssignCond cond; Reg dest;$/;"	m	struct:Instr::__anon3::__anon5
+condExp	Lib/Source/Translate.cpp	/^BranchCond condExp(Seq<Instr>* seq, CExpr* c)$/;"	f
+conj	Lib/Source/Syntax.h	/^    struct { BExpr* lhs; BExpr* rhs; } conj;$/;"	m	union:BExpr::__anon17	typeref:struct:BExpr::__anon17::__anon18
+controlStack	Lib/Source/Syntax.cpp	/^Stack<Stmt> controlStack;$/;"	v
+conv_p	Tests/Hello.cpp	/^out conv_p(std::vector<T> const &f, std::vector<T> const &g) {$/;"	f
+core	Lib/Source/Interpreter.h	/^  CoreState core[MAX_QPUS];  \/\/ State of each core$/;"	m	struct:InterpreterState
+create	Lib/Common/Heap.h	/^    void create(unsigned int heapCapacityInBytes)$/;"	f	class:Heap
+current	Tests/HeatMap.cpp	/^  Float prev, current, next;$/;"	m	struct:Cursor	file:
+data	Lib/Source/Syntax.h	/^    struct { Expr* data; Expr* addr; } storeReq;$/;"	m	struct:Stmt::__anon22::__anon29
+data	Lib/Target/Syntax.h	/^    struct { Reg data; BufferAorB buffer; } ST1;$/;"	m	struct:Instr::__anon3::__anon11
+dealloc	Lib/VideoCore/SharedArray.h	/^  void dealloc() {$/;"	f	class:SharedArray
+dealloc	Lib/VideoCore/SharedArray.h	/^  void dealloc() {}$/;"	f	class:SharedArray
+decodeSmallLit	Lib/Target/SmallLiteral.cpp	/^Word decodeSmallLit(int x)$/;"	f
+def	Lib/Target/Liveness.h	/^  SmallSeq<Reg> def;$/;"	m	struct:UseDefReg
+def	Lib/Target/Liveness.h	/^  SmallSeq<RegId> def;$/;"	m	struct:UseDef
+deleteLast	Lib/Common/Seq.h	/^    void deleteLast()$/;"	f	class:Seq
+depth	Lib/Source/Gen.h	/^  int depth;$/;"	m	struct:GenOptions
+deref	Lib/Source/Syntax.h	/^    struct { Expr* ptr; } deref;$/;"	m	union:Expr::__anon14	typeref:struct:Expr::__anon14::__anon16
+derefOffsetMask	Lib/Source/Gen.h	/^  int derefOffsetMask;$/;"	m	struct:GenOptions
+dest	Lib/Target/Syntax.h	/^    struct { Reg dest; } LD4;$/;"	m	struct:Instr::__anon3::__anon10
+dest	Lib/Target/Syntax.h	/^    struct { Reg dest; } RECV;$/;"	m	struct:Instr::__anon3::__anon13
+dest	Lib/Target/Syntax.h	/^    struct { bool setFlags; AssignCond cond; Reg dest; Imm imm; } LI;$/;"	m	struct:Instr::__anon3::__anon4
+dest	Lib/Target/Syntax.h	/^    struct { bool setFlags; AssignCond cond; Reg dest;$/;"	m	struct:Instr::__anon3::__anon5
+destroy	Lib/Common/Heap.h	/^    void destroy()$/;"	f	class:Heap
+disableQPUs	Lib/VideoCore/VideoCore.cpp	/^void disableQPUs()$/;"	f
+disj	Lib/Source/Syntax.h	/^    struct { BExpr* lhs; BExpr* rhs; } disj;$/;"	m	union:BExpr::__anon17	typeref:struct:BExpr::__anon17::__anon19
+dmaLoad	Lib/Target/Emulator.h	/^  DMAReq dmaLoad;            \/\/ In-flight DMA load$/;"	m	struct:QPUState
+dmaStore	Lib/Target/Emulator.h	/^  DMAReq dmaStore;           \/\/ In-flight DMA store$/;"	m	struct:QPUState
+dstReg	Lib/Source/Translate.cpp	/^Reg dstReg(Var v)$/;"	f
+elems	Lib/Common/Seq.h	/^    T* elems;$/;"	m	class:Seq
+elems	Lib/Target/Emulator.h	/^  Word elems[NUM_LANES];$/;"	m	struct:Vec
+elseStmt	Lib/Source/Syntax.h	/^    struct { BExpr* cond; Stmt* thenStmt; Stmt* elseStmt; } where;$/;"	m	struct:Stmt::__anon22::__anon25
+elseStmt	Lib/Source/Syntax.h	/^    struct { CExpr* cond; Stmt* thenStmt; Stmt* elseStmt; } ifElse;$/;"	m	struct:Stmt::__anon22::__anon26
+emitChar	Lib/Target/Emulator.cpp	/^void emitChar(Seq<char>* out, char c)$/;"	f
+emitStr	Lib/Target/Emulator.cpp	/^void emitStr(Seq<char>* out, const char* s)$/;"	f
+emu	Lib/Kernel.h	/^  template <typename... us> void emu(us... args) {$/;"	f	struct:Kernel
+emuHeap	Lib/Target/Emulator.cpp	/^int32_t* emuHeap    = NULL;$/;"	v
+emuHeapEnd	Lib/Target/Emulator.cpp	/^uint32_t emuHeapEnd = 0;$/;"	v
+emulate	Lib/Target/Emulator.cpp	/^void emulate$/;"	f
+enableQPUs	Lib/VideoCore/VideoCore.cpp	/^void enableQPUs()$/;"	f
+encode	Lib/Target/Encode.cpp	/^void encode(Seq<Instr>* instrs, Seq<uint32_t>* code)$/;"	f
+encodeAddOp	Lib/Target/Encode.cpp	/^uint32_t encodeAddOp(ALUOp op)$/;"	f
+encodeAssignCond	Lib/Target/Encode.cpp	/^uint32_t encodeAssignCond(AssignCond cond)$/;"	f
+encodeBranchCond	Lib/Target/Encode.cpp	/^uint32_t encodeBranchCond(BranchCond cond)$/;"	f
+encodeDestReg	Lib/Target/Encode.cpp	/^uint32_t encodeDestReg(Reg reg, RegTag* file)$/;"	f
+encodeInstr	Lib/Target/Encode.cpp	/^void encodeInstr(Instr instr, uint32_t* high, uint32_t* low)$/;"	f
+encodeMulOp	Lib/Target/Encode.cpp	/^uint32_t encodeMulOp(ALUOp op)$/;"	f
+encodeSmallLit	Lib/Target/SmallLiteral.cpp	/^int encodeSmallLit(Expr* e)$/;"	f
+encodeSrcReg	Lib/Target/Encode.cpp	/^uint32_t encodeSrcReg(Reg reg, RegTag file, uint32_t* mux)$/;"	f
+env	Lib/Source/Interpreter.h	/^  Vec* env;                  \/\/ Environment mapping vars to values$/;"	m	struct:CoreState
+eval	Lib/Source/Interpreter.cpp	/^Vec eval(CoreState* s, Expr* e)$/;"	f
+evalBool	Lib/Source/Interpreter.cpp	/^Vec evalBool(CoreState* s, BExpr* e)$/;"	f
+evalCond	Lib/Source/Interpreter.cpp	/^bool evalCond(CoreState* s, CExpr* e)$/;"	f
+evalImm	Lib/Target/Emulator.cpp	/^Vec evalImm(Imm imm)$/;"	f
+evalSmallImm	Lib/Target/Emulator.cpp	/^Vec evalSmallImm(QPUState* s, SmallImm imm)$/;"	f
+evalVar	Lib/Source/Interpreter.cpp	/^Vec evalVar(CoreState* s, Var v)$/;"	f
+exec	Lib/Source/Interpreter.cpp	/^void exec(InterpreterState* state, CoreState* s)$/;"	f
+execAssign	Lib/Source/Interpreter.cpp	/^void execAssign(CoreState* s, Vec cond, Expr* lhs, Expr* rhs)$/;"	f
+execLoadReceive	Lib/Source/Interpreter.cpp	/^void execLoadReceive(CoreState* s, Expr* e)$/;"	f
+execPrint	Lib/Source/Interpreter.cpp	/^void execPrint(CoreState* s, PrintStmt p)$/;"	f
+execSetStride	Lib/Source/Interpreter.cpp	/^void execSetStride(CoreState* s, StmtTag tag, Expr* e)$/;"	f
+execStoreRequest	Lib/Source/Interpreter.cpp	/^void execStoreRequest(CoreState* s, Expr* data, Expr* addr) {$/;"	f
+execWhere	Lib/Source/Interpreter.cpp	/^void execWhere(CoreState* s, Vec cond, Stmt* stmt)$/;"	f
+execute_code	Lib/VideoCore/Mailbox.cpp	/^unsigned execute_code(int file_desc, unsigned code, unsigned r0, unsigned r1, unsigned r2, unsigned r3, unsigned r4, unsigned r5)$/;"	f
+execute_qpu	Lib/VideoCore/Mailbox.cpp	/^unsigned execute_qpu(int file_desc, unsigned num_qpus, unsigned control, unsigned noflush, unsigned timeout) {$/;"	f
+expr	Lib/Source/Float.h	/^  Expr* expr;$/;"	m	struct:Float
+expr	Lib/Source/Float.h	/^  Expr* expr;$/;"	m	struct:FloatExpr
+expr	Lib/Source/Int.h	/^  Expr* expr;$/;"	m	struct:Int
+expr	Lib/Source/Int.h	/^  Expr* expr;$/;"	m	struct:IntExpr
+expr	Lib/Source/Ptr.h	/^  Expr* expr;$/;"	m	struct:Ptr
+expr	Lib/Source/Ptr.h	/^  Expr* expr;$/;"	m	struct:PtrExpr
+expr	Lib/Source/Syntax.h	/^    Expr* expr;$/;"	m	union:PrintStmt::__anon21
+extend	Lib/Common/Seq.h	/^    void extend()$/;"	f	class:Seq
+finish	Tests/HeatMap.cpp	/^  void finish() {$/;"	f	struct:Cursor
+flag	Lib/Target/Syntax.h	/^  Flag flag;$/;"	m	struct:AssignCond
+flag	Lib/Target/Syntax.h	/^  Flag flag;$/;"	m	struct:BranchCond
+floatLit	Lib/Source/Syntax.h	/^    float floatLit;$/;"	m	union:Expr::__anon14
+floatVal	Lib/Target/Emulator.h	/^  float floatVal; $/;"	m	union:Word
+floatVal	Lib/Target/Syntax.h	/^    float floatVal;$/;"	m	union:Imm::__anon1
+flush	Lib/Source/StmtExtra.h	/^inline void flush()$/;"	f
+forLoop	Lib/Source/Syntax.h	/^    struct { CExpr* cond; Stmt* inc; Stmt* body; } forLoop;$/;"	m	union:Stmt::__anon22	typeref:struct:Stmt::__anon22::__anon28
+freshLabel	Lib/Target/Syntax.cpp	/^Label freshLabel()$/;"	f
+freshReg	Lib/Target/Syntax.cpp	/^Reg freshReg()$/;"	f
+freshVar	Lib/Source/Syntax.cpp	/^Var freshVar()$/;"	f
+front	Lib/Target/Emulator.h	/^  int front, back;$/;"	m	struct:VPMLoadQueue
+gather	Lib/Source/StmtExtra.h	/^template <typename T> inline void gather(Ptr<T>& addr)$/;"	f
+gather	Lib/Source/StmtExtra.h	/^template <typename T> inline void gather(PtrExpr<T> addr)$/;"	f
+gatherExpr	Lib/Source/StmtExtra.h	/^inline void gatherExpr(Expr* e)$/;"	f
+gcd	Tests/GCD.cpp	/^void gcd(Ptr<Int> p, Ptr<Int> q, Ptr<Int> r)$/;"	f
+gen	Lib/Target/ReachingDefs.cpp	/^  SmallSeq<InstrId> gen;$/;"	m	struct:GenKill	file:
+genAssign	Lib/Source/Gen.cpp	/^Stmt* genAssign(GenOptions* opts, int depth)$/;"	f
+genBExpr	Lib/Source/Gen.cpp	/^BExpr* genBExpr(GenOptions* opts, int depth)$/;"	f
+genCExpr	Lib/Source/Gen.cpp	/^CExpr* genCExpr(GenOptions* opts, int depth)$/;"	f
+genDeref	Lib/Source/Gen.h	/^  bool genDeref;$/;"	m	struct:GenOptions
+genDeref2	Lib/Source/Gen.h	/^  bool genDeref2;$/;"	m	struct:GenOptions
+genExpr	Lib/Source/Gen.cpp	/^Expr* genExpr(GenOptions* opts, Type t, int depth)$/;"	f
+genFloat	Lib/Source/Gen.h	/^  bool genFloat;$/;"	m	struct:GenOptions
+genFloatLit	Lib/Source/Gen.cpp	/^float genFloatLit()$/;"	f
+genIncr	Lib/Target/Syntax.cpp	/^Instr genIncr(Reg dst, Reg srcA, int n)$/;"	f
+genIntLit	Lib/Source/Gen.cpp	/^int genIntLit()$/;"	f
+genLI	Lib/Target/Syntax.cpp	/^Instr genLI(Reg dst, int i)$/;"	f
+genLShift	Lib/Target/Syntax.cpp	/^Instr genLShift(Reg dst, Reg srcA, int n)$/;"	f
+genLValue	Lib/Source/Gen.cpp	/^Expr* genLValue(GenOptions* opts, Type t, int depth)$/;"	f
+genLVar	Lib/Source/Gen.cpp	/^Expr* genLVar(GenOptions* opts, Type t)$/;"	f
+genMove	Lib/Target/Syntax.cpp	/^Instr genMove(Reg dst, Reg src)$/;"	f
+genOR	Lib/Target/Syntax.cpp	/^Instr genOR(Reg dst, Reg srcA, Reg srcB)$/;"	f
+genOp	Lib/Source/Gen.cpp	/^Op genOp(GenOptions* opts, Type t)$/;"	f
+genPrint	Lib/Source/Gen.cpp	/^Stmt* genPrint(GenOptions* opts, int depth)$/;"	f
+genRotate	Lib/Source/Gen.h	/^  bool genRotate;$/;"	m	struct:GenOptions
+genSetReadStride	Lib/Target/LoadStore.cpp	/^void genSetReadStride(Seq<Instr>* instrs, Reg stride)$/;"	f
+genSetReadStride	Lib/Target/LoadStore.cpp	/^void genSetReadStride(Seq<Instr>* instrs, int stride)$/;"	f
+genSetWriteStride	Lib/Target/LoadStore.cpp	/^void genSetWriteStride(Seq<Instr>* instrs, Reg stride)$/;"	f
+genSetWriteStride	Lib/Target/LoadStore.cpp	/^void genSetWriteStride(Seq<Instr>* instrs, int stride)$/;"	f
+genSetupVPMStore	Lib/Target/LoadStore.cpp	/^void genSetupVPMStore(Seq<Instr>* instrs, BufferAorB b, Reg qpuId)$/;"	f
+genStmt	Lib/Source/Gen.cpp	/^Stmt* genStmt(GenOptions* opts, int depth, int length)$/;"	f
+genStrided	Lib/Source/Gen.h	/^  bool genStrided;$/;"	m	struct:GenOptions
+genType	Lib/Source/Gen.cpp	/^Type genType(GenOptions* opts, bool allowPointers)$/;"	f
+genVar	Lib/Source/Gen.cpp	/^Expr* genVar(GenOptions* opts, Type t)$/;"	f
+genWhere	Lib/Source/Gen.cpp	/^Stmt* genWhere(GenOptions* opts, int depth, int length)$/;"	f
+genWhile	Lib/Source/Gen.cpp	/^Stmt* genWhile(GenOptions* o, int depth)$/;"	f
+getAddress	Lib/VideoCore/SharedArray.h	/^  uint32_t getAddress() {$/;"	f	class:SharedArray
+getFreshLabelCount	Lib/Target/Syntax.cpp	/^int getFreshLabelCount()$/;"	f
+getFreshVarCount	Lib/Source/Syntax.cpp	/^int getFreshVarCount()$/;"	f
+getMailbox	Lib/VideoCore/VideoCore.cpp	/^int getMailbox()$/;"	f
+getPointer	Lib/VideoCore/SharedArray.h	/^  T* getPointer() {$/;"	f	class:SharedArray
+getTwoUses	Lib/Target/Liveness.cpp	/^bool getTwoUses(Instr instr, Reg* r1, Reg* r2)$/;"	f
+getUniformFloat	Lib/Source/Float.cpp	/^FloatExpr getUniformFloat()$/;"	f
+getUniformInt	Lib/Source/Int.cpp	/^IntExpr getUniformInt()$/;"	f
+getUniformPtr	Lib/Source/Ptr.h	/^template <typename T> inline PtrExpr<T> getUniformPtr() {$/;"	f
+globalLabelId	Lib/Target/Syntax.cpp	/^static int globalLabelId = 0;$/;"	v	file:
+globalVarId	Lib/Source/Syntax.cpp	/^static int globalVarId = 0;$/;"	v	file:
+gpu_base	Lib/VideoCore/SharedArray.h	/^  void* gpu_base;$/;"	m	class:SharedArray
+handle	Lib/VideoCore/SharedArray.h	/^  uint32_t handle;$/;"	m	class:SharedArray
+head	Lib/Common/Stack.h	/^    T* head;$/;"	m	class:StackItem
+heapName	Lib/Common/Heap.h	/^    const char* heapName;$/;"	m	class:Heap
+hello	Tests/Hello.cpp	/^void hello(Ptr<Int> p)$/;"	f
+hello	Tests/ID.cpp	/^void hello(Ptr<Int> p)$/;"	f
+hostIRQ	Lib/Source/StmtExtra.h	/^inline void hostIRQ()$/;"	f
+id	Lib/Source/Interpreter.h	/^  int id;                    \/\/ Core id$/;"	m	struct:CoreState
+id	Lib/Source/Syntax.h	/^  VarId id;$/;"	m	struct:Var
+id	Lib/Target/Emulator.h	/^  int id;                    \/\/ QPU id$/;"	m	struct:QPUState
+ifElse	Lib/Source/Syntax.h	/^    struct { CExpr* cond; Stmt* thenStmt; Stmt* elseStmt; } ifElse;$/;"	m	union:Stmt::__anon22	typeref:struct:Stmt::__anon22::__anon26
+imm	Lib/Target/Syntax.h	/^    struct { bool setFlags; AssignCond cond; Reg dest; Imm imm; } LI;$/;"	m	struct:Instr::__anon3::__anon4
+immOffset	Lib/Target/Syntax.h	/^  int immOffset;$/;"	m	struct:BranchTarget
+inc	Lib/Source/Syntax.h	/^    struct { CExpr* cond; Stmt* inc; Stmt* body; } forLoop;$/;"	m	struct:Stmt::__anon22::__anon28
+indentBy	Lib/Source/Pretty.cpp	/^void indentBy(int indent) {$/;"	f
+index	Lib/Common/Stack.h	/^    T* index(unsigned int n)$/;"	f	class:Stack
+index	Lib/Source/Int.cpp	/^IntExpr index()$/;"	f
+init	Lib/Common/Seq.h	/^    void init(int initialSize)$/;"	f	class:Seq
+init	Tests/HeatMap.cpp	/^  void init(Ptr<Float> p) {$/;"	f	struct:Cursor
+insert	Lib/Common/Seq.h	/^    bool insert(T x) {$/;"	f	class:Seq
+insertEndCode	Lib/Source/Translate.cpp	/^void insertEndCode(Seq<Instr>* seq)$/;"	f
+insertMoves	Lib/Target/Satisfy.cpp	/^static void insertMoves(Seq<Instr>* instrs, Seq<Instr>* newInstrs)$/;"	f	file:
+insertNops	Lib/Target/Satisfy.cpp	/^static void insertNops(Seq<Instr>* instrs, Seq<Instr>* newInstrs)$/;"	f	file:
+intLit	Lib/Source/Syntax.h	/^    int intLit;$/;"	m	union:Expr::__anon14
+intVal	Lib/Target/Emulator.h	/^  int32_t intVal;$/;"	m	union:Word
+intVal	Lib/Target/Syntax.h	/^    int intVal;$/;"	m	union:Imm::__anon1
+interpret	Lib/Kernel.h	/^  template <typename... us> void interpret(us... args) {$/;"	f	struct:Kernel
+interpreter	Lib/Source/Interpreter.cpp	/^void interpreter$/;"	f
+introduceAccum	Lib/Target/RegAlloc.cpp	/^void introduceAccum(CFG* cfg, Liveness* live, Seq<Instr>* instrs)$/;"	f
+invoke	Lib/VideoCore/Invoke.cpp	/^void invoke($/;"	f
+isCommutative	Lib/Source/Syntax.cpp	/^bool isCommutative(Op op)$/;"	f
+isCondAssign	Lib/Target/Syntax.cpp	/^bool isCondAssign(Instr* instr)$/;"	f
+isLast	Lib/Target/Syntax.cpp	/^bool isLast(Instr instr)$/;"	f
+isLit	Lib/Source/Syntax.cpp	/^bool isLit(Expr* e)$/;"	f
+isMulOp	Lib/Target/Syntax.h	/^inline bool isMulOp(ALUOp op)$/;"	f
+isRegAorB	Lib/Target/Syntax.h	/^inline bool isRegAorB(RegTag rt)$/;"	f
+isSimple	Lib/Source/Translate.cpp	/^bool isSimple(Expr* e)$/;"	f
+isSmallLit	Lib/Target/SmallLiteral.cpp	/^bool isSmallLit(Expr* e)$/;"	f
+isUnary	Lib/Source/Syntax.cpp	/^bool isUnary(Op op)$/;"	f
+kernelFinish	Lib/Source/Stmt.cpp	/^void kernelFinish()$/;"	f
+kill	Lib/Target/ReachingDefs.cpp	/^  SmallSeq<InstrId> kill;$/;"	m	struct:GenKill	file:
+label	Lib/Target/Syntax.h	/^    Label label;$/;"	m	union:Instr::__anon3
+label	Lib/Target/Syntax.h	/^    struct { BranchCond cond; Label label; } BRL;$/;"	m	struct:Instr::__anon3::__anon7
+length	Lib/Source/Gen.h	/^  int length;$/;"	m	struct:GenOptions
+lhs	Lib/Source/Syntax.h	/^    struct { BExpr* lhs; BExpr* rhs; } conj;$/;"	m	struct:BExpr::__anon17::__anon18
+lhs	Lib/Source/Syntax.h	/^    struct { BExpr* lhs; BExpr* rhs; } disj;$/;"	m	struct:BExpr::__anon17::__anon19
+lhs	Lib/Source/Syntax.h	/^    struct { Expr* lhs; CmpOp op; Expr* rhs; } cmp;$/;"	m	struct:BExpr::__anon17::__anon20
+lhs	Lib/Source/Syntax.h	/^    struct { Expr* lhs; Expr* rhs; } assign;$/;"	m	struct:Stmt::__anon22::__anon23
+lhs	Lib/Source/Syntax.h	/^    struct { Expr* lhs; Op op; Expr* rhs; } apply;$/;"	m	struct:Expr::__anon14::__anon15
+liveRangeSplit	Lib/Target/LiveRangeSplit.cpp	/^void liveRangeSplit(Seq<Instr>* instrs, CFG* cfg)$/;"	f
+liveness	Lib/Target/Liveness.cpp	/^void liveness(Seq<Instr>* instrs, CFG* cfg, Liveness* live)$/;"	f
+loadBuffer	Lib/Source/Interpreter.h	/^  Seq<Vec>* loadBuffer;      \/\/ Load buffer$/;"	m	struct:CoreState
+loadBuffer	Lib/Target/Emulator.h	/^  SmallSeq<Vec>* loadBuffer; \/\/ Load buffer for loads via TMU$/;"	m	struct:QPUState
+loadDest	Lib/Source/Syntax.h	/^    Expr* loadDest;$/;"	m	union:Stmt::__anon22
+loadReceive	Lib/Source/Translate.cpp	/^void loadReceive(Seq<Instr>* seq, Expr* dest)$/;"	f
+loadStorePass	Lib/Target/LoadStore.cpp	/^void loadStorePass(Seq<Instr>* instrs)$/;"	f
+loop	Lib/Source/Syntax.h	/^    struct { CExpr* cond; Stmt* body; } loop;$/;"	m	union:Stmt::__anon22	typeref:struct:Stmt::__anon22::__anon27
+loop	Tests/Print.cpp	/^void loop(Int n)$/;"	f
+loopBound	Lib/Source/Gen.h	/^  int loopBound;$/;"	m	struct:GenOptions
+mailbox	Lib/VideoCore/VideoCore.cpp	/^int mailbox = -1;$/;"	v
+main	Tests/AutoTest.cpp	/^int main()$/;"	f
+main	Tests/GCD.cpp	/^int main()$/;"	f
+main	Tests/HeatMap.cpp	/^int main()$/;"	f
+main	Tests/HeatMapScalar.cpp	/^int main()$/;"	f
+main	Tests/Hello.cpp	/^int main()$/;"	f
+main	Tests/ID.cpp	/^int main()$/;"	f
+main	Tests/MultiTri.cpp	/^int main()$/;"	f
+main	Tests/OET.cpp	/^int main()$/;"	f
+main	Tests/Print.cpp	/^int main()$/;"	f
+main	Tests/ReqRecv.cpp	/^int main()$/;"	f
+main	Tests/Rot3D.cpp	/^int main()$/;"	f
+main	Tests/Sort.cpp	/^int main()$/;"	f
+main	Tests/Tri.cpp	/^int main()$/;"	f
+main	Tests/TriFloat.cpp	/^int main()$/;"	f
+main_filter	Tests/Hello.cpp	/^std::vector<double> main_filter = {5, 6, 7};$/;"	v
+mapmem	Lib/VideoCore/Mailbox.cpp	/^void *mapmem(unsigned base, unsigned size)$/;"	f
+max	Lib/Source/Float.cpp	/^FloatExpr max(FloatExpr a, FloatExpr b)$/;"	f
+max	Lib/Source/Int.cpp	/^IntExpr max(IntExpr a, IntExpr b)$/;"	f
+maxElems	Lib/Common/Seq.h	/^    int maxElems;$/;"	m	class:Seq
+mbox_close	Lib/VideoCore/Mailbox.cpp	/^void mbox_close(int file_desc) {$/;"	f
+mbox_open	Lib/VideoCore/Mailbox.cpp	/^int mbox_open() {$/;"	f
+mbox_property	Lib/VideoCore/Mailbox.cpp	/^static int mbox_property(int file_desc, void *buf)$/;"	f	file:
+me	Lib/Source/Int.cpp	/^IntExpr me()$/;"	f
+mem_alloc	Lib/VideoCore/Mailbox.cpp	/^unsigned mem_alloc(int file_desc, unsigned size, unsigned align, unsigned flags)$/;"	f
+mem_free	Lib/VideoCore/Mailbox.cpp	/^unsigned mem_free(int file_desc, unsigned handle)$/;"	f
+mem_lock	Lib/VideoCore/Mailbox.cpp	/^unsigned mem_lock(int file_desc, unsigned handle)$/;"	f
+mem_unlock	Lib/VideoCore/Mailbox.cpp	/^unsigned mem_unlock(int file_desc, unsigned handle)$/;"	f
+member	Lib/Common/Seq.h	/^    bool member(T x) {$/;"	f	class:Seq
+min	Lib/Source/Float.cpp	/^FloatExpr min(FloatExpr a, FloatExpr b)$/;"	f
+min	Lib/Source/Int.cpp	/^IntExpr min(IntExpr a, IntExpr b)$/;"	f
+mkAll	Lib/Source/Syntax.cpp	/^CExpr* mkAll(BExpr* bexpr)$/;"	f
+mkAnd	Lib/Source/Syntax.cpp	/^BExpr* mkAnd(BExpr* lhs, BExpr* rhs)$/;"	f
+mkAny	Lib/Source/Syntax.cpp	/^CExpr* mkAny(BExpr* bexpr)$/;"	f
+mkApply	Lib/Source/Syntax.cpp	/^Expr* mkApply(Expr* lhs, Op op, Expr* rhs)$/;"	f
+mkArg	Lib/Kernel.h	/^template <> inline Float mkArg<Float>() {$/;"	f
+mkArg	Lib/Kernel.h	/^template <> inline Int mkArg<Int>() {$/;"	f
+mkArg	Lib/Kernel.h	/^template <> inline Ptr<Float> mkArg< Ptr<Float> >() {$/;"	f
+mkArg	Lib/Kernel.h	/^template <> inline Ptr<Int> mkArg< Ptr<Int> >() {$/;"	f
+mkAssign	Lib/Source/Syntax.cpp	/^Stmt* mkAssign(Expr* lhs, Expr* rhs)$/;"	f
+mkBExpr	Lib/Source/Syntax.cpp	/^BExpr* mkBExpr()$/;"	f
+mkCExpr	Lib/Source/Syntax.cpp	/^CExpr* mkCExpr()$/;"	f
+mkCmp	Lib/Source/Syntax.cpp	/^BExpr* mkCmp(Expr* lhs, CmpOp op, Expr*  rhs)$/;"	f
+mkCmpOp	Lib/Source/Syntax.cpp	/^CmpOp mkCmpOp(CmpOpId op, BaseType type) {$/;"	f
+mkDeref	Lib/Source/Syntax.cpp	/^Expr* mkDeref(Expr* ptr)$/;"	f
+mkExpr	Lib/Source/Syntax.cpp	/^Expr* mkExpr()$/;"	f
+mkFloatApply	Lib/Source/Float.cpp	/^inline FloatExpr mkFloatApply(FloatExpr a,Op op,FloatExpr b)$/;"	f
+mkFloatCmp	Lib/Source/Cond.h	/^inline BoolExpr mkFloatCmp(FloatExpr a, CmpOp op, FloatExpr b)$/;"	f
+mkFloatExpr	Lib/Source/Float.cpp	/^inline FloatExpr mkFloatExpr(Expr* e) { FloatExpr x; x.expr = e; return x; }$/;"	f
+mkFloatExpr	Lib/Source/Int.cpp	/^inline FloatExpr mkFloatExpr(Expr* e) { FloatExpr x; x.expr = e; return x; }$/;"	f
+mkFloatLit	Lib/Source/Syntax.cpp	/^Expr* mkFloatLit(float lit)$/;"	f
+mkFor	Lib/Source/Syntax.cpp	/^Stmt* mkFor(CExpr* cond, Stmt* inc, Stmt* body)$/;"	f
+mkIf	Lib/Source/Syntax.cpp	/^Stmt* mkIf(CExpr* cond, Stmt* thenStmt, Stmt* elseStmt)$/;"	f
+mkIntApply	Lib/Source/Int.cpp	/^inline IntExpr mkIntApply(IntExpr a,Op op,IntExpr b)$/;"	f
+mkIntCmp	Lib/Source/Cond.h	/^inline BoolExpr mkIntCmp(IntExpr a, CmpOp op, IntExpr b)$/;"	f
+mkIntExpr	Lib/Source/Int.cpp	/^inline IntExpr mkIntExpr(Expr* e) { IntExpr x; x.expr = e; return x; }$/;"	f
+mkIntLit	Lib/Source/Syntax.cpp	/^Expr* mkIntLit(int lit)$/;"	f
+mkNot	Lib/Source/Syntax.cpp	/^BExpr* mkNot(BExpr* neg)$/;"	f
+mkOp	Lib/Source/Syntax.cpp	/^Op mkOp(OpId op, BaseType type) {$/;"	f
+mkOr	Lib/Source/Syntax.cpp	/^BExpr* mkOr(BExpr* lhs, BExpr* rhs)$/;"	f
+mkPrint	Lib/Source/Syntax.cpp	/^Stmt* mkPrint(PrintTag t, Expr* e)$/;"	f
+mkSeq	Lib/Source/Syntax.cpp	/^Stmt* mkSeq(Stmt *s0, Stmt* s1)$/;"	f
+mkSkip	Lib/Source/Syntax.cpp	/^Stmt* mkSkip()$/;"	f
+mkStmt	Lib/Source/Syntax.cpp	/^Stmt* mkStmt()$/;"	f
+mkVar	Lib/Source/Syntax.cpp	/^Expr* mkVar(Var var)$/;"	f
+mkWhere	Lib/Source/Syntax.cpp	/^Stmt* mkWhere(BExpr* cond, Stmt* thenStmt, Stmt* elseStmt)$/;"	f
+mkWhile	Lib/Source/Syntax.cpp	/^Stmt* mkWhile(CExpr* cond, Stmt* body)$/;"	f
+move	Lib/Source/Translate.cpp	/^Instr move(Var dst, Var src, bool setFlags)$/;"	f
+multi_vec_elem	Tests/Hello.cpp	/^ inline void multi_vec_elem(std::vector<T> const &vec, T elem, int it) {$/;"	f
+neg	Lib/Source/Syntax.h	/^    BExpr* neg;$/;"	m	union:BExpr::__anon17
+negAssignCond	Lib/Source/Translate.cpp	/^AssignCond negAssignCond(AssignCond cond)$/;"	f
+negBranchCond	Lib/Source/Translate.cpp	/^BranchCond negBranchCond(BranchCond cond)$/;"	f
+negFlag	Lib/Source/Translate.cpp	/^Flag negFlag(Flag flag)$/;"	f
+negFlags	Lib/Target/Emulator.h	/^  bool negFlags[NUM_LANES];  \/\/ Negative flags$/;"	m	struct:QPUState
+next	Tests/HeatMap.cpp	/^  Float prev, current, next;$/;"	m	struct:Cursor	file:
+nextUniform	Lib/Source/Interpreter.h	/^  int nextUniform;           \/\/ Pointer to next uniform to read$/;"	m	struct:CoreState
+nextUniform	Lib/Target/Emulator.h	/^  int nextUniform;           \/\/ Pointer to next uniform to read$/;"	m	struct:QPUState
+nop	Lib/Target/Syntax.h	/^inline Instr nop()$/;"	f
+nothing	Lib/Kernel.h	/^template <typename... ts> inline void nothing(ts... args) {}$/;"	f
+numCores	Lib/Source/Interpreter.h	/^  int numCores;              \/\/ Core count$/;"	m	struct:CoreState
+numElems	Lib/Common/Seq.h	/^    int numElems;$/;"	m	class:Seq
+numFloatArgs	Lib/Source/Gen.h	/^  int numFloatArgs;$/;"	m	struct:GenOptions
+numFloatVars	Lib/Source/Gen.h	/^  int numFloatVars;$/;"	m	struct:GenOptions
+numIntArgs	Lib/Source/Gen.h	/^  int numIntArgs;$/;"	m	struct:GenOptions
+numIntVars	Lib/Source/Gen.h	/^  int numIntVars;$/;"	m	struct:GenOptions
+numPtr2Args	Lib/Source/Gen.h	/^  int numPtr2Args;$/;"	m	struct:GenOptions
+numPtrArgs	Lib/Source/Gen.h	/^  int numPtrArgs;$/;"	m	struct:GenOptions
+numQPUUsers	Lib/VideoCore/VideoCore.cpp	/^int numQPUUsers = 0;$/;"	v
+numQPUs	Lib/Kernel.h	/^  int numQPUs;$/;"	m	struct:Kernel
+numQPUs	Lib/Source/Int.cpp	/^IntExpr numQPUs()$/;"	f
+numQPUs	Lib/Target/Emulator.h	/^  int numQPUs;               \/\/ QPU count$/;"	m	struct:QPUState
+numVars	Lib/Kernel.h	/^  int numVars;$/;"	m	struct:Kernel
+oet	Tests/OET.cpp	/^void oet(Ptr<Int> p)$/;"	f
+oet	Tests/Sort.cpp	/^void oet(Ptr<Int> p)$/;"	f
+op	Lib/Source/Syntax.h	/^    struct { Expr* lhs; CmpOp op; Expr* rhs; } cmp;$/;"	m	struct:BExpr::__anon17::__anon20
+op	Lib/Source/Syntax.h	/^    struct { Expr* lhs; Op op; Expr* rhs; } apply;$/;"	m	struct:Expr::__anon14::__anon15
+op	Lib/Source/Syntax.h	/^struct CmpOp { CmpOpId op; BaseType type; };$/;"	m	struct:CmpOp
+op	Lib/Source/Syntax.h	/^struct Op { OpId op; BaseType type; };$/;"	m	struct:Op
+op	Lib/Target/Syntax.h	/^             RegOrImm srcA; ALUOp op; RegOrImm srcB; } ALU;$/;"	m	struct:Instr::__anon3::__anon5
+opToString	Lib/Source/Pretty.cpp	/^const char* opToString(Op op)$/;"	f
+opcode	Lib/Source/Translate.cpp	/^ALUOp opcode(Op op)$/;"	f
+operand	Lib/Source/Translate.cpp	/^RegOrImm operand(Expr* e)$/;"	f
+operator !	Lib/Source/Cond.h	/^inline BoolExpr operator!(BoolExpr a)$/;"	f
+operator !=	Lib/Source/Cond.h	/^inline BoolExpr operator!=(FloatExpr a, FloatExpr b)$/;"	f
+operator !=	Lib/Source/Cond.h	/^inline BoolExpr operator!=(IntExpr a, IntExpr b)$/;"	f
+operator &	Lib/Source/Int.cpp	/^IntExpr operator&(IntExpr a, IntExpr b)$/;"	f
+operator &&	Lib/Source/Cond.h	/^inline BoolExpr operator&&(BoolExpr a, BoolExpr b)$/;"	f
+operator ()	Lib/Kernel.h	/^  template <typename... us> void operator()(us... args) {$/;"	f	struct:Kernel
+operator *	Lib/Source/Float.cpp	/^FloatExpr operator*(FloatExpr a, FloatExpr b)$/;"	f
+operator *	Lib/Source/Int.cpp	/^IntExpr operator*(IntExpr a, IntExpr b)$/;"	f
+operator *	Lib/Source/Ptr.h	/^  T& operator*() {$/;"	f	struct:Ptr
+operator *	Lib/Source/Ptr.h	/^  T& operator*() {$/;"	f	struct:PtrExpr
+operator +	Lib/Source/Float.cpp	/^FloatExpr operator+(FloatExpr a, FloatExpr b)$/;"	f
+operator +	Lib/Source/Int.cpp	/^IntExpr operator+(IntExpr a, IntExpr b)$/;"	f
+operator +	Lib/Source/Ptr.h	/^template <typename T> inline PtrExpr<T> operator+(Ptr<T> &a, IntExpr b) {$/;"	f
+operator +	Lib/Source/Ptr.h	/^template <typename T> inline PtrExpr<T> operator+(Ptr<T> &a, int b) {$/;"	f
+operator +	Lib/Source/Ptr.h	/^template <typename T> inline PtrExpr<T> operator+(PtrExpr<T> a, IntExpr b) {$/;"	f
+operator +	Lib/Source/Ptr.h	/^template <typename T> inline PtrExpr<T> operator+(PtrExpr<T> a, int b) {$/;"	f
+operator ++	Lib/Source/Int.cpp	/^void Int::operator++(int)$/;"	f	class:Int
+operator -	Lib/Source/Float.cpp	/^FloatExpr operator-(FloatExpr a, FloatExpr b)$/;"	f
+operator -	Lib/Source/Int.cpp	/^IntExpr operator-(IntExpr a, IntExpr b)$/;"	f
+operator <	Lib/Source/Cond.h	/^inline BoolExpr operator<(FloatExpr a, FloatExpr b)$/;"	f
+operator <	Lib/Source/Cond.h	/^inline BoolExpr operator<(IntExpr a, IntExpr b)$/;"	f
+operator <<	Lib/Source/Int.cpp	/^IntExpr operator<<(IntExpr a, IntExpr b)$/;"	f
+operator <=	Lib/Source/Cond.h	/^inline BoolExpr operator<=(FloatExpr a, FloatExpr b)$/;"	f
+operator <=	Lib/Source/Cond.h	/^inline BoolExpr operator<=(IntExpr a, IntExpr b)$/;"	f
+operator =	Lib/Source/Float.cpp	/^Float& Float::operator=(Float& rhs)$/;"	f	class:Float
+operator =	Lib/Source/Float.cpp	/^FloatExpr Float::operator=(FloatExpr rhs)$/;"	f	class:Float
+operator =	Lib/Source/Int.cpp	/^Int& Int::operator=(Int& rhs)$/;"	f	class:Int
+operator =	Lib/Source/Int.cpp	/^IntExpr Int::operator=(IntExpr rhs)$/;"	f	class:Int
+operator =	Lib/Source/Ptr.h	/^  Ptr<T>& operator=(Ptr<T>& rhs) {$/;"	f	struct:Ptr
+operator =	Lib/Source/Ptr.h	/^  PtrExpr<T> operator=(PtrExpr<T> rhs) {$/;"	f	struct:Ptr
+operator ==	Lib/Source/Cond.h	/^inline BoolExpr operator==(FloatExpr a, FloatExpr b)$/;"	f
+operator ==	Lib/Source/Cond.h	/^inline BoolExpr operator==(IntExpr a, IntExpr b)$/;"	f
+operator ==	Lib/Target/Syntax.h	/^inline bool operator==(Reg ra, Reg rb)$/;"	f
+operator >	Lib/Source/Cond.h	/^inline BoolExpr operator>(FloatExpr a, FloatExpr b)$/;"	f
+operator >	Lib/Source/Cond.h	/^inline BoolExpr operator>(IntExpr a, IntExpr b)$/;"	f
+operator >=	Lib/Source/Cond.h	/^inline BoolExpr operator>=(FloatExpr a, FloatExpr b)$/;"	f
+operator >=	Lib/Source/Cond.h	/^inline BoolExpr operator>=(IntExpr a, IntExpr b)$/;"	f
+operator >>	Lib/Source/Int.cpp	/^IntExpr operator>>(IntExpr a, IntExpr b)$/;"	f
+operator FloatExpr	Lib/Source/Float.cpp	/^Float::operator FloatExpr() { return mkFloatExpr(this->expr); }$/;"	f	class:Float
+operator IntExpr	Lib/Source/Int.cpp	/^Int::operator IntExpr() { return mkIntExpr(this->expr); }$/;"	f	class:Int
+operator []	Lib/Source/Ptr.h	/^  T& operator[](IntExpr index) {$/;"	f	struct:Ptr
+operator []	Lib/Source/Ptr.h	/^  T& operator[](IntExpr index) {$/;"	f	struct:PtrExpr
+operator []	Lib/VideoCore/SharedArray.h	/^  T& operator[] (int i) {$/;"	f	class:SharedArray
+operator []	Lib/VideoCore/SharedArray.h	/^  inline T& operator[] (int i) {$/;"	f	class:SharedArray
+operator ^	Lib/Source/Int.cpp	/^IntExpr operator^(IntExpr a, IntExpr b)$/;"	f
+operator |	Lib/Source/Int.cpp	/^IntExpr operator|(IntExpr a, IntExpr b)$/;"	f
+operator ||	Lib/Source/Cond.h	/^inline BoolExpr operator||(BoolExpr a, BoolExpr b)$/;"	f
+operator ~	Lib/Source/Int.cpp	/^IntExpr operator~(IntExpr a)$/;"	f
+output	Lib/Source/Interpreter.h	/^  Seq<char>* output;         \/\/ Output from print statements$/;"	m	struct:CoreState
+output	Lib/Target/Emulator.h	/^  Seq<char>* output;      \/\/ Output for print statements$/;"	m	struct:State
+passParam	Lib/Kernel.h	/^template <> inline bool passParam< Ptr<Float>, SharedArray<float>* >$/;"	f
+passParam	Lib/Kernel.h	/^template <> inline bool passParam< Ptr<Int>, SharedArray<int>* >$/;"	f
+passParam	Lib/Kernel.h	/^template <> inline bool passParam< Ptr<Ptr<Float>>, SharedArray<float*>* >$/;"	f
+passParam	Lib/Kernel.h	/^template <> inline bool passParam< Ptr<Ptr<Int>>, SharedArray<int*>* >$/;"	f
+passParam	Lib/Kernel.h	/^template <> inline bool passParam<Float, float>$/;"	f
+passParam	Lib/Kernel.h	/^template <> inline bool passParam<Int, int>$/;"	f
+pc	Lib/Target/Emulator.h	/^  int pc;                    \/\/ Program counter$/;"	m	struct:QPUState
+pickVar	Lib/Source/Gen.cpp	/^Expr* pickVar(GenOptions* o, Type t)$/;"	f
+pop	Lib/Common/Seq.h	/^    T pop() {$/;"	f	class:Seq
+pop	Lib/Common/Stack.h	/^    void pop()$/;"	f	class:Stack
+pretty	Lib/Source/Pretty.cpp	/^void pretty(BExpr* b)$/;"	f
+pretty	Lib/Source/Pretty.cpp	/^void pretty(CExpr* c)$/;"	f
+pretty	Lib/Source/Pretty.cpp	/^void pretty(Expr* e)$/;"	f
+pretty	Lib/Source/Pretty.cpp	/^void pretty(Stmt* s)$/;"	f
+pretty	Lib/Source/Pretty.cpp	/^void pretty(int indent, Stmt* s)$/;"	f
+pretty	Lib/Target/Pretty.cpp	/^void pretty(ALUOp op)$/;"	f
+pretty	Lib/Target/Pretty.cpp	/^void pretty(AssignCond cond)$/;"	f
+pretty	Lib/Target/Pretty.cpp	/^void pretty(BranchCond cond)$/;"	f
+pretty	Lib/Target/Pretty.cpp	/^void pretty(BranchTarget target)$/;"	f
+pretty	Lib/Target/Pretty.cpp	/^void pretty(BufferAorB buffer)$/;"	f
+pretty	Lib/Target/Pretty.cpp	/^void pretty(Flag flag)$/;"	f
+pretty	Lib/Target/Pretty.cpp	/^void pretty(Imm imm) {$/;"	f
+pretty	Lib/Target/Pretty.cpp	/^void pretty(Instr instr)$/;"	f
+pretty	Lib/Target/Pretty.cpp	/^void pretty(Reg r)$/;"	f
+pretty	Lib/Target/Pretty.cpp	/^void pretty(RegOrImm r)$/;"	f
+pretty	Lib/Target/Pretty.cpp	/^void pretty(SmallImm imm)$/;"	f
+pretty	Lib/Target/Pretty.cpp	/^void pretty(SubWord sw)$/;"	f
+prev	Tests/HeatMap.cpp	/^  Float prev, current, next;$/;"	m	struct:Cursor	file:
+prime	Tests/HeatMap.cpp	/^  void prime() {$/;"	f	struct:Cursor
+print	Lib/Source/Syntax.h	/^    PrintStmt print;$/;"	m	union:Stmt::__anon22
+printCharSeq	Tests/AutoTest.cpp	/^void printCharSeq(Seq<char>* s)$/;"	f
+printFloatVec	Lib/Target/Emulator.cpp	/^void printFloatVec(Seq<char>* out, Vec x)$/;"	f
+printIntVec	Lib/Target/Emulator.cpp	/^void printIntVec(Seq<char>* out, Vec x)$/;"	f
+printSmallLit	Lib/Target/SmallLiteral.cpp	/^void printSmallLit(int x)$/;"	f
+printStmt	Lib/Source/Translate.cpp	/^void printStmt(Seq<Instr>* seq, PrintStmt s)$/;"	f
+progGen	Lib/Source/Gen.cpp	/^Stmt* progGen(GenOptions* opts, int* numVars)$/;"	f
+ptr	Lib/Source/Syntax.h	/^    struct { Expr* ptr; } deref;$/;"	m	struct:Expr::__anon14::__anon16
+ptrTo	Lib/Source/Gen.cpp	/^  TypeTag ptrTo;$/;"	m	struct:Type	file:
+push	Lib/Common/Seq.h	/^    void push(T x) { append(x); }$/;"	f	class:Seq
+push	Lib/Common/Stack.h	/^    void push(T* x)$/;"	f	class:Stack
+putInVar	Lib/Source/Translate.cpp	/^Expr* putInVar(Seq<Instr>* seq, Expr* e)$/;"	f
+qpu	Lib/Kernel.h	/^  template <typename... us> void qpu(us... args) {$/;"	f	struct:Kernel
+qpu	Lib/Target/Emulator.h	/^  QPUState qpu[MAX_QPUS]; \/\/ State of each QPU$/;"	m	struct:State
+qpuCodeMem	Lib/Kernel.h	/^  SharedArray<uint32_t>* qpuCodeMem;$/;"	m	struct:Kernel
+qpuCodeMemOffset	Lib/Kernel.h	/^  int qpuCodeMemOffset;$/;"	m	struct:Kernel
+qpu_enable	Lib/VideoCore/Mailbox.cpp	/^unsigned qpu_enable(int file_desc, unsigned enable)$/;"	f
+randRange	Lib/Source/Gen.cpp	/^int randRange(int min, int max)$/;"	f
+reachingDefs	Lib/Target/ReachingDefs.cpp	/^void reachingDefs(Seq<Instr>* instrs, CFG* cfg, ReachingDefs* defs)$/;"	f
+reachingOutDefs	Lib/Target/ReachingDefs.cpp	/^void reachingOutDefs(Seq<Instr>* instrs, Liveness* live,$/;"	f
+readReg	Lib/Target/Emulator.cpp	/^Vec readReg(QPUState* s, Seq<int32_t>* uniforms, Reg reg)$/;"	f
+readRegOrImm	Lib/Target/Emulator.cpp	/^Vec readRegOrImm(QPUState* s, Seq<int32_t>* uniforms, RegOrImm src)$/;"	f
+readStride	Lib/Source/Interpreter.h	/^  int readStride;            \/\/ Read stride$/;"	m	struct:CoreState
+readStride	Lib/Target/Emulator.h	/^  int readStride;            \/\/ Read stride$/;"	m	struct:QPUState
+receive	Lib/Source/StmtExtra.h	/^inline void receive(Float& dest)$/;"	f
+receive	Lib/Source/StmtExtra.h	/^inline void receive(Int& dest)$/;"	f
+receive	Lib/Source/StmtExtra.h	/^template <typename T> inline void receive(Ptr<T>& dest)$/;"	f
+receiveExpr	Lib/Source/StmtExtra.h	/^inline void receiveExpr(Expr* e)$/;"	f
+reg	Lib/Target/Syntax.h	/^    Reg reg;$/;"	m	union:RegOrImm::__anon2
+regAlloc	Lib/Target/RegAlloc.cpp	/^void regAlloc(CFG* cfg, Seq<Instr>* instrs)$/;"	f
+regFileA	Lib/Target/Emulator.h	/^  Vec* regFileA;             \/\/ Register file A$/;"	m	struct:QPUState
+regFileB	Lib/Target/Emulator.h	/^  Vec* regFileB;             \/\/ Register file B$/;"	m	struct:QPUState
+regFileOf	Lib/Target/Satisfy.cpp	/^RegTag regFileOf(Reg r)$/;"	f
+regId	Lib/Target/Syntax.h	/^  RegId regId;$/;"	m	struct:Reg
+regOffset	Lib/Target/Syntax.h	/^  RegId regOffset;$/;"	m	struct:BranchTarget
+relative	Lib/Target/Syntax.h	/^  bool relative;$/;"	m	struct:BranchTarget
+remapAToAccum	Lib/Target/Satisfy.cpp	/^Instr remapAToAccum(Instr* instr, RegId acc)$/;"	f
+remapBToAccum	Lib/Target/Satisfy.cpp	/^Instr remapBToAccum(Instr* instr, RegId acc)$/;"	f
+remove	Lib/Common/Seq.h	/^    T remove(int index) {$/;"	f	class:Seq
+removeLabels	Lib/Target/RemoveLabels.cpp	/^void removeLabels(Seq<Instr>* instrs)$/;"	f
+renameDef	Lib/Target/LiveRangeSplit.cpp	/^void renameDef(Seq<Instr>* instrs,$/;"	f
+renameDest	Lib/Target/Subst.cpp	/^void renameDest(Instr* instr, RegTag vt, RegId v,$/;"	f
+renameUses	Lib/Target/Subst.cpp	/^void renameUses(Instr* instr, RegTag vt, RegId v,$/;"	f
+replace	Lib/Common/Stack.h	/^    void replace(T* x)$/;"	f	class:Stack
+resetFreshLabelGen	Lib/Target/Syntax.cpp	/^void resetFreshLabelGen()$/;"	f
+resetFreshLabelGen	Lib/Target/Syntax.cpp	/^void resetFreshLabelGen(int val)$/;"	f
+resetFreshVarGen	Lib/Source/Syntax.cpp	/^void resetFreshVarGen()$/;"	f
+resetFreshVarGen	Lib/Source/Syntax.cpp	/^void resetFreshVarGen(int val)$/;"	f
+resolveRegFileConflict	Lib/Target/Satisfy.cpp	/^bool resolveRegFileConflict(Instr* instr, Instr* newInstr)$/;"	f
+reverseCFG	Lib/Target/CFG.cpp	/^void reverseCFG(CFG* succs, CFG* preds)$/;"	f
+rhs	Lib/Source/Syntax.h	/^    struct { BExpr* lhs; BExpr* rhs; } conj;$/;"	m	struct:BExpr::__anon17::__anon18
+rhs	Lib/Source/Syntax.h	/^    struct { BExpr* lhs; BExpr* rhs; } disj;$/;"	m	struct:BExpr::__anon17::__anon19
+rhs	Lib/Source/Syntax.h	/^    struct { Expr* lhs; CmpOp op; Expr* rhs; } cmp;$/;"	m	struct:BExpr::__anon17::__anon20
+rhs	Lib/Source/Syntax.h	/^    struct { Expr* lhs; Expr* rhs; } assign;$/;"	m	struct:Stmt::__anon22::__anon23
+rhs	Lib/Source/Syntax.h	/^    struct { Expr* lhs; Op op; Expr* rhs; } apply;$/;"	m	struct:Expr::__anon14::__anon15
+ror	Lib/Source/Int.cpp	/^IntExpr ror(IntExpr a, IntExpr b)$/;"	f
+rot3D	Tests/Rot3D.cpp	/^void rot3D(int n, float cosTheta, float sinTheta, float* x, float* y)$/;"	f
+rot3D_1	Tests/Rot3D.cpp	/^void rot3D_1(Int n, Float cosTheta, Float sinTheta, Ptr<Float> x, Ptr<Float> y)$/;"	f
+rot3D_2	Tests/Rot3D.cpp	/^void rot3D_2(Int n, Float cosTheta, Float sinTheta, Ptr<Float> x, Ptr<Float> y)$/;"	f
+rot3D_3	Tests/Rot3D.cpp	/^void rot3D_3(Int n, Float cosTheta, Float sinTheta, Ptr<Float> x, Ptr<Float> y)$/;"	f
+rotRight	Lib/Source/Interpreter.cpp	/^inline int32_t rotRight(int32_t x, int32_t n)$/;"	f
+rotRight	Lib/Target/Emulator.cpp	/^inline int32_t rotRight(int32_t x, int32_t n)$/;"	f
+rotate	Lib/Source/Int.cpp	/^FloatExpr rotate(FloatExpr a, IntExpr b)$/;"	f
+rotate	Lib/Source/Int.cpp	/^IntExpr rotate(IntExpr a, IntExpr b)$/;"	f
+rotate	Lib/Target/Emulator.cpp	/^Vec rotate(Vec v, int n)$/;"	f
+running	Lib/Target/Emulator.h	/^  bool running;              \/\/ Is QPU active, or has it halted?$/;"	m	struct:QPUState
+s0	Lib/Source/Syntax.h	/^    struct { Stmt* s0; Stmt* s1; } seq;$/;"	m	struct:Stmt::__anon22::__anon24
+s1	Lib/Source/Syntax.h	/^    struct { Stmt* s0; Stmt* s1; } seq;$/;"	m	struct:Stmt::__anon22::__anon24
+satisfy	Lib/Target/Satisfy.cpp	/^void satisfy(Seq<Instr>* instrs)$/;"	f
+sema	Lib/Source/Interpreter.h	/^  int sema[16];              \/\/ Semaphores$/;"	m	struct:InterpreterState
+sema	Lib/Target/Emulator.h	/^  int sema[16];           \/\/ Semaphores$/;"	m	struct:State
+semaDec	Lib/Source/StmtExtra.h	/^inline void semaDec(int semaId)$/;"	f
+semaId	Lib/Source/Syntax.h	/^    int semaId;$/;"	m	union:Stmt::__anon22
+semaId	Lib/Target/Syntax.h	/^    int semaId;$/;"	m	union:Instr::__anon3
+semaInc	Lib/Source/StmtExtra.h	/^inline void semaInc(int semaId)$/;"	f
+semaphore	Lib/Source/Translate.cpp	/^void semaphore(Seq<Instr>* seq, StmtTag tag, int semaId)$/;"	f
+sendIRQToHost	Lib/Source/Translate.cpp	/^void sendIRQToHost(Seq<Instr>* seq)$/;"	f
+seq	Lib/Source/Syntax.h	/^    struct { Stmt* s0; Stmt* s1; } seq;$/;"	m	union:Stmt::__anon22	typeref:struct:Stmt::__anon22::__anon24
+setCapacity	Lib/Common/Seq.h	/^    void setCapacity(int n) {$/;"	f	class:Seq
+setCond	Lib/Source/Translate.cpp	/^Instr setCond(Var v)$/;"	f
+setFlag	Lib/Source/Translate.cpp	/^int setFlag(Flag f)$/;"	f
+setFlags	Lib/Target/Syntax.h	/^    struct { bool setFlags; AssignCond cond; Reg dest; Imm imm; } LI;$/;"	m	struct:Instr::__anon3::__anon4
+setFlags	Lib/Target/Syntax.h	/^    struct { bool setFlags; AssignCond cond; Reg dest;$/;"	m	struct:Instr::__anon3::__anon5
+setNumQPUs	Lib/Kernel.h	/^  void setNumQPUs(int n) {$/;"	f	struct:Kernel
+setReadStride	Lib/Source/Stmt.cpp	/^void setReadStride(IntExpr stride)$/;"	f
+setStrideStmt	Lib/Source/Translate.cpp	/^void setStrideStmt(Seq<Instr>* seq, StmtTag tag, Expr* e)$/;"	f
+setWriteStride	Lib/Source/Stmt.cpp	/^void setWriteStride(IntExpr stride)$/;"	f
+shiftLeft	Tests/HeatMap.cpp	/^  void shiftLeft(Float& result) {$/;"	f	struct:Cursor
+shiftRight	Tests/HeatMap.cpp	/^  void shiftRight(Float& result) {$/;"	f	struct:Cursor
+shr	Lib/Source/Int.cpp	/^IntExpr shr(IntExpr a, IntExpr b)$/;"	f
+simplify	Lib/Source/Translate.cpp	/^Expr* simplify(Seq<Instr>* seq, Expr* e)$/;"	f
+size	Lib/Common/Heap.h	/^    unsigned long size, capacity;$/;"	m	class:Heap
+size	Lib/Common/Stack.h	/^    unsigned int size;$/;"	m	class:Stack
+size	Lib/VideoCore/SharedArray.h	/^  uint32_t size;$/;"	m	class:SharedArray
+sizeEnv	Lib/Source/Interpreter.h	/^  int sizeEnv;               \/\/ Size of the environment$/;"	m	struct:CoreState
+sizeRegFileA	Lib/Target/Emulator.h	/^  int sizeRegFileA;          \/\/ (and size)$/;"	m	struct:QPUState
+sizeRegFileB	Lib/Target/Emulator.h	/^  int sizeRegFileB;          \/\/ (and size)$/;"	m	struct:QPUState
+smallFloats	Lib/Target/SmallLiteral.cpp	/^const float smallFloats[NUM_SMALL_FLOATS] = {$/;"	v
+smallImm	Lib/Target/Syntax.h	/^    SmallImm smallImm;$/;"	m	union:RegOrImm::__anon2
+sourceCode	Lib/Kernel.h	/^  Stmt* sourceCode;$/;"	m	struct:Kernel
+specialStr	Lib/Target/Pretty.cpp	/^const char* specialStr(RegId rid)$/;"	f
+srcA	Lib/Target/Syntax.h	/^             RegOrImm srcA; ALUOp op; RegOrImm srcB; } ALU;$/;"	m	struct:Instr::__anon3::__anon5
+srcB	Lib/Target/Syntax.h	/^             RegOrImm srcA; ALUOp op; RegOrImm srcB; } ALU;$/;"	m	struct:Instr::__anon3::__anon5
+srcReg	Lib/Source/Translate.cpp	/^Reg srcReg(Var v)$/;"	f
+stack	Lib/Source/Interpreter.h	/^  Seq<Stmt*>* stack;         \/\/ Control stack$/;"	m	struct:CoreState
+step	Tests/HeatMap.cpp	/^void step(Ptr<Float> map, Ptr<Float> mapOut, Int pitch, Int width, Int height)$/;"	f
+step	Tests/HeatMapScalar.cpp	/^void step(float** map, float** mapOut, int width, int height)$/;"	f
+stmt	Lib/Source/Translate.cpp	/^void stmt(Seq<Instr>* seq, Stmt* s)$/;"	f
+stmtStack	Lib/Source/Syntax.cpp	/^Stack<Stmt> stmtStack;$/;"	v
+store	Lib/Source/StmtExtra.h	/^inline void store(FloatExpr data, Ptr<Float> &addr)$/;"	f
+store	Lib/Source/StmtExtra.h	/^inline void store(FloatExpr data, PtrExpr<Float> addr)$/;"	f
+store	Lib/Source/StmtExtra.h	/^inline void store(IntExpr data, Ptr<Int> &addr)$/;"	f
+store	Lib/Source/StmtExtra.h	/^inline void store(IntExpr data, PtrExpr<Int> addr)$/;"	f
+storeExpr	Lib/Source/StmtExtra.h	/^inline void storeExpr(Expr* e0, Expr* e1)$/;"	f
+storeReq	Lib/Source/Syntax.h	/^    struct { Expr* data; Expr* addr; } storeReq;$/;"	m	union:Stmt::__anon22	typeref:struct:Stmt::__anon22::__anon29
+storeRequest	Lib/Source/Translate.cpp	/^void storeRequest(Seq<Instr>* seq, Expr* data, Expr* addr)$/;"	f
+str	Lib/Source/Syntax.h	/^    const char* str;$/;"	m	union:PrintStmt::__anon21
+stride	Lib/Source/Syntax.h	/^    Expr* stride;$/;"	m	union:Stmt::__anon22
+substRegTag	Lib/Target/Subst.cpp	/^void substRegTag(Instr* instr, RegTag vt, RegTag wt)$/;"	f
+tag	Lib/Source/Gen.cpp	/^  TypeTag tag;$/;"	m	struct:Type	file:
+tag	Lib/Source/Syntax.h	/^  BExprTag tag;$/;"	m	struct:BExpr
+tag	Lib/Source/Syntax.h	/^  CExprTag tag;$/;"	m	struct:CExpr
+tag	Lib/Source/Syntax.h	/^  ExprTag tag;$/;"	m	struct:Expr
+tag	Lib/Source/Syntax.h	/^  PrintTag tag;$/;"	m	struct:PrintStmt
+tag	Lib/Source/Syntax.h	/^  StmtTag tag;$/;"	m	struct:Stmt
+tag	Lib/Source/Syntax.h	/^  VarTag tag;$/;"	m	struct:Var
+tag	Lib/Target/Syntax.h	/^  AssignCondTag tag;$/;"	m	struct:AssignCond
+tag	Lib/Target/Syntax.h	/^  BranchCondTag tag;$/;"	m	struct:BranchCond
+tag	Lib/Target/Syntax.h	/^  ImmTag tag;$/;"	m	struct:Imm
+tag	Lib/Target/Syntax.h	/^  InstrTag tag;$/;"	m	struct:Instr
+tag	Lib/Target/Syntax.h	/^  RegOrImmTag tag;$/;"	m	struct:RegOrImm
+tag	Lib/Target/Syntax.h	/^  RegTag tag;$/;"	m	struct:Reg
+tag	Lib/Target/Syntax.h	/^  SmallImmTag tag;$/;"	m	struct:SmallImm
+tail	Lib/Common/Stack.h	/^    StackItem<T>* tail;$/;"	m	class:StackItem
+target	Lib/Target/Syntax.h	/^    struct { BranchCond cond; BranchTarget target; } BR;$/;"	m	struct:Instr::__anon3::__anon6
+targetCode	Lib/Kernel.h	/^  Seq<Instr> targetCode;$/;"	m	struct:Kernel
+test	Tests/ReqRecv.cpp	/^void test(Ptr<Int> p)$/;"	f
+thenStmt	Lib/Source/Syntax.h	/^    struct { BExpr* cond; Stmt* thenStmt; Stmt* elseStmt; } where;$/;"	m	struct:Stmt::__anon22::__anon25
+thenStmt	Lib/Source/Syntax.h	/^    struct { CExpr* cond; Stmt* thenStmt; Stmt* elseStmt; } ifElse;$/;"	m	struct:Stmt::__anon22::__anon26
+toFloat	Lib/Source/Int.cpp	/^FloatExpr toFloat(IntExpr a)$/;"	f
+toInt	Lib/Source/Int.cpp	/^IntExpr toInt(FloatExpr a)$/;"	f
+top	Lib/Common/Stack.h	/^    T* top()$/;"	f	class:Stack
+topItem	Lib/Common/Stack.h	/^    StackItem<T>* topItem;$/;"	m	class:Stack
+translateStmt	Lib/Source/Translate.cpp	/^void translateStmt(Seq<Instr>* seq, Stmt* s)$/;"	f
+tri	Tests/MultiTri.cpp	/^void tri(Ptr<Int> p)$/;"	f
+tri	Tests/Tri.cpp	/^void tri(Ptr<Int> p)$/;"	f
+tri	Tests/TriFloat.cpp	/^void tri(Ptr<Float> p)$/;"	f
+type	Lib/Source/Syntax.h	/^struct CmpOp { CmpOpId op; BaseType type; };$/;"	m	struct:CmpOp
+type	Lib/Source/Syntax.h	/^struct Op { OpId op; BaseType type; };$/;"	m	struct:Op
+uniforms	Lib/Kernel.h	/^  Seq<int32_t> uniforms;$/;"	m	struct:Kernel
+uniforms	Lib/Source/Interpreter.h	/^  Seq<int32_t>* uniforms;    \/\/ Arguments to kernel$/;"	m	struct:CoreState
+unmapmem	Lib/VideoCore/Mailbox.cpp	/^void unmapmem(void *addr, unsigned size)$/;"	f
+use	Lib/Target/Liveness.h	/^  SmallSeq<Reg> use;$/;"	m	struct:UseDefReg
+use	Lib/Target/Liveness.h	/^  SmallSeq<RegId> use;$/;"	m	struct:UseDef
+useDef	Lib/Target/Liveness.cpp	/^void useDef(Instr instr, UseDef* out)$/;"	f
+useDefReg	Lib/Target/Liveness.cpp	/^void useDefReg(Instr instr, UseDefReg* useDef)$/;"	f
+useRegOffset	Lib/Target/Syntax.h	/^  bool useRegOffset;$/;"	m	struct:BranchTarget
+useSetOfSuccs	Lib/Target/Liveness.cpp	/^void useSetOfSuccs(Seq<Instr>* instrs, CFG* cfg,$/;"	f
+val	Lib/Target/Syntax.h	/^  int val;$/;"	m	struct:SmallImm
+var	Lib/Source/Syntax.h	/^    Var var;$/;"	m	union:Expr::__anon14
+varAssign	Lib/Source/Translate.cpp	/^void varAssign( Seq<Instr>* seq   \/\/ Target instruction sequence to extend$/;"	f
+vec	Tests/Hello.cpp	/^std::vector<double> vec = {1, 2, 3, 4};$/;"	v
+vecAlways	Lib/Source/Interpreter.cpp	/^Vec vecAlways()$/;"	f
+vecAnd	Lib/Source/Interpreter.cpp	/^Vec vecAnd(Vec x, Vec y)$/;"	f
+vecNeg	Lib/Source/Interpreter.cpp	/^Vec vecNeg(Vec cond)$/;"	f
+vpm	Lib/Source/Interpreter.h	/^  Word vpm[VPM_SIZE];        \/\/ Shared VPM memory$/;"	m	struct:InterpreterState
+vpm	Lib/Target/Emulator.h	/^  Word vpm[VPM_SIZE];     \/\/ Shared VPM memory$/;"	m	struct:State
+vpmLoadQueue	Lib/Target/Emulator.h	/^  VPMLoadQueue vpmLoadQueue; \/\/ VPM load queue$/;"	m	struct:QPUState
+where	Lib/Source/Syntax.h	/^    struct { BExpr* cond; Stmt* thenStmt; Stmt* elseStmt; } where;$/;"	m	union:Stmt::__anon22	typeref:struct:Stmt::__anon22::__anon25
+whereStmt	Lib/Source/Translate.cpp	/^void whereStmt( Seq<Instr>* seq$/;"	f
+writeReg	Lib/Target/Emulator.cpp	/^void writeReg(QPUState* s, bool setFlags, AssignCond cond, Reg dest, Vec v)$/;"	f
+writeStride	Lib/Source/Interpreter.h	/^  int writeStride;           \/\/ Write stride$/;"	m	struct:CoreState
+writeStride	Lib/Target/Emulator.h	/^  int writeStride;           \/\/ Write stride$/;"	m	struct:QPUState
+zeroFlags	Lib/Target/Emulator.h	/^  bool zeroFlags[NUM_LANES]; \/\/ Zero flags$/;"	m	struct:QPUState
+~Heap	Lib/Common/Heap.h	/^    ~Heap()$/;"	f	class:Heap
+~Kernel	Lib/Kernel.h	/^  ~Kernel() {$/;"	f	struct:Kernel
+~Seq	Lib/Common/Seq.h	/^    ~Seq()$/;"	f	class:Seq
+~SharedArray	Lib/VideoCore/SharedArray.h	/^  ~SharedArray() {$/;"	f	class:SharedArray
+~Stack	Lib/Common/Stack.h	/^    ~Stack()$/;"	f	class:Stack
