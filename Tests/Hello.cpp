@@ -48,13 +48,14 @@ void hello(Ptr<Int> p)
 
 int main()
 {
+  for (int i = 0; i < 6; i++)
+    out[i] = 0;
+
   // Construct kernel
   auto k = compile(conv_p);
 
   // Allocate and initialise array shared between ARM and GPU
   // SharedArray<int> array(16);
-  for (int i = 0; i < 6; i++)
-    out[i] = 0;
 
   //   int value = 5;
   // for( int j = 0; j < 3; j++)
