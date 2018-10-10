@@ -26,7 +26,7 @@ static int const vec_siz = vec.size();
 
 void conv_p() {
     printf("DP: Conv started!\n");
-    auto t = std::chrono::system_clock::now();
+    auto start = std::chrono::high_resolution_clock::now();
     // int const ng = g.size();
     // int const n  = nf + ng - 1;
     // std::vector<T> out(n, T());
@@ -35,8 +35,9 @@ void conv_p() {
         multi_vec_elem(vec[i], i );
 
     }
-    std::chrono::duration<double> dif_loc = std::chrono::system_clock::now() - t;
-    printf("DP: Conv ended. Took: %fs\n", dif_loc.count());
+    auto finish = std::chrono::high_resolution_clock::now();
+
+    printf("DP: Conv ended. Took: %fns\n", std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start).count());
     }
 
 
