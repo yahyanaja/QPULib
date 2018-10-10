@@ -32,7 +32,7 @@ void conv_p() {
     // std::vector<T> out(n, T());
     // int out_beg = 0; // out.begin();
     for(auto i(0); i < vec_siz; ++i) {
-        multi_vec_elem(main_filter, vec[i], i );
+        multi_vec_elem(vec[i], i );
 
     }
     std::chrono::duration<double> dif_loc = std::chrono::system_clock::now() - t;
