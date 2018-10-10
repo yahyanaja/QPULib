@@ -39,10 +39,10 @@ void conv_p() {
     }
 
 
-void hello(Ptr<Int> p)
-{
-  *p = 1;
-}
+// void hello(Ptr<Int> p)
+// {
+//   *p = 1;
+// }
 // SharedArray<int> vec(4);
 // SharedArray<int> main_filter(3);
 
@@ -65,7 +65,7 @@ int main()
   k();
 
   for (int i = 0; i < 6; i++) {
-    printf("%i: %i\n", i, out[i]);
+    printf("%i: %f\n", i, out[i]);
   }
 
   return 0;

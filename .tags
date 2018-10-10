@@ -587,7 +587,6 @@ gpu_base	Lib/VideoCore/SharedArray.h	/^  void* gpu_base;$/;"	m	class:SharedArray
 handle	Lib/VideoCore/SharedArray.h	/^  uint32_t handle;$/;"	m	class:SharedArray
 head	Lib/Common/Stack.h	/^    T* head;$/;"	m	class:StackItem
 heapName	Lib/Common/Heap.h	/^    const char* heapName;$/;"	m	class:Heap
-hello	Tests/Hello.cpp	/^void hello(Ptr<Int> p)$/;"	f
 hello	Tests/ID.cpp	/^void hello(Ptr<Int> p)$/;"	f
 hostIRQ	Lib/Source/StmtExtra.h	/^inline void hostIRQ()$/;"	f
 id	Lib/Source/Interpreter.h	/^  int id;                    \/\/ Core id$/;"	m	struct:CoreState
