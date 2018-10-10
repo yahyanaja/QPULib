@@ -456,7 +456,7 @@ cond	Lib/Target/Syntax.h	/^    struct { bool setFlags; AssignCond cond; Reg dest
 condExp	Lib/Source/Translate.cpp	/^BranchCond condExp(Seq<Instr>* seq, CExpr* c)$/;"	f
 conj	Lib/Source/Syntax.h	/^    struct { BExpr* lhs; BExpr* rhs; } conj;$/;"	m	union:BExpr::__anon17	typeref:struct:BExpr::__anon17::__anon18
 controlStack	Lib/Source/Syntax.cpp	/^Stack<Stmt> controlStack;$/;"	v
-conv_p	Tests/Hello.cpp	/^void conv_p(std::vector<double> const &f, std::vector<double> const &g) {$/;"	f
+conv_p	Tests/Hello.cpp	/^void conv_p() {$/;"	f
 core	Lib/Source/Interpreter.h	/^  CoreState core[MAX_QPUS];  \/\/ State of each core$/;"	m	struct:InterpreterState
 create	Lib/Common/Heap.h	/^    void create(unsigned int heapCapacityInBytes)$/;"	f	class:Heap
 current	Tests/HeatMap.cpp	/^  Float prev, current, next;$/;"	m	struct:Cursor	file:

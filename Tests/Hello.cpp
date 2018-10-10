@@ -10,7 +10,8 @@ using namespace std;
 // Define function that runs on the GPU.
 
 SharedArray<int> out(6);
-
+std::vector<double> vec = {1, 2, 3, 4};
+std::vector<double> main_filter = {5, 6, 7};
 
  inline void multi_vec_elem(std::vector<double> const &vec, double elem, int it) {
      static int const vec_siz = vec.size();
@@ -21,7 +22,7 @@ SharedArray<int> out(6);
 
 }
 
-void conv_p(std::vector<double> const &f, std::vector<double> const &g) {
+void conv_p() {
     printf("DP: Conv started!\n");
     auto t = std::chrono::system_clock::now();
     int const nf = f.size();
@@ -44,8 +45,6 @@ void hello(Ptr<Int> p)
 }
 // SharedArray<int> vec(4);
 // SharedArray<int> main_filter(3);
-std::vector<double> vec = {1, 2, 3, 4};
-std::vector<double> main_filter = {5, 6, 7};
 
 int main()
 {
@@ -62,7 +61,7 @@ int main()
   //   main_filter[j] = value++;
 
   // Invoke the kernel and display the result
-  k(vec, main_filter);
+  k();
 
   for (int i = 0; i < 6; i++) {
     printf("%i: %i\n", i, out[i]);
