@@ -66,7 +66,7 @@ int main()
   k();
 
   for (int i = 0; i < 6; i++) {
-    printf("%i: %f\n", i, out[i]);
+    printf("%i: %d\n", i, out[i]);
   }
 
   return 0;
