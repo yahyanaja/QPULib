@@ -36,8 +36,7 @@ void conv_p(std::vector<T> const &f, std::vector<T> const &g) {
 
     }
     std::chrono::duration<double> dif_loc = std::chrono::system_clock::now() - t;
-    std::cout << "DP: Conv ended. Took: " << dif_loc.count() <<
-    "s\n";
+    printf("DP: Conv ended. Took: %fs\n", dif_loc.count());
     }
 
 
