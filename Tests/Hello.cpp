@@ -21,7 +21,7 @@ template<typename T>
 }
 
 template<typename T>
-out conv_p(std::vector<T> const &f, std::vector<T> const &g) {
+void conv_p(std::vector<T> const &f, std::vector<T> const &g) {
     printf("DP: Conv started!\n");
     auto t = std::chrono::system_clock::now();
     int const nf = f.size();
