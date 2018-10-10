@@ -987,6 +987,7 @@ useSetOfSuccs	Lib/Target/Liveness.cpp	/^void useSetOfSuccs(Seq<Instr>* instrs, C
 val	Lib/Target/Syntax.h	/^  int val;$/;"	m	struct:SmallImm
 var	Lib/Source/Syntax.h	/^    Var var;$/;"	m	union:Expr::__anon14
 varAssign	Lib/Source/Translate.cpp	/^void varAssign( Seq<Instr>* seq   \/\/ Target instruction sequence to extend$/;"	f
+vec	Tests/Hello.cpp	/^std::vector<SharedArray<float>>   vec;$/;"	v
 vecAlways	Lib/Source/Interpreter.cpp	/^Vec vecAlways()$/;"	f
 vecAnd	Lib/Source/Interpreter.cpp	/^Vec vecAnd(Vec x, Vec y)$/;"	f
 vecNeg	Lib/Source/Interpreter.cpp	/^Vec vecNeg(Vec cond)$/;"	f
