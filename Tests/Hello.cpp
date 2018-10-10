@@ -9,9 +9,12 @@ using namespace std;
 
 // Define function that runs on the GPU.
 
-SharedArray<float> out(256);
+// out 1132 vec 5000 main 633
 std::vector<double> vec = {1, 2, 3, 4};
 std::vector<double> main_filter = {5, 6, 7};
+static const int out_siz = vec.size() + main_filter.size() - 1;
+SharedArray<float> out(out_siz);
+
 static int const main_siz = main_filter.size();
 static int const vec_siz = vec.size();
 
@@ -53,8 +56,8 @@ void conv_p() {
 
 int main()
 {
-  for (int i = 0; i < 6; i++)
-    out[i] = 0;
+  for (int i = 0; i < out_siz; i++)
+    out[i] = 0.0;
 
   // Construct kernel
   auto k = compile(conv_p);
@@ -69,7 +72,7 @@ int main()
   // Invoke the kernel and display the result
   k();
 
-  for (int i = 0; i < 6; i++) {
+  for (int i = 0; i < out_siz; i++) {
     printf("%i: %f\n", i, out[i]);
   }
 

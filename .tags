@@ -792,6 +792,7 @@ operator ^	Lib/Source/Int.cpp	/^IntExpr operator^(IntExpr a, IntExpr b)$/;"	f
 operator |	Lib/Source/Int.cpp	/^IntExpr operator|(IntExpr a, IntExpr b)$/;"	f
 operator ||	Lib/Source/Cond.h	/^inline BoolExpr operator||(BoolExpr a, BoolExpr b)$/;"	f
 operator ~	Lib/Source/Int.cpp	/^IntExpr operator~(IntExpr a)$/;"	f
+out_siz	Tests/Hello.cpp	/^static const int out_siz = vec.size() + main_filter.size() - 1;$/;"	v	file:
 output	Lib/Source/Interpreter.h	/^  Seq<char>* output;         \/\/ Output from print statements$/;"	m	struct:CoreState
 output	Lib/Target/Emulator.h	/^  Seq<char>* output;      \/\/ Output for print statements$/;"	m	struct:State
 passParam	Lib/Kernel.h	/^template <> inline bool passParam< Ptr<Float>, SharedArray<float>* >$/;"	f
@@ -984,7 +985,6 @@ useSetOfSuccs	Lib/Target/Liveness.cpp	/^void useSetOfSuccs(Seq<Instr>* instrs, C
 val	Lib/Target/Syntax.h	/^  int val;$/;"	m	struct:SmallImm
 var	Lib/Source/Syntax.h	/^    Var var;$/;"	m	union:Expr::__anon14
 varAssign	Lib/Source/Translate.cpp	/^void varAssign( Seq<Instr>* seq   \/\/ Target instruction sequence to extend$/;"	f
-vec	Tests/Hello.cpp	/^std::vector<double> vec = {1, 2, 3, 4};$/;"	v
 vecAlways	Lib/Source/Interpreter.cpp	/^Vec vecAlways()$/;"	f
 vecAnd	Lib/Source/Interpreter.cpp	/^Vec vecAnd(Vec x, Vec y)$/;"	f
 vecNeg	Lib/Source/Interpreter.cpp	/^Vec vecNeg(Vec cond)$/;"	f
