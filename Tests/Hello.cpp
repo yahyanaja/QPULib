@@ -34,11 +34,11 @@ void conv_p() {
     // int const n  = nf + ng - 1;
     // std::vector<T> out(n, T());
     // int out_beg = 0; // out.begin();
-    float section =  (float) vec_siz / numQPUs().expr->intLit;
-    int i_at_start = (int) (section * (float)      me().expr->intLit) ;
-    int i_at_end =   (int) (section * (float) (1 + me().expr->intLit));
-    printf("QPU (%d/%d), section: %f, i_start: %d, i_end: %d\n", me().expr->intLit,
-                            numQPUs().expr->intLit, section, i_at_start, i_at_end);
+    float section =  (float) vec_siz / 1/*numQPUs().expr->intLit*/;
+    int i_at_start = (int) (section * (float)  0    /* me().expr->intLit */) ;
+    int i_at_end =   (int) (section * (float) (1 + 0/* me().expr->intLit */ ));
+    // printf("QPU (%d/%d), section: %f, i_start: %d, i_end: %d\n", me().expr->intLit,
+                            // numQPUs().expr->intLit, section, i_at_start, i_at_end);
     for(int i = i_at_start; i < i_at_end; i++) {
         multi_vec_elem(vec[i], i );
 
@@ -67,16 +67,16 @@ int main()
     out[i] = 0.0;
 
   // Construct kernel
+  auto k = compile(conv_p);
   k.setNumQPUs(NQPUS);
-  if(numQPUs().expr->intLit != NQPUS )
-  {
-    printf("Expected numQPUs() to be eq to NQPUS = %d\n", NQPUS);
-    return 1;
-  }
-  else
-    printf("Equal: numQPUs().expr->intLit: %d == NQPUS: %d\n", numQPUs().expr->intLit, NQPUS);
+  // if(numQPUs().expr->intLit != NQPUS )
+  // {
+  //   printf("Expected numQPUs() to be eq to NQPUS = %d\n", NQPUS);
+  //   return 1;
+  // }
+  // else
+  //   printf("Equal: numQPUs().expr->intLit: %d == NQPUS: %d\n", numQPUs().expr->intLit, NQPUS);
 
-    auto k = compile(conv_p);
 
   // Allocate and initialise array shared between ARM and GPU
   // SharedArray<int> array(16);
