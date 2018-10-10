@@ -10,8 +10,8 @@ using namespace std;
 // Define function that runs on the GPU.
 
 // out 1132 vec 5000 main 633
-std::vector<float> vec = {1, 2, 3, 4};
-std::vector<float> main_filter = {5, 6, 7};
+std::vector<float> vec = {1, 2, 3, 4, 7, 8, 9, 11, 12, 13, 14, 15};
+std::vector<float> main_filter = {5, 6, 7, 8, 9, 10};
 static const int out_siz = vec.size() + main_filter.size() - 1;
 SharedArray<float> out(out_siz);
 

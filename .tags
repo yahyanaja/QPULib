@@ -656,7 +656,7 @@ main	Tests/Rot3D.cpp	/^int main()$/;"	f
 main	Tests/Sort.cpp	/^int main()$/;"	f
 main	Tests/Tri.cpp	/^int main()$/;"	f
 main	Tests/TriFloat.cpp	/^int main()$/;"	f
-main_filter	Tests/Hello.cpp	/^std::vector<float> main_filter = {5, 6, 7};$/;"	v
+main_filter	Tests/Hello.cpp	/^std::vector<float> main_filter = {5, 6, 7, 8, 9, 10};$/;"	v
 main_siz	Tests/Hello.cpp	/^static int const main_siz = main_filter.size();$/;"	v	file:
 mapmem	Lib/VideoCore/Mailbox.cpp	/^void *mapmem(unsigned base, unsigned size)$/;"	f
 max	Lib/Source/Float.cpp	/^FloatExpr max(FloatExpr a, FloatExpr b)$/;"	f
