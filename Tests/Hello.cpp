@@ -12,8 +12,7 @@ using namespace std;
 SharedArray<int> out(6);
 
 
-template<typename T>
- inline void multi_vec_elem(std::vector<T> const &vec, T elem, int it) {
+ inline void multi_vec_elem(std::vector<double> const &vec, double elem, int it) {
      static int const vec_siz = vec.size();
      for(int i = 0; i < vec_siz ; i++){
         out[it] += vec[i] * elem;
@@ -22,8 +21,7 @@ template<typename T>
 
 }
 
-template<typename T>
-void conv_p(std::vector<T> const &f, std::vector<T> const &g) {
+void conv_p(std::vector<double> const &f, std::vector<double> const &g) {
     printf("DP: Conv started!\n");
     auto t = std::chrono::system_clock::now();
     int const nf = f.size();
