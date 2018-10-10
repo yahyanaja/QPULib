@@ -987,10 +987,11 @@ useSetOfSuccs	Lib/Target/Liveness.cpp	/^void useSetOfSuccs(Seq<Instr>* instrs, C
 val	Lib/Target/Syntax.h	/^  int val;$/;"	m	struct:SmallImm
 var	Lib/Source/Syntax.h	/^    Var var;$/;"	m	union:Expr::__anon14
 varAssign	Lib/Source/Translate.cpp	/^void varAssign( Seq<Instr>* seq   \/\/ Target instruction sequence to extend$/;"	f
+vec	Tests/Hello.cpp	/^SharedArray<float>   vec[vec_arr_siz];$/;"	v
 vecAlways	Lib/Source/Interpreter.cpp	/^Vec vecAlways()$/;"	f
 vecAnd	Lib/Source/Interpreter.cpp	/^Vec vecAnd(Vec x, Vec y)$/;"	f
 vecNeg	Lib/Source/Interpreter.cpp	/^Vec vecNeg(Vec cond)$/;"	f
-vec_arr_siz	Tests/Hello.cpp	/^static const int vec_arr_siz = (int) ceil(vec_siz\/16);$/;"	v	file:
+vec_arr_siz	Tests/Hello.cpp	/^static const int vec_arr_siz = 235; \/\/ (int) ceil(vec_siz\/16);$/;"	v	file:
 vec_siz	Tests/Hello.cpp	/^static int const vec_siz = vec_v.size();$/;"	v	file:
 vpm	Lib/Source/Interpreter.h	/^  Word vpm[VPM_SIZE];        \/\/ Shared VPM memory$/;"	m	struct:InterpreterState
 vpm	Lib/Target/Emulator.h	/^  Word vpm[VPM_SIZE];     \/\/ Shared VPM memory$/;"	m	struct:State
