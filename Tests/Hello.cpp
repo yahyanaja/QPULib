@@ -20,9 +20,9 @@ static const int main_arr_siz = (int) ceil(main_siz/16);
 static int const vec_siz = vec_v.size();
 static const int vec_arr_siz = (int) ceil(vec_siz/16);
 
-SharedArray<float>          out[out_arr_siz];
-SharedArray<float>          vec[vec_arr_siz];
-SharedArray<float> main_filter[main_arr_siz];
+SharedArray<float>          out(out_siz);
+SharedArray<float>          * vec = new SharedArray<float>[vec_arr_siz];
+SharedArray<float> main_filter(main_siz);
 
  inline void multi_vec_elem(float elem, const int it) {
      for(int i = 0; i < main_siz ; i++){
