@@ -13,6 +13,7 @@ SharedArray<double> out(6);
 std::vector<double> vec = {1, 2, 3, 4};
 std::vector<double> main_filter = {5, 6, 7};
 static int const main_siz = main_filter.size();
+static int const vec_siz = vec.size();
 
 
  inline void multi_vec_elem(double elem, int it) {

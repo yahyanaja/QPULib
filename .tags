@@ -988,6 +988,7 @@ vec	Tests/Hello.cpp	/^std::vector<double> vec = {1, 2, 3, 4};$/;"	v
 vecAlways	Lib/Source/Interpreter.cpp	/^Vec vecAlways()$/;"	f
 vecAnd	Lib/Source/Interpreter.cpp	/^Vec vecAnd(Vec x, Vec y)$/;"	f
 vecNeg	Lib/Source/Interpreter.cpp	/^Vec vecNeg(Vec cond)$/;"	f
+vec_siz	Tests/Hello.cpp	/^static int const vec_siz = vec.size();$/;"	v	file:
 vpm	Lib/Source/Interpreter.h	/^  Word vpm[VPM_SIZE];        \/\/ Shared VPM memory$/;"	m	struct:InterpreterState
 vpm	Lib/Target/Emulator.h	/^  Word vpm[VPM_SIZE];     \/\/ Shared VPM memory$/;"	m	struct:State
 vpmLoadQueue	Lib/Target/Emulator.h	/^  VPMLoadQueue vpmLoadQueue; \/\/ VPM load queue$/;"	m	struct:QPUState
