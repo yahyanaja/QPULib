@@ -20,10 +20,9 @@ SharedArray<float>          vec(vec_siz);
 SharedArray<float> main_filter(main_siz);
 
 
- inline void multi_vec_elem(float elem, int it) {
+ inline void multi_vec_elem(float elem, const int it) {
      for(int i = 0; i < main_siz ; i++){
-        out[it] += (float) main_filter[i] * elem;
-        it++;
+        out[it + i] += (float) main_filter[i] * elem;
     }
 
 }
@@ -31,10 +30,6 @@ SharedArray<float> main_filter(main_siz);
 void conv_p() {
     printf("DP: Conv started!\n");
     auto start = std::chrono::high_resolution_clock::now();
-    // int const ng = g.size();
-    // int const n  = nf + ng - 1;
-    // std::vector<T> out(n, T());
-    // int out_beg = 0; // out.begin();
     float section =  (float) vec_siz / 1/*numQPUs().expr->intLit*/;
     int i_at_start = (int) (section * (float)  0    /* me().expr->intLit */) ;
     int i_at_end =   (int) (section * (float) (1 + 0/* me().expr->intLit */ ));
