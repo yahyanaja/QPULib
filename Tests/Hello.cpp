@@ -9,7 +9,7 @@ using namespace std;
 
 // Define function that runs on the GPU.
 
-SharedArray<int> out(6);
+SharedArray<double> out(6);
 std::vector<double> vec = {1, 2, 3, 4};
 std::vector<double> main_filter = {5, 6, 7};
 
@@ -25,13 +25,13 @@ std::vector<double> main_filter = {5, 6, 7};
 void conv_p() {
     printf("DP: Conv started!\n");
     auto t = std::chrono::system_clock::now();
-    int const nf = f.size();
+    int const nf = vec.size();
     // int const ng = g.size();
     // int const n  = nf + ng - 1;
     // std::vector<T> out(n, T());
     // int out_beg = 0; // out.begin();
     for(auto i(0); i < nf; ++i) {
-        multi_vec_elem(g, f[i], i );
+        multi_vec_elem(main_filter, vec[i], i );
 
     }
     std::chrono::duration<double> dif_loc = std::chrono::system_clock::now() - t;
