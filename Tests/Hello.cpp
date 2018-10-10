@@ -9,14 +9,14 @@ using namespace std;
 
 // Define function that runs on the GPU.
 
-SharedArray<int> out(6);
-std::vector<int> vec = {1, 2, 3, 4};
-std::vector<int> main_filter = {5, 6, 7};
+SharedArray<double> out(6);
+std::vector<double> vec = {1, 2, 3, 4};
+std::vector<double> main_filter = {5, 6, 7};
 static int const main_siz = main_filter.size();
 static int const vec_siz = vec.size();
 
 
- inline void multi_vec_elem(int elem, int it) {
+ inline void multi_vec_elem(double elem, int it) {
      for(int i = 0; i < main_siz ; i++){
         out[it] += main_filter[i] * elem;
         it++;
@@ -70,7 +70,7 @@ int main()
   k();
 
   for (int i = 0; i < 6; i++) {
-    printf("%i: %d\n", i, out[i]);
+    printf("%i: %f\n", i, out[i]);
   }
 
   return 0;

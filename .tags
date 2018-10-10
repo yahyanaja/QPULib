@@ -656,7 +656,7 @@ main	Tests/Rot3D.cpp	/^int main()$/;"	f
 main	Tests/Sort.cpp	/^int main()$/;"	f
 main	Tests/Tri.cpp	/^int main()$/;"	f
 main	Tests/TriFloat.cpp	/^int main()$/;"	f
-main_filter	Tests/Hello.cpp	/^std::vector<int> main_filter = {5, 6, 7};$/;"	v
+main_filter	Tests/Hello.cpp	/^std::vector<double> main_filter = {5, 6, 7};$/;"	v
 main_siz	Tests/Hello.cpp	/^static int const main_siz = main_filter.size();$/;"	v	file:
 mapmem	Lib/VideoCore/Mailbox.cpp	/^void *mapmem(unsigned base, unsigned size)$/;"	f
 max	Lib/Source/Float.cpp	/^FloatExpr max(FloatExpr a, FloatExpr b)$/;"	f
@@ -710,7 +710,7 @@ mkVar	Lib/Source/Syntax.cpp	/^Expr* mkVar(Var var)$/;"	f
 mkWhere	Lib/Source/Syntax.cpp	/^Stmt* mkWhere(BExpr* cond, Stmt* thenStmt, Stmt* elseStmt)$/;"	f
 mkWhile	Lib/Source/Syntax.cpp	/^Stmt* mkWhile(CExpr* cond, Stmt* body)$/;"	f
 move	Lib/Source/Translate.cpp	/^Instr move(Var dst, Var src, bool setFlags)$/;"	f
-multi_vec_elem	Tests/Hello.cpp	/^ inline void multi_vec_elem(int elem, int it) {$/;"	f
+multi_vec_elem	Tests/Hello.cpp	/^ inline void multi_vec_elem(double elem, int it) {$/;"	f
 neg	Lib/Source/Syntax.h	/^    BExpr* neg;$/;"	m	union:BExpr::__anon17
 negAssignCond	Lib/Source/Translate.cpp	/^AssignCond negAssignCond(AssignCond cond)$/;"	f
 negBranchCond	Lib/Source/Translate.cpp	/^BranchCond negBranchCond(BranchCond cond)$/;"	f
@@ -984,7 +984,7 @@ useSetOfSuccs	Lib/Target/Liveness.cpp	/^void useSetOfSuccs(Seq<Instr>* instrs, C
 val	Lib/Target/Syntax.h	/^  int val;$/;"	m	struct:SmallImm
 var	Lib/Source/Syntax.h	/^    Var var;$/;"	m	union:Expr::__anon14
 varAssign	Lib/Source/Translate.cpp	/^void varAssign( Seq<Instr>* seq   \/\/ Target instruction sequence to extend$/;"	f
-vec	Tests/Hello.cpp	/^std::vector<int> vec = {1, 2, 3, 4};$/;"	v
+vec	Tests/Hello.cpp	/^std::vector<double> vec = {1, 2, 3, 4};$/;"	v
 vecAlways	Lib/Source/Interpreter.cpp	/^Vec vecAlways()$/;"	f
 vecAnd	Lib/Source/Interpreter.cpp	/^Vec vecAnd(Vec x, Vec y)$/;"	f
 vecNeg	Lib/Source/Interpreter.cpp	/^Vec vecNeg(Vec cond)$/;"	f
