@@ -27,7 +27,6 @@ SharedArray<float> main_filter(main_siz);
  inline void multi_vec_elem(float elem, const int it) {
      for(int i = 0; i < main_siz ; i++){
         out[it + i] += (float) main_filter[i] * elem;
-        it++;
     }
 
 }
