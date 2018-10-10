@@ -66,6 +66,8 @@ int main()
 
   // Construct kernel
   auto k = compile(conv_p);
+  k.setNumQPUs(NQPUS);
+
 
   // Allocate and initialise array shared between ARM and GPU
   // SharedArray<int> array(16);
