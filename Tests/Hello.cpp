@@ -21,7 +21,7 @@ static int const vec_siz = vec_v.size();
 static const int vec_arr_siz = (int) ceil(vec_siz/16);
 
 SharedArray<float>          out(out_siz);
-SharedArray<float>          * vec = new SharedArray<float>[vec_arr_siz];
+std::vector<SharedArray<float>>   vec(vec_arr_siz, SharedArray<float>(16));
 SharedArray<float> main_filter(main_siz);
 
  inline void multi_vec_elem(float elem, const int it) {
@@ -52,21 +52,13 @@ void conv_p() {
 
     }
 
-
-// void hello(Ptr<Int> p)
-// {
-//   *p = 1;
-// }
-// SharedArray<int> vec(4);
-// SharedArray<int> main_filter(3);
-
 int main()
 {
   const int NQPUS  = 1;
 
 int ind = 0;
   for(int i = 0; i < vec_arr_siz; i++){
-      vec[i] = new SharedArray<float>(16);
+      // vec[i] = new SharedArray<float>(16);
       for(int j = 0; j < 16; j++ ){
         if(ind < vec_siz)
         vec[i][j] = vec_v[ind++];
