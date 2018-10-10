@@ -37,7 +37,10 @@ void conv_p() {
     }
     auto finish = std::chrono::high_resolution_clock::now();
 
-    printf("DP: Conv ended. Took: %fns\n", std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start).count());
+    printf("DP: Conv ended. Took: ");
+    printf("%lld", std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start).count());
+    printf("ns\n");
+
     }
 
 
