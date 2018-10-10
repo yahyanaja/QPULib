@@ -21,7 +21,7 @@ static int const vec_siz = vec.size();
 
  inline void multi_vec_elem(double elem, int it) {
      for(int i = 0; i < main_siz ; i++){
-        out[it] += main_filter[i] * elem;
+        out[it] += (float) main_filter[i] * elem;
         it++;
     }
 
