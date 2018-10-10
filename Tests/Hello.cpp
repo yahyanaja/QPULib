@@ -61,6 +61,8 @@ void conv_p() {
 
 int main()
 {
+  const int NQPUS  = 1;
+
   for (int i = 0; i < out_siz; i++)
     out[i] = 0.0;
 
