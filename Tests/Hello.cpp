@@ -3,7 +3,9 @@
 #include <stdlib.h>
 #include <sys/time.h>
 #include <vector>
+#include <chrono>
 
+using namespace std;
 
 // Define function that runs on the GPU.
 
