@@ -67,7 +67,6 @@ int main()
     out[i] = 0.0;
 
   // Construct kernel
-  auto k = compile(conv_p);
   k.setNumQPUs(NQPUS);
   if(numQPUs().expr->intLit != NQPUS )
   {
@@ -77,6 +76,7 @@ int main()
   else
     printf("Equal: numQPUs().expr->intLit: %d == NQPUS: %d\n", numQPUs().expr->intLit, NQPUS);
 
+    auto k = compile(conv_p);
 
   // Allocate and initialise array shared between ARM and GPU
   // SharedArray<int> array(16);
