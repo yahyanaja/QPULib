@@ -34,11 +34,11 @@ void conv_p() {
     // int const n  = nf + ng - 1;
     // std::vector<T> out(n, T());
     // int out_beg = 0; // out.begin();
-    float section =  (float) vec_siz / numQPUs().e->intLit;
-    int i_at_start = (int) (section * (float)      me().e->intLit) ;
-    int i_at_end =   (int) (section * (float) (1 + me().e->intLit));
-    printf("QPU (%d/%d), section: %f, i_start: %d, i_end: %d\n", me().e->intLit,
-                            numQPUs().e->intLit, section, i_at_start, i_at_end);
+    float section =  (float) vec_siz / numQPUs().Expr->intLit;
+    int i_at_start = (int) (section * (float)      me().Expr->intLit) ;
+    int i_at_end =   (int) (section * (float) (1 + me().Expr->intLit));
+    printf("QPU (%d/%d), section: %f, i_start: %d, i_end: %d\n", me().Expr->intLit,
+                            numQPUs().Expr->intLit, section, i_at_start, i_at_end);
     for(int i = i_at_start; i < i_at_end; i++) {
         multi_vec_elem(vec[i], i );
 
