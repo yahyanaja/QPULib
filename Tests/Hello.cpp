@@ -74,6 +74,8 @@ int main()
     printf("Expected numQPUs() to be eq to NQPUS = %d\n", NQPUS);
     return 1;
   }
+  else
+    printf("Equal: numQPUs().expr->intLit: %d == NQPUS: %d\n", numQPUs().expr->intLit, NQPUS);
 
 
   // Allocate and initialise array shared between ARM and GPU
