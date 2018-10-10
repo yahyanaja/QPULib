@@ -57,7 +57,8 @@ int main()
 
 int ind = 0;
   for(int i = 0; i < vec_arr_siz; i++){
-    vec[i] = *(new SharedArray<float>(16));
+    SharedArray<float> t(16);
+    vec[i] = t;
       // vec[i] = new SharedArray<float>(16);
       for(int j = 0; j < 16; j++ ){
         if(ind < vec_siz)
