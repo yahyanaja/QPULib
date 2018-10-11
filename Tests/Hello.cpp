@@ -48,7 +48,7 @@ receive(o_ptr_Float);
 receive(m_ptr_Float);
 
     // For(Int i = 0, i < main_siz , i = i + 16)
-        gather(m_ptr+index());
+        // gather(m_ptr+index());
         // receive(m_ptr_Float);
         // m_ptr_Float = m_ptr_Float * elem;
         // Print(m_ptr_Float);
