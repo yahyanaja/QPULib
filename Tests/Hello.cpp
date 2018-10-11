@@ -17,7 +17,7 @@ std::vector<double> vec_v =          {378.5000000000000000, 376.9233274231110045
    // ceil(3750/16)*16
 static int const main_siz = main_filter_v.size();
 static int const vec_siz = vec_v.size();
-static int const out_siz = vec_siz + main_siz - 1 + 16; // omitted -1 inorder to be multiple of 16
+static int const out_siz = vec_siz + main_siz - 1; // omitted -1 inorder to be multiple of 16
 
 // std::vector<double>         out_v (out_siz);
 SharedArray<float>          out(out_siz);
@@ -37,7 +37,7 @@ Int it_Int = it;
 o_ptr = o_ptr + it_Int;
 
     // For(Int i = 0, i < main_siz , i = i + 16)
-       *o_ptr = *o_ptr + *m_ptr * elem;
+       *o_ptr = *o_ptr + /* *m_ptr  * */ elem;
        // m_ptr = m_ptr + 16;
        // o_ptr = o_ptr + 16;
    // End
