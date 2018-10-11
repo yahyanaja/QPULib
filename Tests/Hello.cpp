@@ -79,12 +79,12 @@ void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> vec_ptr) {
       Ptr<Float> o_ptr_loc = o_ptr + i;
       for( int j = 0; j < main_siz; j += 16 ){
 
+        Float a, b, c(vec_ptr[i]);
+
       gather(m_ptr_loc + index());
-      gather(o_ptr_loc + index());
-
-      Float a, b, c(vec_ptr[i]);
-
       receive(a);
+
+      gather(o_ptr_loc + index());
       receive(b);
 
             *(o_ptr_loc) = b + a * c;
