@@ -75,10 +75,12 @@ void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> vec_ptr) {
       //   printf("i >= out_siz ( %d >= %d )\n", i, out_siz);
       //   if( i >= vec_siz)
       //   printf("i >= vec_siz ( %d >= %d )\n", i, vec_siz);
+      Ptr<Float> m_ptr_loc = m_ptr;
+      Ptr<Float> o_ptr_loc = o_ptr;
       for( int j = 0; j < main_siz; j += 16 ){
 
-      gather(m_ptr + index());
-      gather(o_ptr + index());
+      gather(m_ptr_loc + index());
+      gather(o_ptr_loc + index());
 
       Float a, b, c(vec_ptr[i]);
 
@@ -86,15 +88,16 @@ void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> vec_ptr) {
       receive(b);
 
       //   *(o_ptr + i) = b + a * c;
-            *(o_ptr + i) = b + a * c;
+            *(o_ptr_loc + i) = b + a * c;
             // if( j + 16 < main_size )
             // {
-              m_ptr = m_ptr + 16;
-              o_ptr = o_ptr + 16;
+              m_ptr_loc = m_ptr_loc + 16;
+              o_ptr_loc = o_ptr_loc + 16;
             // }
           }
 
     }
+    
     auto finish = std::chrono::high_resolution_clock::now();
 
     printf("DP: Conv ended. Took: ");
