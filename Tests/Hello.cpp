@@ -43,9 +43,10 @@ Float m_ptr_Float;
     // For(Int i = 0, i < main_siz , i = i + 16)
         gather(m_ptr+index());
         receive(m_ptr_Float);
-       *o_ptr = *o_ptr + (m_ptr_Float * elem);
-       m_ptr = m_ptr + 16;
-       o_ptr = o_ptr + 16;
+        m_ptr_Float = m_ptr_Float * elem;
+       *o_ptr = *o_ptr + m_ptr_Float;
+       // m_ptr = m_ptr + 16;
+       // o_ptr = o_ptr + 16;
    // End
 
 }
@@ -63,7 +64,7 @@ void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr) {
       //   printf("i >= out_siz ( %d >= %d )\n", i, out_siz);
       //   if( i >= vec_siz)
       //   printf("i >= vec_siz ( %d >= %d )\n", i, vec_siz);
-          multi_vec_elem(m_ptr, o_ptr, vec[0], i );
+          multi_vec_elem(m_ptr, o_ptr, vec[i], i );
 
     }
     auto finish = std::chrono::high_resolution_clock::now();
