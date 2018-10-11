@@ -36,11 +36,11 @@ Int it_Int = it;
 
 o_ptr = o_ptr + it_Int;
 
-    For(Int i = 0, i < main_siz , i = i + 16)
+    // For(Int i = 0, i < main_siz , i = i + 16)
        *o_ptr = *o_ptr + *m_ptr * elem;
-       m_ptr = m_ptr + 16;
-       o_ptr = o_ptr + 16;
-   End
+       // m_ptr = m_ptr + 16;
+       // o_ptr = o_ptr + 16;
+   // End
 
 }
 
@@ -48,13 +48,16 @@ void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr) {
     printf("DP: Conv started!\n");
     auto start = std::chrono::high_resolution_clock::now();
     float section =  (float) vec_siz / 1/*numQPUs().expr->intLit*/;
-    int i_at_start = (int) (section * (float)  0    /* me().expr->intLit */) ;
-    int i_at_end =   (int) (section * (float) (1 + 0/* me().expr->intLit */ ));
+    int i_at_start = 0       // (int) (section * (float)  0    /* me().expr->intLit */) ;
+    int i_at_end =   vec_siz // (int) (section * (float) (1 + 0/* me().expr->intLit */ ));
     // printf("QPU (%d/%d), section: %f, i_start: %d, i_end: %d\n", me().expr->intLit,
                             // numQPUs().expr->intLit, section, i_at_start, i_at_end);
 
     for(int i = i_at_start; i < i_at_end; i++) {
-
+      if( i >= out_siz)
+        printf("i >= out_siz ( %d >= %d )\n", i, out_siz);
+        if( i >= vec_siz)
+        printf("i >= vec_siz ( %d >= %d )\n", i, vec_siz);
           multi_vec_elem(m_ptr, o_ptr, vec[i], i );
 
     }
@@ -70,9 +73,6 @@ int main()
 {
   if(main_siz % 16 != 0 )
     printf("Error - MAIN_SIZ expected to be mutliple of 16. MAIN_SIZ = %d\n", main_siz);
-  const int NQPUS  = 1;
-
-int ind = 0;
 
   for(int i = 0; i < main_siz; i++){
     main_filter[i] = main_filter_v[i];
@@ -86,6 +86,7 @@ int ind = 0;
 
   // Construct kernel
   auto k = compile(conv_p);
+  const int NQPUS  = 1;
   k.setNumQPUs(NQPUS);
   // if(numQPUs().expr->intLit != NQPUS )
   // {
