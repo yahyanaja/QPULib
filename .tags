@@ -792,7 +792,7 @@ operator ^	Lib/Source/Int.cpp	/^IntExpr operator^(IntExpr a, IntExpr b)$/;"	f
 operator |	Lib/Source/Int.cpp	/^IntExpr operator|(IntExpr a, IntExpr b)$/;"	f
 operator ||	Lib/Source/Cond.h	/^inline BoolExpr operator||(BoolExpr a, BoolExpr b)$/;"	f
 operator ~	Lib/Source/Int.cpp	/^IntExpr operator~(IntExpr a)$/;"	f
-out_siz	Tests/Hello.cpp	/^static int const out_siz = vec_v.size() + main_filter_v.size() - 1;$/;"	v	file:
+out_siz	Tests/Hello.cpp	/^static int const out_siz = (int) ceil((vec_v.size() + main_filter_v.size() - 1)\/16)*16;$/;"	v	file:
 output	Lib/Source/Interpreter.h	/^  Seq<char>* output;         \/\/ Output from print statements$/;"	m	struct:CoreState
 output	Lib/Target/Emulator.h	/^  Seq<char>* output;      \/\/ Output for print statements$/;"	m	struct:State
 passParam	Lib/Kernel.h	/^template <> inline bool passParam< Ptr<Float>, SharedArray<float>* >$/;"	f
