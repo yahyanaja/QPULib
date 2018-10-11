@@ -78,7 +78,7 @@ void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> vec_ptr) {
       // gather(m_ptr + index());
       // gather(o_ptr + index());
       //
-      Float a, b, c(vec_ptr[i]);
+      Float a, b, c;
       //
       // receive(a);
       // receive(b);
