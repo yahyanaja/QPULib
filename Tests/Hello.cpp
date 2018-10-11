@@ -56,7 +56,7 @@ receive(m_ptr_Float);
         // Print(o_ptr);
         // Print("\n");
        // *o_ptr =
-        Float t = o_ptr_Float + m_ptr_Float; // elem ; // + m_ptr_Float;
+        // Float t = o_ptr_Float + m_ptr_Float; // elem ; // + m_ptr_Float;
         *o_ptr = elem;
        // m_ptr = m_ptr + 16;
        // o_ptr = o_ptr + 16;
