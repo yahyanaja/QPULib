@@ -95,8 +95,9 @@ void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> vec_ptr) {
       // End
       //
           // For(Int j = 0, j < main_siz , j = j + 16)
-          for( int j = 0; j < main_siz; j += 16 )
+          for( int j = 0; j < main_siz; j += 16 ){
             *(o_ptr + i) = b + a * c;
+          }
           // End
 
     }
