@@ -33,7 +33,7 @@ SharedArray<float>  main_filter(main_siz);
 //   *p = me();
 // }
 
-inline void multi_vec_elem(Ptr<Float> m_ptr, Ptr<Float> o_ptr, float elem, const int it) {
+inline void multi_vec_elem(Ptr<Float> m_ptr, Ptr<Float> o_ptr, Float elem, const int it) {
 // Float elem_Float(elem);
 Int it_Int = it;
 
