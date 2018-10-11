@@ -91,7 +91,7 @@ void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> vec_ptr) {
             *(o_ptr_loc + i) = b + a * c;
             // if( j + 16 < main_size )
             // {
-              // m_ptr_loc = m_ptr_loc + 16;
+              m_ptr_loc = m_ptr_loc + 16;
               // o_ptr_loc = o_ptr_loc + 16;
             // }
           }
