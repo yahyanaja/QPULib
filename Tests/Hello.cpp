@@ -58,7 +58,7 @@ o_ptr = o_ptr + it_Int;
         // Print(" ");
         // Print(o_ptr);
         // Print("\n");
-       *o_ptr = *o_ptr + m_ptr * elem;
+       *o_ptr = *o_ptr + *m_ptr * elem;
         // Float t = o_ptr_Float + m_ptr_Float; // elem ; // + m_ptr_Float;
         // *o_ptr = elem;
        // m_ptr = m_ptr + 16;
