@@ -52,7 +52,7 @@ void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr) {
     int i_at_end =   30; //vec_siz; // (int) (section * (float) (1 + 0/* me().expr->intLit */ ));
     // printf("QPU (%d/%d), section: %f, i_start: %d, i_end: %d\n", me().expr->intLit,
                             // numQPUs().expr->intLit, section, i_at_start, i_at_end);
-
+  printf("vec_siz: %d, main_siz: %d, out_siz: %d\n", vec_siz, main_siz, out_siz);
     for(int i = i_at_start; i < i_at_end; i++) {
       if( i >= out_siz)
         printf("i >= out_siz ( %d >= %d )\n", i, out_siz);
