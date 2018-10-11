@@ -37,7 +37,10 @@ inline void multi_vec_elem(Ptr<Float> m_ptr, Ptr<Float> o_ptr, Float elem, const
 // Float elem_Float(elem);
 Int it_Int = it;
 
-o_ptr = o_ptr + it_Int;
+// o_ptr = o_ptr + it_Int;
+gather(o_ptr + it_Int + index());
+Float o_ptr_Float;
+receive(o_ptr_Float);
 Float m_ptr_Float;
 
     // For(Int i = 0, i < main_siz , i = i + 16)
@@ -48,7 +51,7 @@ Float m_ptr_Float;
         // Print(" ");
         // Print(o_ptr);
         // Print("\n");
-       *o_ptr = *o_ptr + elem ; // + m_ptr_Float;
+       *o_ptr = o_ptr_Float + elem ; // + m_ptr_Float;
        // m_ptr = m_ptr + 16;
        // o_ptr = o_ptr + 16;
    // End
