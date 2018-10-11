@@ -29,11 +29,11 @@ SharedArray<int>  main_filter(main_siz);
 //   *p = me();
 // }
 
-inline void multi_vec_elem(float elem, const int it) {
-  Ptr<Int> m_ptr = &main_filter;
-  Int it_Int = it;
-  Ptr<float> o_ptr = out + it_Int;
+inline void multi_vec_elem(Ptr<Int> m_ptr, Ptr<Float> o_ptr, float elem, const int it) {
+  o_ptr = o_ptr + it_Int;
 Float elem_Float(elem);
+Int it_Int = it;
+
     For(Int i = 0, i < main_siz , i = i + 16)
        *o_ptr = *o_ptr + *m_ptr * elem;
        m_ptr = m_ptr + 16;
@@ -42,7 +42,7 @@ Float elem_Float(elem);
 
 }
 
-void conv_p() {
+void conv_p(Ptr<Int> m_ptr, Ptr<Float> o_ptr) {
     printf("DP: Conv started!\n");
     auto start = std::chrono::high_resolution_clock::now();
     float section =  (float) vec_siz / 1/*numQPUs().expr->intLit*/;
@@ -53,7 +53,7 @@ void conv_p() {
 
     for(int i = i_at_start; i < i_at_end; i++) {
 
-          multi_vec_elem(vec[i], i );
+          multi_vec_elem(m_ptr, o_ptr, vec[i], i );
 
     }
     auto finish = std::chrono::high_resolution_clock::now();
@@ -102,7 +102,7 @@ int ind = 0;
   //   main_filter[j] = value++;
 
   // Invoke the kernel and display the result
-  k();
+  k(&main_filter, &out);
 
   for (int i = 0; i < out_siz; i++) {
     printf("%i: %f\n", i, out[i]);
