@@ -51,7 +51,7 @@ receive(o_ptr_Float);
 receive(m_ptr_Float);
 
 Float t = o_ptr_Float + m_ptr_Float * elem;
-    // For(Int i = 0, i < main_siz , i = i + 16)
+    For(Int i = 0, i < 2 , i = i + 16)
         // gather(m_ptr+index());
         // receive(m_ptr_Float);
         // m_ptr_Float = m_ptr_Float * elem;
@@ -60,7 +60,7 @@ Float t = o_ptr_Float + m_ptr_Float * elem;
         // Print(o_ptr);
         // Print("\n");
         *o_ptr = t;
-        *o_ptr = t;
+        // *o_ptr = t;
         // Float t = o_ptr_Float + m_ptr_Float; // elem ; // + m_ptr_Float;
         // *o_ptr = elem;
        // m_ptr = m_ptr + 16;
