@@ -75,20 +75,20 @@ void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> vec_ptr) {
       //   printf("i >= out_siz ( %d >= %d )\n", i, out_siz);
       //   if( i >= vec_siz)
       //   printf("i >= vec_siz ( %d >= %d )\n", i, vec_siz);
-      gather(m_ptr + index());
-      gather(o_ptr + index());
-
+      // gather(m_ptr + index());
+      // gather(o_ptr + index());
+      //
       Float a, b, c(vec_ptr[i]);
-
-      receive(a);
-      receive(b);
+      //
+      // receive(a);
+      // receive(b);
 
       // For(Int i = 0, i < main_siz , i = i + 16)
-        // gather(m_ptr + index());
-        // gather(o_ptr + index());
-        // receive(a);
-        // receive(b);
-        // c = vec_ptr[i];
+        gather(m_ptr + index());
+        gather(o_ptr + index());
+        receive(a);
+        receive(b);
+        c = vec_ptr[i];
       //   *(o_ptr + i) = b + a * c;
       //   m_ptr = m_ptr + 16;
       //   o_ptr = o_ptr + 16;
@@ -101,7 +101,7 @@ void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> vec_ptr) {
             // receive(a);
             // receive(b);
             // c = vec_ptr[i];
-            *(o_ptr + i) = *o_ptr + *m_ptr * vec_ptr[i];
+            *(o_ptr + i) = b + a * c;
           }
           // End
 
