@@ -39,11 +39,11 @@ Int it_Int = it;
 
 o_ptr = o_ptr + it_Int;
 
-    // For(Int i = 0, i < main_siz , i = i + 16)
+    For(Int i = 0, i < main_siz , i = i + 16)
        *o_ptr = *o_ptr + (*m_ptr * elem);
-       // m_ptr = m_ptr + 16;
-       // o_ptr = o_ptr + 16;
-   // End
+       m_ptr = m_ptr + 16;
+       o_ptr = o_ptr + 16;
+   End
 
 }
 
