@@ -31,13 +31,13 @@ SharedArray<float>  main_filter(main_siz);
 // }
 
 inline void multi_vec_elem(Ptr<Float> m_ptr, Ptr<Float> o_ptr, float elem, const int it) {
-Float elem_Float(elem);
+// Float elem_Float(elem);
 Int it_Int = it;
 
 o_ptr = o_ptr + it_Int;
 
     // For(Int i = 0, i < main_siz , i = i + 16)
-       *o_ptr = *o_ptr + /* *m_ptr  * */ elem;
+       *o_ptr = *o_ptr + *m_ptr /* * elem */;
        // m_ptr = m_ptr + 16;
        // o_ptr = o_ptr + 16;
    // End
@@ -53,10 +53,10 @@ void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr) {
     // printf("QPU (%d/%d), section: %f, i_start: %d, i_end: %d\n", me().expr->intLit,
                             // numQPUs().expr->intLit, section, i_at_start, i_at_end);
     for(int i = i_at_start; i < i_at_end; i++) {
-      if( i >= out_siz)
-        printf("i >= out_siz ( %d >= %d )\n", i, out_siz);
-        if( i >= vec_siz)
-        printf("i >= vec_siz ( %d >= %d )\n", i, vec_siz);
+      // if( i >= out_siz)
+      //   printf("i >= out_siz ( %d >= %d )\n", i, out_siz);
+      //   if( i >= vec_siz)
+      //   printf("i >= vec_siz ( %d >= %d )\n", i, vec_siz);
           multi_vec_elem(m_ptr, o_ptr, vec[i], i );
 
     }
