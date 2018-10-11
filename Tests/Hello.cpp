@@ -44,7 +44,11 @@ Float m_ptr_Float;
         gather(m_ptr+index());
         receive(m_ptr_Float);
         m_ptr_Float = m_ptr_Float * elem;
-       *o_ptr = *o_ptr + m_ptr_Float;
+        // Print(m_ptr_Float);
+        // Print(" ");
+        // Print(*o_ptr);
+        // Print("\n");
+       // *o_ptr = *o_ptr + m_ptr_Float;
        // m_ptr = m_ptr + 16;
        // o_ptr = o_ptr + 16;
    // End
