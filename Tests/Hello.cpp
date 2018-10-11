@@ -82,6 +82,7 @@ void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> vec_ptr) {
 
       receive(a);
       receive(b);
+      Int main_siz_Int(main_siz);
 
       // For(Int i = 0, i < main_siz , i = i + 16)
       //   gather(m_ptr + index());
@@ -94,7 +95,7 @@ void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> vec_ptr) {
       //   o_ptr = o_ptr + 16;
       // End
       //
-          For(Int j = 0, j < main_siz , j = j + 16)
+          For(Int j = 0, j < main_siz_Int , j = j + 16)
           // for( int j = 0; j < main_siz; j += 16 )
             *(o_ptr + i) = b + a * c;
           End
