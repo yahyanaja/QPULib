@@ -21,7 +21,7 @@ static int const vec_siz = vec_v.size();
 // std::vector<double>         out_v (out_siz);
 SharedArray<float>          out(out_siz);
 SharedArray<float>          vec(vec_siz);
-SharedArray<int>  main_filter(main_siz);
+SharedArray<float>  main_filter(main_siz);
 
 // void hello(Ptr<float> p)
 // {
@@ -29,10 +29,11 @@ SharedArray<int>  main_filter(main_siz);
 //   *p = me();
 // }
 
-inline void multi_vec_elem(Ptr<Int> m_ptr, Ptr<Float> o_ptr, float elem, const int it) {
-  o_ptr = o_ptr + it_Int;
+inline void multi_vec_elem(Ptr<Float> m_ptr, Ptr<Float> o_ptr, float elem, const int it) {
 Float elem_Float(elem);
 Int it_Int = it;
+
+o_ptr = o_ptr + it_Int;
 
     For(Int i = 0, i < main_siz , i = i + 16)
        *o_ptr = *o_ptr + *m_ptr * elem;
@@ -42,7 +43,7 @@ Int it_Int = it;
 
 }
 
-void conv_p(Ptr<Int> m_ptr, Ptr<Float> o_ptr) {
+void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr) {
     printf("DP: Conv started!\n");
     auto start = std::chrono::high_resolution_clock::now();
     float section =  (float) vec_siz / 1/*numQPUs().expr->intLit*/;
@@ -73,7 +74,7 @@ int main()
 int ind = 0;
 
   for(int i = 0; i < main_siz; i++){
-    main_filter[i] = (int)main_filter_v[i];
+    main_filter[i] = main_filter_v[i];
   }
   for(int i = 0; i < vec_siz; i++){
     vec[i] = vec_v[i];

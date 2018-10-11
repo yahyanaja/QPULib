@@ -456,7 +456,7 @@ cond	Lib/Target/Syntax.h	/^    struct { bool setFlags; AssignCond cond; Reg dest
 condExp	Lib/Source/Translate.cpp	/^BranchCond condExp(Seq<Instr>* seq, CExpr* c)$/;"	f
 conj	Lib/Source/Syntax.h	/^    struct { BExpr* lhs; BExpr* rhs; } conj;$/;"	m	union:BExpr::__anon17	typeref:struct:BExpr::__anon17::__anon18
 controlStack	Lib/Source/Syntax.cpp	/^Stack<Stmt> controlStack;$/;"	v
-conv_p	Tests/Hello.cpp	/^void conv_p() {$/;"	f
+conv_p	Tests/Hello.cpp	/^void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr) {$/;"	f
 core	Lib/Source/Interpreter.h	/^  CoreState core[MAX_QPUS];  \/\/ State of each core$/;"	m	struct:InterpreterState
 create	Lib/Common/Heap.h	/^    void create(unsigned int heapCapacityInBytes)$/;"	f	class:Heap
 current	Tests/HeatMap.cpp	/^  Float prev, current, next;$/;"	m	struct:Cursor	file:
@@ -710,7 +710,7 @@ mkVar	Lib/Source/Syntax.cpp	/^Expr* mkVar(Var var)$/;"	f
 mkWhere	Lib/Source/Syntax.cpp	/^Stmt* mkWhere(BExpr* cond, Stmt* thenStmt, Stmt* elseStmt)$/;"	f
 mkWhile	Lib/Source/Syntax.cpp	/^Stmt* mkWhile(CExpr* cond, Stmt* body)$/;"	f
 move	Lib/Source/Translate.cpp	/^Instr move(Var dst, Var src, bool setFlags)$/;"	f
-multi_vec_elem	Tests/Hello.cpp	/^inline void multi_vec_elem(float elem, const int it) {$/;"	f
+multi_vec_elem	Tests/Hello.cpp	/^inline void multi_vec_elem(Ptr<Float> m_ptr, Ptr<Float> o_ptr, float elem, const int it) {$/;"	f
 neg	Lib/Source/Syntax.h	/^    BExpr* neg;$/;"	m	union:BExpr::__anon17
 negAssignCond	Lib/Source/Translate.cpp	/^AssignCond negAssignCond(AssignCond cond)$/;"	f
 negBranchCond	Lib/Source/Translate.cpp	/^BranchCond negBranchCond(BranchCond cond)$/;"	f
