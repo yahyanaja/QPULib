@@ -20,24 +20,24 @@ static int const vec_siz = vec_v.size();
 
 // std::vector<double>         out_v (out_siz);
 SharedArray<float>          out(out_siz);
-SharedArray<float>          vec(vec_size);
+SharedArray<float>          vec(vec_siz);
 SharedArray<float>  main_filter(main_siz);
 
-void hello(Ptr<float> p)
-{
-  p = p + (me() << 4);
-  *p = me();
-}
+// void hello(Ptr<float> p)
+// {
+//   p = p + (me() << 4);
+//   *p = me();
+// }
 
 inline void multi_vec_elem(Float elem, const int it) {
-  Ptr<float> m_ptr = &main;
-  Ptr<float> o_ptr = &out + it;
+  Ptr<float> m_ptr = main_filter;
+  Ptr<float> o_ptr = out + it;
 
-    For(Int i = 0, i < main_siz , i = i + 16){
-       *o_ptr += *m_ptr * elem;
+    For(Int i = 0, i < main_siz , i = i + 16)
+       *o_ptr = *o_ptr + *m_ptr * elem;
        m_ptr = m_ptr + 16;
        o_ptr = o_ptr + 16;
-   }
+   End
 
 }
 
