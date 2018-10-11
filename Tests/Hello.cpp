@@ -40,9 +40,9 @@ static int const out_siz = vec_siz + main_siz - 1 ; // omitted -1 inorder to be 
 
 inline void multi_vec_elem(Float m_ptr, Float prev_out, Float v_ptr) {
 // Float elem_Float(elem);
-Int it_Int = it;
+// Int it_Int = it;
 
-o_ptr = o_ptr + it_Int;
+// o_ptr = o_ptr + it_Int;
 // gather(o_ptr + it_Int + index());
 // gather(m_ptr+index());
 //
@@ -54,7 +54,7 @@ o_ptr = o_ptr + it_Int;
 
     // For(Int i = 0, i < main_siz , i = i + 16)
 
-       return  prev_out + *m_ptr * v_ptr[it];
+       return  prev_out + m_ptr * v_ptr;
 
        // m_ptr = m_ptr + 16;
        // o_ptr = o_ptr + 16;
