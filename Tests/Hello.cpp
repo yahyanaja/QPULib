@@ -63,7 +63,7 @@ void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr) {
       //   printf("i >= out_siz ( %d >= %d )\n", i, out_siz);
       //   if( i >= vec_siz)
       //   printf("i >= vec_siz ( %d >= %d )\n", i, vec_siz);
-          multi_vec_elem(m_ptr, o_ptr, vec[i], i );
+          multi_vec_elem(m_ptr, o_ptr, vec[0], i );
 
     }
     auto finish = std::chrono::high_resolution_clock::now();
