@@ -15,9 +15,9 @@ std::vector<double> vec_v =          {378.5000000000000000, 376.9233274231110045
                                       197.8764081924703362, 182.2882756518549172, 166.1476595700851533, 149.7151558524639654, 133.2411582905070588, 117.0100197815578440, 100.5541299696064357, 84.1213857784912875, 67.4818630881904937, 51.1493884537923975, 35.1096213341426022, 19.3959914826039217, 3.8401817883525413};
  std::vector<double> main_filter_v = {-1.3297364530947558e-04, -1.8619813326340053e-05, -1.9927583273486273e-05, -2.1230104229368908e-05, -2.2634103062365175e-05, -2.4041162317835777e-05, -2.5557767918874349e-05, -2.7080406648550287e-05, -2.8710722180127414e-05, -3.0337532931360952e-05, -3.2062154932255169e-05, -3.3774152468525441e-05, -3.5591572552427255e-05, -3.7415817130812727e-05, -3.9382927173854860e-05, -4.1369340531321311e-05};
    // ceil(3750/16)*16
-static int const out_siz = (int) (ceil((vec_v.size() + main_filter_v.size() - 1)/16)*16);
 static int const main_siz = main_filter_v.size();
 static int const vec_siz = vec_v.size();
+static int const out_siz = vec_siz + main_siz ; // - 1; // omitted -1 inorder to be multiple of 16
 
 // std::vector<double>         out_v (out_siz);
 SharedArray<float>          out(out_siz);
@@ -49,10 +49,9 @@ void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr) {
     auto start = std::chrono::high_resolution_clock::now();
     float section =  (float) vec_siz / 1; // numQPUs().expr->intLit
     int i_at_start = 0;       // (int) (section * (float)  0    /* me().expr->intLit */) ;
-    int i_at_end =   30; //vec_siz; // (int) (section * (float) (1 + 0/* me().expr->intLit */ ));
+    int i_at_end =   vec_siz; // (int) (section * (float) (1 + 0/* me().expr->intLit */ ));
     // printf("QPU (%d/%d), section: %f, i_start: %d, i_end: %d\n", me().expr->intLit,
                             // numQPUs().expr->intLit, section, i_at_start, i_at_end);
-  printf("vec_siz: %d, main_siz: %d, out_siz: %d\n", vec_siz, main_siz, out_siz);
     for(int i = i_at_start; i < i_at_end; i++) {
       if( i >= out_siz)
         printf("i >= out_siz ( %d >= %d )\n", i, out_siz);
@@ -71,8 +70,11 @@ void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr) {
 
 int main()
 {
-  if(main_siz % 16 != 0 )
-    printf("Error - MAIN_SIZ expected to be mutliple of 16. MAIN_SIZ = %d\n", main_siz);
+  if(out_siz % 16 != 0 || main_siz % 16 != 0 || out_siz % 16 != 0)
+{
+      printf("Error - sizes expected to be mutliple of 16.\n");
+}
+      printf("vec_siz: %d, main_siz: %d, out_siz: %d\n", vec_siz, main_siz, out_siz);
 
   for(int i = 0; i < main_siz; i++){
     main_filter[i] = main_filter_v[i];
