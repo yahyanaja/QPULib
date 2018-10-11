@@ -47,9 +47,9 @@ o_ptr = o_ptr + it_Int;
 void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr) {
     printf("DP: Conv started!\n");
     auto start = std::chrono::high_resolution_clock::now();
-    float section =  (float) vec_siz / 1/*numQPUs().expr->intLit*/;
-    int i_at_start = 0       // (int) (section * (float)  0    /* me().expr->intLit */) ;
-    int i_at_end =   vec_siz // (int) (section * (float) (1 + 0/* me().expr->intLit */ ));
+    float section =  (float) vec_siz / 1; // numQPUs().expr->intLit
+    int i_at_start = 0;       // (int) (section * (float)  0    /* me().expr->intLit */) ;
+    int i_at_end =   vec_siz; // (int) (section * (float) (1 + 0/* me().expr->intLit */ ));
     // printf("QPU (%d/%d), section: %f, i_start: %d, i_end: %d\n", me().expr->intLit,
                             // numQPUs().expr->intLit, section, i_at_start, i_at_end);
 
