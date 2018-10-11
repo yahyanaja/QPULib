@@ -56,8 +56,8 @@ o_ptr = o_ptr + it_Int;
 
        *o_ptr = *o_ptr + *m_ptr * v_ptr[it];
 
-       m_ptr = m_ptr + 16;
-       o_ptr = o_ptr + 16;
+       // m_ptr = m_ptr + 16;
+       // o_ptr = o_ptr + 16;
    // End
 
 }
