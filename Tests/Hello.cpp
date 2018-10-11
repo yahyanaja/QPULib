@@ -94,10 +94,10 @@ void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> vec_ptr) {
       //   o_ptr = o_ptr + 16;
       // End
       //
-          For(Int j = 0, j < main_siz , j = j + 16)
-          // for( int j = 0; j < main_siz; j += 16 )
+          // For(Int j = 0, j < main_siz , j = j + 16)
+          for( int j = 0; j < main_siz; j += 16 )
             *(o_ptr + i) = b + a * c;
-          End
+          // End
 
     }
     auto finish = std::chrono::high_resolution_clock::now();
