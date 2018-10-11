@@ -656,7 +656,7 @@ main	Tests/Rot3D.cpp	/^int main()$/;"	f
 main	Tests/Sort.cpp	/^int main()$/;"	f
 main	Tests/Tri.cpp	/^int main()$/;"	f
 main	Tests/TriFloat.cpp	/^int main()$/;"	f
-main_filter_v	Tests/Hello.cpp	/^ std::vector<double> main_filter_v = {-1.3297364530947558e-04, -1.8619813326340053e-05, -1.9927583273486273e-05, -2.1230104229368908e-05, -2.2634103062365175e-05, -2.4041162317835777e-05, -2.5557767918874349e-05, -2.7080406648550287e-05, -2.8710722180127414e-05, -3.0337532931360952e-05, -3.2062154932255169e-05, -3.3774152468525441e-05, -3.5591572552427255e-05, -3.7415817130812727e-05, -3.9382927173854860e-05}; \/\/ , -4.1369340531321311e-05};$/;"	v
+main_filter_v	Tests/Hello.cpp	/^ std::vector<double> main_filter_v = {-1.3297364530947558e-04, -1.8619813326340053e-05, -1.9927583273486273e-05, -2.1230104229368908e-05, -2.2634103062365175e-05, -2.4041162317835777e-05, -2.5557767918874349e-05, -2.7080406648550287e-05, -2.8710722180127414e-05, -3.0337532931360952e-05, -3.2062154932255169e-05, -3.3774152468525441e-05, -3.5591572552427255e-05, -3.7415817130812727e-05, -3.9382927173854860e-05, -4.1369340531321311e-05, \/\/ };$/;"	v
 main_siz	Tests/Hello.cpp	/^static int const main_siz = main_filter_v.size();$/;"	v	file:
 mapmem	Lib/VideoCore/Mailbox.cpp	/^void *mapmem(unsigned base, unsigned size)$/;"	f
 max	Lib/Source/Float.cpp	/^FloatExpr max(FloatExpr a, FloatExpr b)$/;"	f
