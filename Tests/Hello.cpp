@@ -38,12 +38,15 @@ inline void multi_vec_elem(Ptr<Float> m_ptr, Ptr<Float> o_ptr, Float elem, const
 Int it_Int = it;
 
 o_ptr = o_ptr + it_Int;
+Float m_ptr_Float;
 
-    For(Int i = 0, i < main_siz , i = i + 16)
-       *o_ptr = *o_ptr + (*m_ptr * elem);
+    // For(Int i = 0, i < main_siz , i = i + 16)
+        gather(m_ptr+index());
+        receive(m_ptr_Float);
+       *o_ptr = *o_ptr + (m_ptr_Float * elem);
        m_ptr = m_ptr + 16;
        o_ptr = o_ptr + 16;
-   End
+   // End
 
 }
 
