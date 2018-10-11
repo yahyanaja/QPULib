@@ -792,7 +792,7 @@ operator ^	Lib/Source/Int.cpp	/^IntExpr operator^(IntExpr a, IntExpr b)$/;"	f
 operator |	Lib/Source/Int.cpp	/^IntExpr operator|(IntExpr a, IntExpr b)$/;"	f
 operator ||	Lib/Source/Cond.h	/^inline BoolExpr operator||(BoolExpr a, BoolExpr b)$/;"	f
 operator ~	Lib/Source/Int.cpp	/^IntExpr operator~(IntExpr a)$/;"	f
-out_siz	Tests/Hello.cpp	/^static int const out_siz = vec_siz + main_siz - 1 + 32; \/\/ omitted -1 inorder to be multiple of 16$/;"	v	file:
+out_siz	Tests/Hello.cpp	/^static int const out_siz = vec_siz + main_siz - 1; \/\/ omitted -1 inorder to be multiple of 16$/;"	v	file:
 output	Lib/Source/Interpreter.h	/^  Seq<char>* output;         \/\/ Output from print statements$/;"	m	struct:CoreState
 output	Lib/Target/Emulator.h	/^  Seq<char>* output;      \/\/ Output for print statements$/;"	m	struct:State
 passParam	Lib/Kernel.h	/^template <> inline bool passParam< Ptr<Float>, SharedArray<float>* >$/;"	f
@@ -988,7 +988,7 @@ varAssign	Lib/Source/Translate.cpp	/^void varAssign( Seq<Instr>* seq   \/\/ Targ
 vecAlways	Lib/Source/Interpreter.cpp	/^Vec vecAlways()$/;"	f
 vecAnd	Lib/Source/Interpreter.cpp	/^Vec vecAnd(Vec x, Vec y)$/;"	f
 vecNeg	Lib/Source/Interpreter.cpp	/^Vec vecNeg(Vec cond)$/;"	f
-vec_siz	Tests/Hello.cpp	/^static int const vec_siz = vec_v.size();$/;"	v	file:
+vec_siz	Tests/Hello.cpp	/^static int const vec_siz = vec_v.size() - 16;$/;"	v	file:
 vpm	Lib/Source/Interpreter.h	/^  Word vpm[VPM_SIZE];        \/\/ Shared VPM memory$/;"	m	struct:InterpreterState
 vpm	Lib/Target/Emulator.h	/^  Word vpm[VPM_SIZE];     \/\/ Shared VPM memory$/;"	m	struct:State
 vpmLoadQueue	Lib/Target/Emulator.h	/^  VPMLoadQueue vpmLoadQueue; \/\/ VPM load queue$/;"	m	struct:QPUState
