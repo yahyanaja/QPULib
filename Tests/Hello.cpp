@@ -31,13 +31,13 @@ SharedArray<float>  main_filter(main_siz);
 // }
 
 inline void multi_vec_elem(Ptr<Float> m_ptr, Ptr<Float> o_ptr, float elem, const int it) {
-// Float elem_Float(elem);
+Float elem_Float(elem);
 Int it_Int = it;
 
 o_ptr = o_ptr + it_Int;
 
     // For(Int i = 0, i < main_siz , i = i + 16)
-       *o_ptr = *o_ptr + *m_ptr /* * elem */;
+       *o_ptr = *o_ptr + *m_ptr * elem_Float;
        // m_ptr = m_ptr + 16;
        // o_ptr = o_ptr + 16;
    // End
