@@ -38,7 +38,7 @@ static int const out_siz = vec_siz + main_siz - 1 ; // omitted -1 inorder to be 
 //   *p = me();
 // }
 
-inline void multi_vec_elem(Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> v_ptr, const int it) {
+inline void multi_vec_elem(Float m_ptr, Float prev_out, Float v_ptr) {
 // Float elem_Float(elem);
 Int it_Int = it;
 
@@ -54,7 +54,7 @@ o_ptr = o_ptr + it_Int;
 
     // For(Int i = 0, i < main_siz , i = i + 16)
 
-       *o_ptr = *o_ptr + *m_ptr * v_ptr[it];
+       return  prev_out + *m_ptr * v_ptr[it];
 
        // m_ptr = m_ptr + 16;
        // o_ptr = o_ptr + 16;
@@ -75,7 +75,15 @@ void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> vec_ptr) {
       //   printf("i >= out_siz ( %d >= %d )\n", i, out_siz);
       //   if( i >= vec_siz)
       //   printf("i >= vec_siz ( %d >= %d )\n", i, vec_siz);
-          multi_vec_elem(m_ptr, o_ptr, vec_ptr, i );
+      gather(m_ptr + index());
+      gather(o_ptr + index());
+
+      Float a, b, c(vec_ptr[i]);
+
+      receive(a);
+      receive(b);
+
+        *(o_ptr + i) = multi_vec_elem( a, b, c);
 
     }
     auto finish = std::chrono::high_resolution_clock::now();
