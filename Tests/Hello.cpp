@@ -38,7 +38,7 @@ static int const out_siz = vec_siz + main_siz - 1 ; // omitted -1 inorder to be 
 //   *p = me();
 // }
 
-inline void multi_vec_elem(Float m_ptr, Float prev_out, Float v_ptr) {
+inline Float multi_vec_elem(Float m_ptr, Float prev_out, Float v_ptr) {
 // Float elem_Float(elem);
 // Int it_Int = it;
 
