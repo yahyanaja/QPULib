@@ -38,29 +38,29 @@ static int const out_siz = vec_siz + main_siz - 1 ; // omitted -1 inorder to be 
 //   *p = me();
 // }
 
-inline Float multi_vec_elem(Float m_ptr, Float prev_out, Float v_ptr) {
-// Float elem_Float(elem);
-// Int it_Int = it;
-
-// o_ptr = o_ptr + it_Int;
-// gather(o_ptr + it_Int + index());
-// gather(m_ptr+index());
+// inline Float multi_vec_elem(Float m_ptr, Float prev_out, Float v_ptr) {
+// // Float elem_Float(elem);
+// // Int it_Int = it;
 //
-// Float o_ptr_Float;
-// Float m_ptr_Float;
+// // o_ptr = o_ptr + it_Int;
+// // gather(o_ptr + it_Int + index());
+// // gather(m_ptr+index());
+// //
+// // Float o_ptr_Float;
+// // Float m_ptr_Float;
+// //
+// // receive(o_ptr_Float);
+// // receive(m_ptr_Float);
 //
-// receive(o_ptr_Float);
-// receive(m_ptr_Float);
-
-    // For(Int i = 0, i < main_siz , i = i + 16)
-
-       return  prev_out + m_ptr * v_ptr;
-
-       // m_ptr = m_ptr + 16;
-       // o_ptr = o_ptr + 16;
-   // End
-
-}
+//     // For(Int i = 0, i < main_siz , i = i + 16)
+//
+//        return  prev_out + m_ptr * v_ptr;
+//
+//        // m_ptr = m_ptr + 16;
+//        // o_ptr = o_ptr + 16;
+//    // End
+//
+// }
 
 void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> vec_ptr) {
     printf("DP: Conv started!\n");
@@ -83,7 +83,7 @@ void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> vec_ptr) {
       receive(a);
       receive(b);
 
-        *(o_ptr + i) = multi_vec_elem( a, b, c);
+        *(o_ptr + i) = b + a * c;
 
     }
     auto finish = std::chrono::high_resolution_clock::now();
