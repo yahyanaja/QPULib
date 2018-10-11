@@ -21,7 +21,7 @@ static int const vec_siz = vec_v.size();
 // std::vector<double>         out_v (out_siz);
 SharedArray<float>          out(out_siz);
 SharedArray<float>          vec(vec_siz);
-SharedArray<float>  main_filter(main_siz);
+SharedArray<int>  main_filter(main_siz);
 
 // void hello(Ptr<float> p)
 // {
