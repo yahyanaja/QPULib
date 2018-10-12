@@ -62,50 +62,70 @@ static int const out_siz = vec_siz + main_siz - 1 ; // omitted -1 inorder to be 
 //
 // }
 
-void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> vec_ptr) {
-    printf("DP: Conv started!\n");
-    auto start = std::chrono::high_resolution_clock::now();
-    // float section =  (float) vec_siz / 1; // numQPUs().expr->intLit
-    int i_at_start = 0;       // (int) (section * (float)  0    /* me().expr->intLit */) ;
-    int i_at_end =   vec_siz; // (int) (section * (float) (1 + 0/* me().expr->intLit */ ));
-    // printf("QPU (%d/%d), section: %f, i_start: %d, i_end: %d\n", me().expr->intLit,
-                            // numQPUs().expr->intLit, section, i_at_start, i_at_end);
-    for(int i = i_at_start; i < i_at_end; i++) {
-      // if( i >= out_siz)
-      //   printf("i >= out_siz ( %d >= %d )\n", i, out_siz);
-      //   if( i >= vec_siz)
-      //   printf("i >= vec_siz ( %d >= %d )\n", i, vec_siz);
-      Ptr<Float> m_ptr_loc = m_ptr;
-      Ptr<Float> o_ptr_loc = o_ptr + i;
-      const int inc = 16;
-      Float c(vec_ptr[i]);
-      for( int j = 0; j < main_siz; j += inc ){
+void conv(Int m_ptr_siz, Int o_ptr_siz, Int vec_ptr_siz, Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> vec_ptr)
+{
+  Int inc = 16;
+  Ptr<Float> m = m_ptr + index();
+  Ptr<Float> o = o_ptr + index();
+  Ptr<Float> v = vec_ptr + index();
+  gather(m); gather(o); gather(v);
 
-        // Float a, b, c(vec_ptr[i]);
-      //
-      // gather(m_ptr_loc);
-      // receive(a);
-      //
-      // gather(o_ptr_loc);
-      // receive(b);
-      Float res =  *m_ptr_loc * c;
-            // store(1.0, o_ptr_loc);
-            if( j + inc < main_siz )
-            {
-              m_ptr_loc = m_ptr_loc + inc;
-              o_ptr_loc = o_ptr_loc + inc;
-            }
-          }
+  Float mOld, oOld, vOld;
+  For (Int i = 0, i < vec_ptr_siz, i = i+inc)
+    gather(m+inc); gather(o+inc);  gather(v+inc);
+    receive(mOld); receive(oOld); receive(vOld);
+    store(oOld + mOld * vOld, o);
+    m = m+inc; o = o+inc; v = v+inc;
+  End
 
-    }
+  receive(mOld); receive(oOld); receive(vOld);
+}
 
-    auto finish = std::chrono::high_resolution_clock::now();
 
-    printf("DP: Conv ended. Took: ");
-    printf("%lld", std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start).count());
-    printf("ns\n");
-
-    }
+// void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> vec_ptr) {
+//     printf("DP: Conv started!\n");
+//     auto start = std::chrono::high_resolution_clock::now();
+//     // float section =  (float) vec_siz / 1; // numQPUs().expr->intLit
+//     int i_at_start = 0;       // (int) (section * (float)  0    /* me().expr->intLit */) ;
+//     int i_at_end =   vec_siz; // (int) (section * (float) (1 + 0/* me().expr->intLit */ ));
+//     // printf("QPU (%d/%d), section: %f, i_start: %d, i_end: %d\n", me().expr->intLit,
+//                             // numQPUs().expr->intLit, section, i_at_start, i_at_end);
+//     for(int i = i_at_start; i < i_at_end; i++) {
+//       // if( i >= out_siz)
+//       //   printf("i >= out_siz ( %d >= %d )\n", i, out_siz);
+//       //   if( i >= vec_siz)
+//       //   printf("i >= vec_siz ( %d >= %d )\n", i, vec_siz);
+//       Ptr<Float> m_ptr_loc = m_ptr;
+//       Ptr<Float> o_ptr_loc = o_ptr + i;
+//       const int inc = 16;
+//       Float c(vec_ptr[i]);
+//       for( int j = 0; j < main_siz; j += inc ){
+//
+//         Float b, c(vec_ptr[i]);
+//       //
+//       // gather(m_ptr_loc);
+//       // receive(a);
+//       //
+//       gather(o_ptr_loc);
+//       receive(b);
+//       Float res = b + *m_ptr_loc * vec_ptr[i];
+//             // store(1.0, o_ptr_loc);
+//             if( j + inc < main_siz )
+//             {
+//               m_ptr_loc = m_ptr_loc + inc;
+//               o_ptr_loc = o_ptr_loc + inc;
+//             }
+//           }
+//
+//     }
+//
+//     auto finish = std::chrono::high_resolution_clock::now();
+//
+//     printf("DP: Conv ended. Took: ");
+//     printf("%lld", std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start).count());
+//     printf("ns\n");
+//
+//     }
 
 int main()
 {
@@ -130,7 +150,7 @@ int main()
   }
 
   // Construct kernel
-  auto k = compile(conv_p);
+  auto k = compile(conv);
   const int NQPUS  = 1;
   k.setNumQPUs(NQPUS);
   // if(numQPUs().expr->intLit != NQPUS )
@@ -149,8 +169,9 @@ int main()
   // for( int j = 0; j < 3; j++)
   //   main_filter[j] = value++;
 
+  // void conv(Int m_ptr_siz, Int o_ptr_siz, Int vec_ptr_siz, Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> vec_ptr)
   // Invoke the kernel and display the result
-  k(&main_filter, &out, &vec);
+  k(main_siz, out_siz, vec_siz, &main_filter, &out, &vec);
 
   for (int i = 0; i < out_siz; i++) {
     printf("%i: %f\n", i, out[i]);
