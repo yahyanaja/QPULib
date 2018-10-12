@@ -88,7 +88,7 @@ void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> vec_ptr) {
       //
       // gather(o_ptr_loc);
       // receive(b);
-      Float res = *o_ptr_loc + *m_ptr_loc * c;
+      Float res =  *m_ptr_loc * c;
             // store(1.0, o_ptr_loc);
             if( j + inc < main_siz )
             {
