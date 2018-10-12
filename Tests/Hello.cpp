@@ -69,21 +69,18 @@ void conv(Int m_ptr_siz, Int o_ptr_siz, Int vec_ptr_siz, Ptr<Float> m_ptr, Ptr<F
   Ptr<Float> m = m_ptr ; // + index();
   Ptr<Float> o = o_ptr ; // + index();
   Ptr<Float> v = vec_ptr; //  + index();
-  gather(m); gather(o); gather(v);
+  gather(m);
 
   // SharedArray<float> out(o_ptr_siz);
   Float mOld, oOld, vOld;
   receive(mOld);
   For (Int i = 0, i < vec_ptr_siz, i = i+inc)
-  /* gather(m+inc); */ gather(o+inc); gather(v+inc);
+  /* gather(m+inc); */ gather(o); gather(v);
                        receive(oOld); receive(vOld);
 
     store(oOld + mOld * vOld, o);
                   o = o+1; v = v+inc; // m = m+inc;
   End
-
-   receive(o); receive(v);
-
 }
 
 // void conv(Int m_ptr_siz, Int o_ptr_siz, Int vec_ptr_siz, Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> vec_ptr)
