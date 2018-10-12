@@ -78,6 +78,7 @@ void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> vec_ptr) {
       Ptr<Float> m_ptr_loc = m_ptr;
       Ptr<Float> o_ptr_loc = o_ptr + i;
       const int inc = 16;
+
       for( int j = 0; j < main_siz; j += inc ){
 
         // Float a, b, c(vec_ptr[i]);
@@ -87,8 +88,8 @@ void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> vec_ptr) {
       //
       // gather(o_ptr_loc);
       // receive(b);
-
-            store(*o_ptr_loc + *m_ptr_loc * vec_ptr[i], o_ptr_loc);
+      Float res = 1.0; // *o_ptr_loc + *m_ptr_loc * vec_ptr[i];
+            store(res, o_ptr_loc);
             if( j + inc < main_siz )
             {
               m_ptr_loc = m_ptr_loc + inc;
