@@ -65,9 +65,9 @@ static int const out_siz = vec_siz + main_siz ;// - 1 ; // omitted -1 inorder to
 void conv(Int m_ptr_siz, Int o_ptr_siz, Int vec_ptr_siz, Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> vec_ptr)
 {
   Int inc = 1;
-  Ptr<Float> m = m_ptr + index();
-  Ptr<Float> o = o_ptr + index();
-  Ptr<Float> v = vec_ptr + index();
+  Ptr<Float> m = m_ptr ; // + index();
+  Ptr<Float> o = o_ptr ; // + index();
+  Ptr<Float> v = vec_ptr; //  + index();
   // SharedArray<float> out(o_ptr_siz);
 
   For (Int i = 0, i < vec_ptr_siz, i = i+inc)
