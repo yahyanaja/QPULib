@@ -27,7 +27,7 @@ std::vector<double> vec_v =          {378.5000000000000000, 376.9233274231110045
    // ceil(3750/16)*16
 static int const main_siz = main_filter_v.size();
 static int const vec_siz = vec_v.size() * 16;
-static int const out_siz = vec_siz + main_siz ;// - 1 ; // omitted -1 inorder to be multiple of 16
+static int const out_siz = vec_siz/16 + main_siz ;// - 1 ; // omitted -1 inorder to be multiple of 16
 
 // std::vector<double>         out_v (out_siz);
 
@@ -79,7 +79,7 @@ void conv(Int m_ptr_siz, Int o_ptr_siz, Int vec_ptr_siz, Ptr<Float> m_ptr, Ptr<F
                        receive(oOld); receive(vOld);
 
     store(oOld + mOld * vOld, o);
-                  o = o+inc; v = v+inc; // m = m+inc;
+                  o = o+1; v = v+inc; // m = m+inc;
   End
 
    receive(o); receive(v);
