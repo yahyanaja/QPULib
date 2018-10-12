@@ -26,7 +26,7 @@ std::vector<double> vec_v =          {378.5000000000000000, 376.9233274231110045
                                                                           // 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
    // ceil(3750/16)*16
 static int const main_siz = main_filter_v.size();
-static int const vec_siz = vec_v.size();
+static int const vec_siz = vec_v.size() * 16;
 static int const out_siz = vec_siz + main_siz ;// - 1 ; // omitted -1 inorder to be multiple of 16
 
 // std::vector<double>         out_v (out_siz);
@@ -62,20 +62,44 @@ static int const out_siz = vec_siz + main_siz ;// - 1 ; // omitted -1 inorder to
 //
 // }
 
+
 void conv(Int m_ptr_siz, Int o_ptr_siz, Int vec_ptr_siz, Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> vec_ptr)
 {
-  Int inc = 1;
+  Int inc = 16;
   Ptr<Float> m = m_ptr ; // + index();
   Ptr<Float> o = o_ptr ; // + index();
   Ptr<Float> v = vec_ptr; //  + index();
-  // SharedArray<float> out(o_ptr_siz);
+  gather(m); gather(o); gather(v);
 
+  // SharedArray<float> out(o_ptr_siz);
+  Float mOld, oOld, vOld;
+  receive(mOld);
   For (Int i = 0, i < vec_ptr_siz, i = i+inc)
-    store(*o + *m /* * v[0] */, o);
-                  o = o+inc; v = v+inc;
+  /* gather(m+inc); */ gather(o+inc); gather(v+inc);
+                       receive(oOld); receive(vOld);
+
+    store(oOld + mOld * vOld, o);
+                  o = o+inc; v = v+inc; // m = m+inc;
   End
 
+   receive(o); receive(v);
+
 }
+
+// void conv(Int m_ptr_siz, Int o_ptr_siz, Int vec_ptr_siz, Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> vec_ptr)
+// {
+//   Int inc = 1;
+//   Ptr<Float> m = m_ptr ; // + index();
+//   Ptr<Float> o = o_ptr ; // + index();
+//   Ptr<Float> v = vec_ptr; //  + index();
+//   // SharedArray<float> out(o_ptr_siz);
+//
+//   For (Int i = 0, i < vec_ptr_siz, i = i+inc)
+//     store(*o + *m /* * v[0] */, o);
+//                   o = o+inc; v = v+inc;
+//   End
+//
+// }
 
 
 // void conv_p(Ptr<Float> m_ptr, Ptr<Float> o_ptr, Ptr<Float> vec_ptr) {
@@ -136,10 +160,13 @@ int main()
       SharedArray<float>  main_filter(main_siz);
 
   for(int i = 0; i < main_siz; i++){
-    main_filter[i] = main_filter_v[i];
+      main_filter[i] = main_filter_v[i];
   }
-  for(int i = 0; i < vec_siz; i++){
-    vec[i] = vec_v[i];
+  int ind = 0;
+  for(int i = 0; i < vec_siz; i+=16){
+    for(int j = 0; j < 16; j++)
+      vec[i + j] = vec_v[ind];
+      ind++;
   }
   for (int i = 0; i < out_siz; i++){
     out[i] = 0.0;

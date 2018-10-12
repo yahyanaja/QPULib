@@ -987,7 +987,7 @@ varAssign	Lib/Source/Translate.cpp	/^void varAssign( Seq<Instr>* seq   \/\/ Targ
 vecAlways	Lib/Source/Interpreter.cpp	/^Vec vecAlways()$/;"	f
 vecAnd	Lib/Source/Interpreter.cpp	/^Vec vecAnd(Vec x, Vec y)$/;"	f
 vecNeg	Lib/Source/Interpreter.cpp	/^Vec vecNeg(Vec cond)$/;"	f
-vec_siz	Tests/Hello.cpp	/^static int const vec_siz = vec_v.size();$/;"	v	file:
+vec_siz	Tests/Hello.cpp	/^static int const vec_siz = vec_v.size() * 16;$/;"	v	file:
 vpm	Lib/Source/Interpreter.h	/^  Word vpm[VPM_SIZE];        \/\/ Shared VPM memory$/;"	m	struct:InterpreterState
 vpm	Lib/Target/Emulator.h	/^  Word vpm[VPM_SIZE];     \/\/ Shared VPM memory$/;"	m	struct:State
 vpmLoadQueue	Lib/Target/Emulator.h	/^  VPMLoadQueue vpmLoadQueue; \/\/ VPM load queue$/;"	m	struct:QPUState
