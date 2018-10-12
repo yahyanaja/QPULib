@@ -74,9 +74,10 @@ void conv(Int m_ptr_siz, Int o_ptr_siz, Int vec_ptr_siz, Ptr<Float> m_ptr, Ptr<F
   Float mOld, oOld, vOld;
   receive(mOld);
   For (Int i = 0, i < vec_ptr_siz, i = i+inc)
-                   gather(o);
-                   receive(oOld); vOld = v[0];
-    store(oOld + mOld * vOld, o);
+                   // gather(o);
+                   // receive(oOld); 
+                   vOld = v[0];
+    store(*o + mOld * vOld, o);
                   o = o+inc; v = v+inc;
   End
 
