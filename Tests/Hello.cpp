@@ -71,7 +71,7 @@ void conv(Int m_ptr_siz, Int o_ptr_siz, Int vec_ptr_siz, Ptr<Float> m_ptr, Ptr<F
   // SharedArray<float> out(o_ptr_siz);
 
   For (Int i = 0, i < vec_ptr_siz, i = i+inc)
-    store(*o + *m * v[0], o);
+    store(*o + *m /* * v[0] */, o);
                   o = o+inc; v = v+inc;
   End
 
